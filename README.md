@@ -1,16 +1,24 @@
-# ay_khedma
+# Ay Khedma Mobile Application
 
-A new Flutter project.
+## Contributers
 
-## Getting Started
+* [Ebrahim Elnemr](https://github.com/ebrahim969)
+* [Mustafa Magdy]()
 
-This project is a starting point for a Flutter application.
+## Dependencies
 
-A few resources to get you started if this is your first Flutter project:
+### Main Dependencies
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+* `bloc_flutter`
+* `google_fonts`
+* `go_router`
+* `http`
+* `curved_navigation_bar`
+* `font_awesome_icon`
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Local Deployment
+
+Clone the repository
+```shell
+git clone https://github.com/git-push-masters/ay-khedma-mobile.git
+```

@@ -14,7 +14,7 @@
 * `go_router`
 * `http`
 * `curved_navigation_bar`
-* `font_awesome_icon`
+* `font_awesome_flutter`
 
 ## Local Deployment
 

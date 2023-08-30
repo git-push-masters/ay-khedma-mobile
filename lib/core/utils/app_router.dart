@@ -23,7 +23,7 @@ abstract class AppRouter
   static const kSearchLocationRoute= '/SearchLocationView';
   static const kHomeRoute = '/HomeViewe';
   static const kMapRoute = '/MapView';
-  static const kProfileRoute = 'ProfileView';
+  static const kProfileRoute = '/ProfileView';
   static const kSettingsRoute = '/SettingsView';
   static const kChatsAndCallsRoute = '/ChatsAndCallsView';
   static const kChatRoute = '/ChatView';

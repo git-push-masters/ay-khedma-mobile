@@ -9,12 +9,18 @@
 
 ### Main Dependencies
 
-* `bloc_flutter`
+* `flutter_bloc`
+* `get`
 * `google_fonts`
 * `go_router`
 * `http`
 * `curved_navigation_bar`
 * `font_awesome_flutter`
+* `google_maps_flutter`
+* `flutter_map`
+* `flutter_local_notifications`
+* `flutter_spinkit`
+* `flutter_svg`
 
 ## Local Deployment
 

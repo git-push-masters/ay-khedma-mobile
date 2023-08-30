@@ -15,6 +15,11 @@
 * `http`
 * `curved_navigation_bar`
 * `font_awesome_flutter`
+* `google_maps_flutter`
+* `flutter_map`
+* `flutter_local_notifications`
+* `flutter_spinkit`
+* `flutter_svg`
 
 ## Local Deployment
 

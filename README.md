@@ -9,7 +9,7 @@
 
 ### Main Dependencies
 
-* `bloc_flutter`
+* `flutter_bloc`
 * `google_fonts`
 * `go_router`
 * `http`

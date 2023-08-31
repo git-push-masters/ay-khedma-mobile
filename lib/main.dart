@@ -11,10 +11,13 @@ class AyKhedmaApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  MaterialApp.router(
+    return MaterialApp.router(
       routerConfig: AppRouter.router,
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(textTheme: GoogleFonts.rubikTextTheme()),
+      theme: ThemeData(
+        fontFamily: 'Kohinoor Arabic',
+        textTheme: Theme.of(context).textTheme.apply(fontFamily: 'Kohinoor Arabic'),
+      ),
     );
   }
 }

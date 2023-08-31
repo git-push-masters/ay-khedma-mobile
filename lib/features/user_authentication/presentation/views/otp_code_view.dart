@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'widgets/otp_code_view_body.dart';
+import 'widgets/components/otp_code_view_body.dart';
 
 class OtpCodeView extends StatelessWidget {
   const OtpCodeView({super.key});

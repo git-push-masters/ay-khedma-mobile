@@ -1,3 +1,4 @@
+import 'package:ay_khedma/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 import '../../utils/colors.dart';
 
@@ -23,9 +24,12 @@ class CustomTextFeild extends StatelessWidget {
       onSaved: onSaved,
       decoration: InputDecoration(
         border: buildBorder(),
-        enabledBorder: buildBorder(AppColors.kPrimaryColor.withOpacity(.5)),
-        focusedBorder: buildBorder(),
+        enabledBorder: buildBorder(),
+        focusedBorder: buildBorder(AppColors.kPrimaryColor.withOpacity(.5)),
         hintText: hinttext,
+        hintStyle: Styles.textStyle14.copyWith(
+          color: AppColors.kSmallContainersColor
+        )
       ),
       maxLines: maxLines,
     );
@@ -34,6 +38,6 @@ class CustomTextFeild extends StatelessWidget {
   OutlineInputBorder buildBorder([color]) {
     return OutlineInputBorder(
         borderRadius: BorderRadius.circular(16),
-        borderSide: BorderSide(color: color ?? AppColors.kTextFieldHintColor));
+        borderSide: BorderSide(color: color ?? AppColors.kSmallContainersColor));
   }
 }

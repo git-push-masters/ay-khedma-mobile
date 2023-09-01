@@ -13,7 +13,7 @@
 * `get`
 * `flutter_localizations`
 * `go_router`
-* `http`
+* `dio`
 * `curved_navigation_bar`
 * `font_awesome_flutter`
 * `google_maps_flutter`

@@ -14,6 +14,9 @@
 * `flutter_localizations`
 * `go_router`
 * `dio`
+* `dartz`
+* `get_it`
+* `cached_network_image`
 * `curved_navigation_bar`
 * `font_awesome_flutter`
 * `google_maps_flutter`

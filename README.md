@@ -9,20 +9,20 @@
 
 ### Main Dependencies
 
-* [flutter_bloc](https://pub.dev/packages/flutter_bloc)
-* [get](https://pub.dev/packages/get)
-* [flutter_localizations](https://pub.dev/packages/flutter_localizations)
-* [go_router](https://pub.dev/packages/go_router)
-* [dio](https://pub.dev/packages/dio)
-* [dartz](https://pub.dev/packages/dartz)
-* [get_it](https://pub.dev/packages/get_it)
-* [cached_network_image](https://pub.dev/packages/cached_network_image)
-* [curved_navigation_bar](https://pub.dev/packages/curved_navigation_bar)
-* [font_awesome_flutter](https://pub.dev/packages/font_awesome_flutter)
-* [google_maps_flutter](https://pub.dev/packages/google_maps_flutter)
+* [flutter_bloc](https://pub.dev/packages/flutter_bloc) : As a state management
+* [get](https://pub.dev/packages/get) : I will use it to responsive sizein screens
+* [flutter_localizations](https://pub.dev/packages/flutter_localizations) : For change app language
+* [go_router](https://pub.dev/packages/go_router) : To routs between views
+* [dio](https://pub.dev/packages/dio) : To deal with api
+* [dartz](https://pub.dev/packages/dartz) : To handle exceptions wiht failure state 
+* [get_it](https://pub.dev/packages/get_it) : As a service locator to accessing service objects like REST API clients
+* [cached_network_image](https://pub.dev/packages/cached_network_image) : To handle images when it received by null value
+* [curved_navigation_bar](https://pub.dev/packages/curved_navigation_bar) : To create beautiful nav bar
+* [font_awesome_flutter](https://pub.dev/packages/font_awesome_flutter) : For awesome icons
+* [google_maps_flutter](https://pub.dev/packages/google_maps_flutter) : To deale with maps
 * [flutter_map](https://pub.dev/packages/flutter_map)
-* [flutter_local_notifications](https://pub.dev/packages/flutter_local_notifications)
-* [flutter_svg](https://pub.dev/packages/flutter_svg)
+* [flutter_local_notifications](https://pub.dev/packages/flutter_local_notifications) : To deal with notifications
+* [flutter_svg](https://pub.dev/packages/flutter_svg) : To deal with svg images
 
 ## Architecture Pattern
 

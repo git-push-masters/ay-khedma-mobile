@@ -3,7 +3,7 @@
 ## Contributers
 
 * [Ebrahim Elnemr](https://github.com/ebrahim969)
-* [Mustafa Magdy]()
+* [Mustafa Magdy](https://github.com/mustfa-magdy-mohamed-nasr)
 
 ## Dependencies
 
@@ -11,9 +11,12 @@
 
 * `flutter_bloc`
 * `get`
-* `google_fonts`
+* `flutter_localizations`
 * `go_router`
-* `http`
+* `dio`
+* `dartz`
+* `get_it`
+* `cached_network_image`
 * `curved_navigation_bar`
 * `font_awesome_flutter`
 * `google_maps_flutter`
@@ -21,6 +24,17 @@
 * `flutter_local_notifications`
 * `flutter_spinkit`
 * `flutter_svg`
+
+## Architecture Pattern
+
+### MVVM
+
+## Folders Structure
+
+### I devided the progect into tow folders: 
+#### core : it contains all constants and helpers and general widgets
+#### features : It contains all the features of the project, and every feature it contains tow folders => data and presentation that's a layers, data layer has a models and presentaion layer has a view models and views
+
 
 ## Local Deployment
 

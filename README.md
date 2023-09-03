@@ -32,7 +32,7 @@
 
 ### I devided the progect into tow folders: 
 #### core : it contains all constants and helpers and general widgets
-#### features : It contains all the features of the project, and every feature it contains tow folders => data and presentation that's a layers, data layer has a models and presentaion layer has a view models and views
+#### features : It contains all the features of the project, and every feature it contains tow folders => data and presentation that's a layers, data layer has a models and repos, presentaion layer has a view models (it contains blocs and cubits to handle states and business logic) and views (it contains all of ui)
 
 
 ## Local Deployment

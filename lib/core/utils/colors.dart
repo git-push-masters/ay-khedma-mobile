@@ -7,7 +7,8 @@ abstract class AppColors
   static const kUnderHeadLinesColor = Color(0xff757575);
   static const kTextFieldHintColor = Color(0xffB4B4B4);
   static const kTextbuttonColor = Color(0xffFFFFFF);
-  static const kBigContainersColor = Color(0xffEBEBEB);
-  static const kSmallContainersColor = Color(0xffD9D9D9);
+  static const kOutLineBorder = Color(0xffD9D9D9);
+  static const kSmallContainersColor = Color(0xffEBEBEB);
+  static const kSmall2ContainersColor = Color(0xffF9F9F9);
   static const kHeadersColor = Color(0xffFEF8EF);
 }

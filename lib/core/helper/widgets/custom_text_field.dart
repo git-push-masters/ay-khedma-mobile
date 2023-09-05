@@ -28,7 +28,7 @@ class CustomTextFeild extends StatelessWidget {
         focusedBorder: buildBorder(AppColors.kPrimaryColor.withOpacity(.5)),
         hintText: hinttext,
         hintStyle: Styles.textStyle14.copyWith(
-          color: AppColors.kSmallContainersColor
+          color: AppColors.kTextFieldHintColor
         )
       ),
       maxLines: maxLines,
@@ -38,6 +38,6 @@ class CustomTextFeild extends StatelessWidget {
   OutlineInputBorder buildBorder([color]) {
     return OutlineInputBorder(
         borderRadius: BorderRadius.circular(16),
-        borderSide: BorderSide(color: color ?? AppColors.kSmallContainersColor));
+        borderSide: BorderSide(color: color ?? AppColors.kOutLineBorder));
   }
 }

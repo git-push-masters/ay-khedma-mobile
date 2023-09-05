@@ -13,7 +13,7 @@ class ForgotPasswordAndRememberMe extends StatelessWidget {
         Text(
           "هل نسيت كلمه المرور؟",
           style:
-              Styles.textStyle12.copyWith(color: AppColors.kTextFieldHintColor),
+              Styles.textStyle12.copyWith(color: AppColors.kUnderHeadLinesColor),
         ),
         Row(
           children: [
@@ -22,7 +22,7 @@ class ForgotPasswordAndRememberMe extends StatelessWidget {
                 onPressed: () {},
                 icon: const Icon(
                   Icons.check_box_outline_blank,
-                  color: AppColors.kTextFieldHintColor,
+                  color: AppColors.kOutLineBorder,
                 ))
           ],
         )

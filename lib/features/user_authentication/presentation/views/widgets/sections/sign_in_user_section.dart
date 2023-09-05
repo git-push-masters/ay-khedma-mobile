@@ -44,7 +44,7 @@ class SignInUserSection extends StatelessWidget {
         ),
         CustomButton(
             backgroundColor: AppColors.kPrimaryColor,
-            text: "تسجيل",
+            text: "تسجيل الدخول",
             textStyle:
                 Styles.textStyle12.copyWith(color: AppColors.kTextbuttonColor),
             height: 50),

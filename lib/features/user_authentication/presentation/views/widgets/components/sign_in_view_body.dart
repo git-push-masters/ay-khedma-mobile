@@ -12,7 +12,7 @@ class SignInViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Padding(
-        padding: const EdgeInsets.all(44),
+        padding: const EdgeInsets.symmetric(horizontal: 36, vertical: 50),
         child: Column(
           children:const[
             HeaderSignInViewSection(),

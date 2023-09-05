@@ -11,16 +11,19 @@ class ForgotPasswordAndRememberMe extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Text(
-          "هل نسي كلمه المرور؟",
-          style: Styles.textStyle12
-              .copyWith(color: AppColors.kUnderHeadLinesColor),
+          "هل نسيت كلمه المرور؟",
+          style:
+              Styles.textStyle12.copyWith(color: AppColors.kTextFieldHintColor),
         ),
         Row(
           children: [
-            Text("تذكرني", style:Styles.textStyle12
-              .copyWith(color: AppColors.kUnderHeadLinesColor),),
-              const SizedBox(width: 5,),
-            IconButton(onPressed: (){}, icon:const Icon(Icons.check_box_outline_blank))
+            const Text("تذكرني", style: Styles.textStyle12),
+            IconButton(
+                onPressed: () {},
+                icon: const Icon(
+                  Icons.check_box_outline_blank,
+                  color: AppColors.kTextFieldHintColor,
+                ))
           ],
         )
       ],

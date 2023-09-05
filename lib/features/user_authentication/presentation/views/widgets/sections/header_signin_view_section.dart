@@ -15,7 +15,6 @@ class HeaderSignInViewSection extends StatelessWidget {
               const Text("أهلا بعودتك", style: Styles.textStyle24,),
               const SizedBox(height: 7,),
                Text("من فضلك سجل بياناتك للدخول", style: Styles.textStyle12.copyWith(
-                fontWeight: FontWeight.normal,
                 color: AppColors.kUnderHeadLinesColor
                ),),
       ],

@@ -42,7 +42,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
           SlidingLogoAnimated(slidingAnimation: slidingAnimation),
           const Spacer(),
           Padding(
-            padding: const EdgeInsets.all(16),
+            padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 32),
             child: RichText(
               text: TextSpan(
                   children: [
@@ -77,7 +77,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
 
   void navigateToHome() {
     Future.delayed(const Duration(seconds: 4), () {
-      GoRouter.of(context).push(AppRouter.kSignInRoute,);
+      GoRouter.of(context).pushReplacement(AppRouter.kSignInRoute,);
     });
   }
 }

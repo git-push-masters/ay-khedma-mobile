@@ -16,18 +16,20 @@ class SignInViewBody extends StatelessWidget {
     return SafeArea(
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 36, vertical: 50),
-        child: Column(
-          children: const [
-            HeaderSignInViewSection(),
-            SizedBox(
-              height: 45,
-            ),
-            SignInUserSection(),
-            SizedBox(
-              height: 25,
-            ),
-            SignInWithOthersSection()
-          ],
+        child: SingleChildScrollView(
+          child: Column(
+            children: const [
+              HeaderSignInViewSection(),
+              SizedBox(
+                height: 45,
+              ),
+              SignInUserSection(),
+              SizedBox(
+                height: 25,
+              ),
+              SignInWithOthersSection()
+            ],
+          ),
         ),
       ),
     );

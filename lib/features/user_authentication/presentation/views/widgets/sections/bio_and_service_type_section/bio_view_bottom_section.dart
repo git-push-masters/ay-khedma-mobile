@@ -1,6 +1,8 @@
+import 'package:ay_khedma/core/utils/app_router.dart';
 import 'package:ay_khedma/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../../../../../../core/helper/widgets/custom_button.dart';
 import '../../components/bio_and_service_type_components/under_text_fields_bio_view.dart';
@@ -33,6 +35,7 @@ class BioViewBottomSection extends StatelessWidget {
             height: Get.height * .06,
           ),
           CustomButton(
+            onPressed: ()=> GoRouter.of(context).push(AppRouter.kOtpCodeRoute),
               text: "موافق",
               textStyle: Styles.textStyle12.copyWith(color: Colors.white)),
               SizedBox(

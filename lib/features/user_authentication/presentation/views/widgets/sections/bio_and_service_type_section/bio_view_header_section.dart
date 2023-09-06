@@ -3,6 +3,7 @@ import 'package:ay_khedma/core/utils/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
+import 'package:go_router/go_router.dart';
 
 class BioViewHeaderSection extends StatelessWidget {
   const BioViewHeaderSection({super.key});
@@ -25,7 +26,9 @@ class BioViewHeaderSection extends StatelessWidget {
           children: [
             IconButton(
               padding:const EdgeInsets.only(right: 20),
-              onPressed: (){}, icon: const Icon(FontAwesomeIcons.arrowRight, color: AppColors.kPrimaryColor,)),
+              onPressed: (){
+                GoRouter.of(context).pop();
+              }, icon: const Icon(FontAwesomeIcons.arrowRight, color: AppColors.kPrimaryColor,)),
           ],
         )  
       ],

@@ -1,7 +1,6 @@
 import 'package:ay_khedma/features/chats_and_calls/presentation/views/chat_view.dart';
 import 'package:ay_khedma/features/chats_and_calls/presentation/views/chats_and_calls_view.dart';
 import 'package:ay_khedma/features/find_location/presentation/views/find_location_view.dart';
-import 'package:ay_khedma/features/find_location/presentation/views/search_about_location_view.dart';
 import 'package:ay_khedma/features/forget_password/presentation/views/forget_password_view.dart';
 import 'package:ay_khedma/features/map/presentation/views/map_view.dart';
 import 'package:ay_khedma/features/profile/presentation/views/profile_view.dart';
@@ -12,6 +11,8 @@ import 'package:ay_khedma/features/user_authentication/presentation/views/sign_u
 import 'package:go_router/go_router.dart';
 import '../../features/home/presentation/views/home_view.dart';
 import '../../features/splash/presentation/views/splash_view.dart';
+import '../../features/user_authentication/presentation/views/bio_and_service_type_view.dart';
+import '../../features/user_authentication/presentation/views/choose_avatar_view.dart';
 
 abstract class AppRouter
 {
@@ -20,7 +21,8 @@ abstract class AppRouter
   static const kOtpCodeRoute = '/RegisterView';
   static const kForgetPasswordRoute = '/ForgetPasswordView';
   static const kFindLocationRoute= '/FindLocationView';
-  static const kSearchLocationRoute= '/SearchLocationView';
+  static const kBioAndServiceTypeRoute= '/BioAndServiceTypeView';
+  static const kChooseAvatarRoute= '/ChooseAvatarView';
   static const kHomeRoute = '/HomeViewe';
   static const kMapRoute = '/MapView';
   static const kProfileRoute = '/ProfileView';
@@ -54,8 +56,12 @@ abstract class AppRouter
       builder: (context, state) => const FindLocationView(),
     ),
     GoRoute(
-      path: kSearchLocationRoute,
-      builder: (context, state) => const SearchAboutLocationView(),
+      path: kBioAndServiceTypeRoute,
+      builder: (context, state) => const BioAndServiceTypeView(),
+    ),
+    GoRoute(
+      path: kChooseAvatarRoute,
+      builder: (context, state) => const ChooseAvatarView(),
     ),
     GoRoute(
       path: kHomeRoute,

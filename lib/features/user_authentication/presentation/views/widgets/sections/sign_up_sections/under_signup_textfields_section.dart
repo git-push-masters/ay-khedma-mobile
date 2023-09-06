@@ -1,3 +1,5 @@
+import 'package:ay_khedma/core/utils/app_router.dart';
+import 'package:ay_khedma/features/user_authentication/presentation/views/widgets/components/general_components/custom_text_rich.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:go_router/go_router.dart';
@@ -33,19 +35,14 @@ class UnderSignUpTextFieldsSection extends StatelessWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            RichText(
-              text: TextSpan(children: [
-                TextSpan(
-                    text: "بتسجيلك انت توافق علي ",
-                    style: Styles.textStyle12.copyWith(
-                        fontWeight: FontWeight.normal,
-                        color: AppColors.kUnderHeadLinesColor)),
-                TextSpan(
-                    text: "الشروط والأحكام",
-                    style: Styles.textStyle12
-                        .copyWith(color: AppColors.kPrimaryColor)),
-              ]),
-            ),
+            CustomTxetRich(
+                txt1: "بتسجيلك انت توافق علي",
+                txt2: "الشروط والأحكام",
+                textStyle1: Styles.textStyle12.copyWith(
+                    fontWeight: FontWeight.normal,
+                    color: AppColors.kUnderHeadLinesColor),
+                textStyle2: Styles.textStyle12
+                    .copyWith(color: AppColors.kPrimaryColor)),
             Row(
               children: [
                 const Text("تذكرني", style: Styles.textStyle12),
@@ -64,11 +61,12 @@ class UnderSignUpTextFieldsSection extends StatelessWidget {
           height: 15,
         ),
         CustomButton(
+          onPressed: ()=> GoRouter.of(context).push(AppRouter.kBioAndServiceTypeRoute),
             backgroundColor: AppColors.kPrimaryColor,
             text: "التسجيل",
             textStyle: Styles.textStyle12.copyWith(color: Colors.white),
             height: 50),
-            const SizedBox(
+        const SizedBox(
           height: 10,
         ),
         Row(

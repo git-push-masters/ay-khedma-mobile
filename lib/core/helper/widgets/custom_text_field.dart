@@ -27,7 +27,7 @@ class CustomTextFeild extends StatelessWidget {
         enabledBorder: buildBorder(),
         focusedBorder: buildBorder(AppColors.kPrimaryColor.withOpacity(.5)),
         hintText: hinttext,
-        hintStyle: Styles.textStyle14.copyWith(
+        hintStyle: Styles.textStyle12.copyWith(
           color: AppColors.kTextFieldHintColor
         )
       ),

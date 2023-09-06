@@ -19,7 +19,10 @@ class SignInViewBody extends StatelessWidget {
         child: SingleChildScrollView(
           child: Column(
             children: const [
-              HeaderSignInViewSection(),
+              HeaderSignViewSection(
+                headText: "أهلا بعودتك",
+                undertext: "من فضلك سجل بياناتك للدخول",
+              ),
               SizedBox(
                 height: 45,
               ),

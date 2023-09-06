@@ -1,6 +1,5 @@
 import 'package:ay_khedma/core/utils/styles.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import '../../utils/colors.dart';
 
 class CustomTextFeild extends StatelessWidget {
@@ -11,7 +10,7 @@ class CustomTextFeild extends StatelessWidget {
       this.onSaved,
       this.onCahnge,
       this.validator,
-       this.width});
+       this.width, this.prefixIcon});
 
   final String hinttext;
   final int maxLines;
@@ -19,15 +18,17 @@ class CustomTextFeild extends StatelessWidget {
   final Function(String)? onCahnge;
   final String? Function(String?)? validator;
   final double? width;
+  final Widget? prefixIcon;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: width?? Get.width,
+      width: width,
       child: TextFormField(
         validator: validator,
         onChanged: onCahnge,
         onSaved: onSaved,
         decoration: InputDecoration(
+          prefixIcon: prefixIcon,
             border: buildBorder(),
             enabledBorder: buildBorder(),
             focusedBorder: buildBorder(AppColors.kPrimaryColor.withOpacity(.5)),

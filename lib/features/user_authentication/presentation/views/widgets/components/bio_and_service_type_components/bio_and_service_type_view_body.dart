@@ -1,5 +1,5 @@
-import 'package:ay_khedma/core/utils/assets.dart';
 import 'package:flutter/material.dart';
+import '../../sections/bio_and_service_type_section/bio_view_header_section.dart';
 
 class BioAndServiceTypeViewBody extends StatelessWidget {
   const BioAndServiceTypeViewBody({super.key});
@@ -16,17 +16,3 @@ class BioAndServiceTypeViewBody extends StatelessWidget {
   }
 }
 
-class BioViewHeaderSection extends StatelessWidget {
-  const BioViewHeaderSection({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Stack(
-      alignment: Alignment.topCenter,
-      children: [
-        Image.asset(AssetsData.bioHeader2),
-        Image.asset(AssetsData.bioHeader1)
-      ],
-    ) ;
-  }
-}

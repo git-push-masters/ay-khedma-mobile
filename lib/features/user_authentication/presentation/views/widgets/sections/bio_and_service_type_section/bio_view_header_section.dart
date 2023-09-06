@@ -14,7 +14,7 @@ class BioViewHeaderSection extends StatelessWidget {
       clipBehavior: Clip.none,
       children: [
         Positioned(
-          left: 1,
+          left: 0,
           top: 50,  
           child: Image.asset(AssetsData.bioHeader2, height: Get.height * .35,)),
         Positioned(

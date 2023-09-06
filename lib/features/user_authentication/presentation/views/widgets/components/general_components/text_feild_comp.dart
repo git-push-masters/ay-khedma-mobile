@@ -1,6 +1,5 @@
 import 'package:ay_khedma/core/helper/widgets/custom_text_field.dart';
 import 'package:flutter/material.dart';
-
 import '../../../../../../../core/utils/styles.dart';
 
 class TextFeildComp extends StatelessWidget {
@@ -8,12 +7,13 @@ class TextFeildComp extends StatelessWidget {
     super.key,
     required this.txt,
     required this.hintTxt,
-    this.prefixIcon,
+    this.prefixIcon, this.maxLines,
   });
 
   final String txt;
   final String hintTxt;
   final Widget? prefixIcon;
+  final int? maxLines;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -30,6 +30,7 @@ class TextFeildComp extends StatelessWidget {
         CustomTextFeild(
           hinttext: hintTxt,
           prefixIcon: prefixIcon,
+          maxLines: maxLines?? 1,
         ),
       ],
     );

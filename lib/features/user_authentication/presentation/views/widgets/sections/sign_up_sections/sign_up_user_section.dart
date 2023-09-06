@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import '../../../../../../core/helper/widgets/custom_text_field.dart';
-import '../../../../../../core/utils/colors.dart';
-import '../../../../../../core/utils/styles.dart';
-import '../components/text_feild_comp.dart';
+import '../../../../../../../core/helper/widgets/custom_text_field.dart';
+import '../../../../../../../core/utils/colors.dart';
+import '../../../../../../../core/utils/styles.dart';
+import '../../components/general_components/text_feild_comp.dart';
 
 class SignUpUserSection extends StatelessWidget {
   const SignUpUserSection({super.key});

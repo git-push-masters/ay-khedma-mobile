@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:go_router/go_router.dart';
-import '../../../../../../core/helper/widgets/custom_button.dart';
-import '../../../../../../core/utils/colors.dart';
-import '../../../../../../core/utils/styles.dart';
+import '../../../../../../../core/helper/widgets/custom_button.dart';
+import '../../../../../../../core/utils/colors.dart';
+import '../../../../../../../core/utils/styles.dart';
 
 class UnderSignUpTextFieldsSection extends StatelessWidget {
   const UnderSignUpTextFieldsSection({super.key});

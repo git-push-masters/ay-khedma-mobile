@@ -1,9 +1,9 @@
 import 'package:ay_khedma/core/utils/colors.dart';
 import 'package:ay_khedma/core/utils/styles.dart';
-import 'package:ay_khedma/features/user_authentication/presentation/views/widgets/components/forgot_pass_and_remember_me.dart';
+import 'package:ay_khedma/features/user_authentication/presentation/views/widgets/components/sign_in_components/forgot_pass_and_remember_me.dart';
 import 'package:flutter/material.dart';
-import '../../../../../../core/helper/widgets/custom_button.dart';
-import '../components/text_feild_comp.dart';
+import '../../../../../../../core/helper/widgets/custom_button.dart';
+import '../../components/general_components/text_feild_comp.dart';
 
 class SignInUserSection extends StatelessWidget {
   const SignInUserSection({super.key});

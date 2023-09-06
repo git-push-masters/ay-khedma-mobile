@@ -3,9 +3,9 @@ import 'package:ay_khedma/core/utils/assets.dart';
 import 'package:ay_khedma/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import '../../../../../../core/utils/colors.dart';
-import '../components/google_and_apple_container.dart';
-import '../components/sign_in_with_comp.dart';
+import '../../../../../../../core/utils/colors.dart';
+import '../../components/sign_in_components/google_and_apple_container.dart';
+import '../../components/sign_in_components/sign_in_with_comp.dart';
 
 class SignInWithOthersSection extends StatelessWidget {
   const SignInWithOthersSection({super.key});

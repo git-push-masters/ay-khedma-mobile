@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import '../sections/header_signin_view_section.dart';
-import '../sections/sign_up_user_section.dart';
-import '../sections/under_signup_textfields_section.dart';
+import '../../sections/general_sections/header_sign_view_section.dart';
+import '../../sections/sign_up_sections/sign_up_user_section.dart';
+import '../../sections/sign_up_sections/under_signup_textfields_section.dart';
 
 class SignUpViewBody extends StatelessWidget {
   const SignUpViewBody({super.key});

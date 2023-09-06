@@ -1,6 +1,5 @@
 import 'package:ay_khedma/core/utils/colors.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 
 class GoogleAndAppleComp extends StatelessWidget {
   const GoogleAndAppleComp({super.key, required this.txt, required this.image});

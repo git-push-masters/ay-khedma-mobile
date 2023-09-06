@@ -2,6 +2,7 @@ import 'package:ay_khedma/core/helper/widgets/custom_text_field.dart';
 import 'package:ay_khedma/core/utils/colors.dart';
 import 'package:ay_khedma/core/utils/styles.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import '../../../../../../core/helper/widgets/custom_button.dart';
 import '../components/forgot_pass_and_remember_me.dart';
 
@@ -34,7 +35,7 @@ class SignInUserSection extends StatelessWidget {
         const SizedBox(
           height: 10,
         ),
-        const CustomTextFeild(hinttext: "..........."),
+         const CustomTextFeild(hinttext: "..........."),
         const SizedBox(
           height: 10,
         ),

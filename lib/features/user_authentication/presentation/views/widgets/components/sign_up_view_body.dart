@@ -2,6 +2,7 @@
 
 import 'package:ay_khedma/features/user_authentication/presentation/views/widgets/components/sign_in_view_body.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import '../../../../../../core/helper/widgets/custom_text_field.dart';
 import '../../../../../../core/utils/styles.dart';
@@ -42,30 +43,65 @@ class SignUpUserSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children:  [
-        const Align(
-            alignment: Alignment.centerRight,
-            child: Text(
-              "الايميل",
-              style: Styles.textStyle14,
-            )),
-        const SizedBox(
-          height: 10,
+        const TextFeildSection(
+          txt: "اسم المستخدم",
+          hintTxt:"ادخل اسمك...",
         ),
-        const CustomTextFeild(hinttext: "أدخل الايميل الخاص بك"),
         const SizedBox(
-          height: 22,
+          height: 20,
         ),
-        const Align(
-            alignment: Alignment.centerRight,
-            child: Text(
-              "كلمه المرور",
-              style: Styles.textStyle14,
-            )),
+        const TextFeildSection(
+          txt:"رقم الهاتف",
+          hintTxt:  "ادخل رقم الهاتف الخاص بك",
+        ),
         const SizedBox(
-          height: 10,
+          height: 20,
         ),
-        const CustomTextFeild(hinttext: "..........."),
+        const TextFeildSection(
+          txt:"الايميل",
+          hintTxt:  "ادخل الايميل الخاص بك",
+        ),
+        const SizedBox(
+          height: 20,
+        ),
+        const TextFeildSection(
+          txt:"ادخل صورة البطاقة الشخصية",
+          hintTxt:  "اختر ملف...",
+        ),
+        const SizedBox(
+          height: 20,
+        ),
+        const TextFeildSection(
+          txt:"كلمة المرور",
+          hintTxt:  "...........",
+        ),
       ]
     );
+  }
+}
+class TextFeildSection extends StatelessWidget {
+  const TextFeildSection({super.key, required this.txt, required this.hintTxt,this.width, this.textFeild});
+ 
+ final String txt;
+ final String hintTxt;
+ final double? width;
+ final CustomTextFeild? textFeild;
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+         Align(
+                alignment: Alignment.centerRight,
+                child: Text(
+                  txt,
+                  style: Styles.textStyle14,
+                )),
+                const SizedBox(
+          height: 10,
+        ),
+         CustomTextFeild(hinttext:hintTxt, width: width ?? Get.width,),
+      ],
+    );
+        
   }
 }

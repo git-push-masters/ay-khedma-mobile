@@ -21,7 +21,6 @@ class HomeViewHeaderSection extends StatelessWidget {
             height: 180,
             width: Get.width,
             decoration: BoxDecoration(
-              color: Colors.red,
               borderRadius: BorderRadius.circular(16),
               image: const DecorationImage(image: AssetImage(AssetsData.poster), fit: BoxFit.fill)
             ),

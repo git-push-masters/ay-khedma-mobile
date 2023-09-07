@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'core/utils/app_router.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
+import 'features/home/presentation/views/home_view.dart';
+
 void main() {
   runApp(const AyKhedmaApp());
 }
@@ -11,7 +13,7 @@ class AyKhedmaApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp.router(
+    return MaterialApp(
       locale: const Locale("ar", "AE"),
       localizationsDelegates: const [
         GlobalMaterialLocalizations.delegate,
@@ -22,13 +24,14 @@ class AyKhedmaApp extends StatelessWidget {
         Locale('en'),
         Locale('ar'),
       ],
-      routerConfig: AppRouter.router,
+      // routerConfig: AppRouter.router,
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         fontFamily: 'Kohinoor Arabic',
         textTheme:
             Theme.of(context).textTheme.apply(fontFamily: 'Kohinoor Arabic'),
       ),
+      home: const HomeView(),
     );
   }
 }

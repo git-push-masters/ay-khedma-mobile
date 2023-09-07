@@ -17,6 +17,7 @@ class FindLocationViewHeaderSection extends StatelessWidget {
         Align(
             alignment: Alignment.centerRight,
             child: IconButton(
+              padding:const EdgeInsets.only(top: 32, right: 32,),
                 onPressed: () {
                   GoRouter.of(context).pop();
                 },

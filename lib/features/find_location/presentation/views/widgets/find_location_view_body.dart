@@ -3,6 +3,8 @@ import 'package:ay_khedma/features/find_location/presentation/views/widgets/seci
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import 'secions/find_location_view_header_section.dart';
+
 class FindLocationViewBody extends StatelessWidget {
   const FindLocationViewBody({super.key});
 
@@ -11,7 +13,7 @@ class FindLocationViewBody extends StatelessWidget {
     return SafeArea(
         child: Column(
       children:  [
-        const FindLocationViewCenterSection(),
+        const FindLocationViewHeaderSection(),
         SizedBox(height: Get.height*.15,),
         const FindLocationViewCenterSection(),
       ],

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'widgets/components/choose_avatar_components/choose_avatar_view_body.dart';
+import 'widgets/components/choose_avatar_components/secion/choose_avatar_view_body.dart';
 
 class ChooseAvatarView extends StatelessWidget {
   const ChooseAvatarView({super.key});

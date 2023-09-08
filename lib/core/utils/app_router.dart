@@ -1,6 +1,5 @@
 import 'package:ay_khedma/features/chats_and_calls/presentation/views/chat_view.dart';
 import 'package:ay_khedma/features/chats_and_calls/presentation/views/chats_and_calls_view.dart';
-import 'package:ay_khedma/features/find_location/presentation/views/find_location_view.dart';
 import 'package:ay_khedma/features/forget_password/presentation/views/forget_password_view.dart';
 import 'package:ay_khedma/features/map/presentation/views/map_view.dart';
 import 'package:ay_khedma/features/profile/presentation/views/profile_view.dart';
@@ -13,6 +12,7 @@ import '../../features/home/presentation/views/home_view.dart';
 import '../../features/splash/presentation/views/splash_view.dart';
 import '../../features/user_authentication/presentation/views/bio_and_service_type_view.dart';
 import '../../features/user_authentication/presentation/views/choose_avatar_view.dart';
+import '../../features/user_authentication/presentation/views/find_location_view.dart';
 
 abstract class AppRouter
 {

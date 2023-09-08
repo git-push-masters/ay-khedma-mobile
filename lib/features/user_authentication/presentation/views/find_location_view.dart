@@ -1,5 +1,5 @@
+import 'package:ay_khedma/features/user_authentication/presentation/views/widgets/components/find_location_components/find_location_view_body.dart';
 import 'package:flutter/material.dart';
-import 'widgets/find_location_view_body.dart';
 
 class FindLocationView extends StatelessWidget {
   const FindLocationView({super.key});
@@ -7,7 +7,7 @@ class FindLocationView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      body:FindLocationViewBody() ,
+      body: FindLocationViewBody(),
     );
   }
 }

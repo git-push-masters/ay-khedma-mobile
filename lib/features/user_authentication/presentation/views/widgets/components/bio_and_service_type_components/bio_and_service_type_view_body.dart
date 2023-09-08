@@ -13,7 +13,9 @@ class BioAndServiceTypeViewBody extends StatelessWidget {
       child: SingleChildScrollView(
         child: Column(
           children: [
-            const SizedBox(height: 28,),
+            const SizedBox(
+              height: 28,
+            ),
             const BioViewHeaderSection(),
             SizedBox(
               height: Get.height * .3,
@@ -29,7 +31,3 @@ class BioAndServiceTypeViewBody extends StatelessWidget {
     );
   }
 }
-
-
-
-

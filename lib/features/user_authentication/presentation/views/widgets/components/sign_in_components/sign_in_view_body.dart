@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 import '../../sections/general_sections/header_sign_view_section.dart';
@@ -35,4 +34,3 @@ class SignInViewBody extends StatelessWidget {
     );
   }
 }
-

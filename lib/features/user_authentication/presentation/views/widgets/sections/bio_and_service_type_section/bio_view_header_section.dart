@@ -15,23 +15,33 @@ class BioViewHeaderSection extends StatelessWidget {
       clipBehavior: Clip.none,
       children: [
         Positioned(
-          left: 0,
-          top: 50,  
-          child: Image.asset(AssetsData.bioHeader2, height: Get.height * .35,)),
+            left: 0,
+            top: 50,
+            child: Image.asset(
+              AssetsData.bioHeader2,
+              height: Get.height * .35,
+            )),
         Positioned(
-          left: Get.width * .15 ,
-          top: -22,
-          child: Image.asset(AssetsData.bioHeader1, height: Get.height * .35,)),
+            left: Get.width * .15,
+            top: -22,
+            child: Image.asset(
+              AssetsData.bioHeader1,
+              height: Get.height * .35,
+            )),
         Row(
           children: [
             IconButton(
-              padding:const EdgeInsets.only(right: 20),
-              onPressed: (){
-                GoRouter.of(context).pop();
-              }, icon: const Icon(FontAwesomeIcons.arrowRight, color: AppColors.kPrimaryColor,)),
+                padding: const EdgeInsets.only(right: 20),
+                onPressed: () {
+                  GoRouter.of(context).pop();
+                },
+                icon: const Icon(
+                  FontAwesomeIcons.arrowRight,
+                  color: AppColors.kPrimaryColor,
+                )),
           ],
-        )  
+        )
       ],
-    ) ;
+    );
   }
 }

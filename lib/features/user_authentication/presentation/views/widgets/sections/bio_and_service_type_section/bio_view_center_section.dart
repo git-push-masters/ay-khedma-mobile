@@ -37,13 +37,17 @@ class BioViewCenterSection extends StatelessWidget {
                   style: Styles.textStyle12
                       .copyWith(color: AppColors.kTextFieldHintColor),
                 ),
-                const SizedBox(width: 7,),
+                const SizedBox(
+                  width: 7,
+                ),
                 const Icon(FontAwesomeIcons.arrowDownShortWide,
                     color: AppColors.kTextFieldHintColor),
               ],
             ),
           ),
-          const SizedBox(height: 17,),
+          const SizedBox(
+            height: 17,
+          ),
           const TextFeildComp(
             hintTxt: 'تعريف عن الخدمة....',
             txt: 'اكتب تعريفا',

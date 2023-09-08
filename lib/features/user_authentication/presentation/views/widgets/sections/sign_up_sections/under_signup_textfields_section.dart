@@ -61,7 +61,8 @@ class UnderSignUpTextFieldsSection extends StatelessWidget {
           height: 15,
         ),
         CustomButton(
-          onPressed: ()=> GoRouter.of(context).push(AppRouter.kBioAndServiceTypeRoute),
+            onPressed: () =>
+                GoRouter.of(context).push(AppRouter.kBioAndServiceTypeRoute),
             backgroundColor: AppColors.kPrimaryColor,
             text: "التسجيل",
             textStyle: Styles.textStyle12.copyWith(color: Colors.white),

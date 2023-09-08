@@ -25,9 +25,9 @@ class OtpViewBottomSection extends StatelessWidget {
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 44),
           child: CustomButton(
-            onPressed: () {
-              GoRouter.of(context).push(AppRouter.kChooseAvatarRoute);
-            },
+              onPressed: () {
+                GoRouter.of(context).push(AppRouter.kChooseAvatarRoute);
+              },
               text: "موافق",
               textStyle: Styles.textStyle12.copyWith(color: Colors.white)),
         )

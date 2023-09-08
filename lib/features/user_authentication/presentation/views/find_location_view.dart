@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'widgets/find_location_view_body.dart';
+import 'widgets/components/find_location_view_body.dart';
 
 class FindLocationView extends StatelessWidget {
   const FindLocationView({super.key});

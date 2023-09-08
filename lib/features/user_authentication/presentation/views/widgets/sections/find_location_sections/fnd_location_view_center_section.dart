@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
-import '../../../../../../core/helper/widgets/custom_button.dart';
-import '../../../../../../core/utils/assets.dart';
-import '../../../../../../core/utils/colors.dart';
-import '../../../../../../core/utils/styles.dart';
+import '../../../../../../../core/helper/widgets/custom_button.dart';
+import '../../../../../../../core/utils/assets.dart';
+import '../../../../../../../core/utils/colors.dart';
+import '../../../../../../../core/utils/styles.dart';
 
 class FindLocationViewCenterSection extends StatelessWidget {
   const FindLocationViewCenterSection({super.key});

@@ -26,8 +26,10 @@ class ApiService {
     }
     var response = await _dio.post("$_baseUrl$endPoint",
         data: body, queryParameters: headers);
-    var data = jsonDecode(response.data);
-    return data;
+    if(response.statusCode == 201){
+      var data = jsonDecode(response.data);
+      return data;
+    }
   }
 
   // put request to update data

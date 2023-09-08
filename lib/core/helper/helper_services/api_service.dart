@@ -1,6 +1,7 @@
 import 'dart:convert';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
+
 class ApiService {
   final _baseUrl = "http://192.168.1.26:4000/api";
   final Dio _dio;
@@ -13,39 +14,43 @@ class ApiService {
     var data = jsonDecode(response.data);
     return data;
   }
-   
-   
+
   // post request to post new data
-  Future<dynamic> post({required endPoint, @required dynamic body, @required String? token}) async {
+  Future<dynamic> post(
+      {required endPoint,
+      @required dynamic body,
+      @required String? token}) async {
     Map<String, dynamic> headers = {};
-    if(token !=null)
-    {
-      headers.addAll({'Authorization' : 'Bearer $token'});
+    if (token != null) {
+      headers.addAll({'Authorization': 'Bearer $token'});
     }
-   var response = await _dio.post("$_baseUrl$endPoint", data: body, queryParameters: headers);
-   var data = jsonDecode(response.data);
-   return data;
+    var response = await _dio.post("$_baseUrl$endPoint",
+        data: body, queryParameters: headers);
+    var data = jsonDecode(response.data);
+    return data;
   }
 
   // put request to update data
 
-   Future<dynamic> put({required endPoint, @required dynamic body, @required String? token}) async {
+  Future<dynamic> put(
+      {required endPoint,
+      @required dynamic body,
+      @required String? token}) async {
     Map<String, dynamic> headers = {};
-    if(token !=null)
-    {
-      headers.addAll({'Authorization' : 'Bearer $token'});
+    if (token != null) {
+      headers.addAll({'Authorization': 'Bearer $token'});
     }
-   var response = await _dio.put("$_baseUrl$endPoint", data: body, queryParameters: headers);
-   var data = jsonDecode(response.data);
-   return data;
-  }
-  
-  Future<dynamic> delete({required endPoint, @required dynamic body}) async {
-   var response = await _dio.delete("$_baseUrl$endPoint", data: body);
-   var data = jsonDecode(response.data);
-   return data;
+    var response = await _dio.put("$_baseUrl$endPoint",
+        data: body, queryParameters: headers);
+    var data = jsonDecode(response.data);
+    return data;
   }
 
+  Future<dynamic> delete({required endPoint, @required dynamic body}) async {
+    var response = await _dio.delete("$_baseUrl$endPoint", data: body);
+    var data = jsonDecode(response.data);
+    return data;
+  }
 
   // Future<dynamic> put({
   //   required String url,

@@ -12,8 +12,8 @@ class ForgotPasswordAndRememberMe extends StatelessWidget {
       children: [
         Text(
           "هل نسيت كلمه المرور؟",
-          style:
-              Styles.textStyle12.copyWith(color: AppColors.kUnderHeadLinesColor),
+          style: Styles.textStyle12
+              .copyWith(color: AppColors.kUnderHeadLinesColor),
         ),
         Row(
           children: [

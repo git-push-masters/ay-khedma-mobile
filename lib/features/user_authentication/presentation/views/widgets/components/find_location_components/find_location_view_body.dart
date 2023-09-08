@@ -10,17 +10,13 @@ class FindLocationViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
         child: Column(
-      children:  [
+      children: [
         const FindLocationViewHeaderSection(),
-        SizedBox(height: Get.height*.15,),
+        SizedBox(
+          height: Get.height * .15,
+        ),
         const FindLocationViewCenterSection(),
       ],
     ));
   }
 }
-
-
-
-
-
-   

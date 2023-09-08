@@ -12,25 +12,45 @@ class HomeAppBar extends StatelessWidget {
     return Row(
       children: [
         Container(
-        height: 50,
-        width: 50,
-        decoration:  BoxDecoration(
-          color: AppColors.kOutLineBorder,
-          borderRadius:BorderRadius.circular(16),
+          height: 50,
+          width: 50,
+          decoration: BoxDecoration(
+            color: AppColors.kOutLineBorder,
+            borderRadius: BorderRadius.circular(16),
+          ),
         ),
+        const SizedBox(
+          width: 10,
         ),
-        const SizedBox(width: 10,),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text("أهلا بيك", style: Styles.textStyle12.copyWith(fontSize: 10, color: AppColors.kUnderHeadLinesColor)),
-            const SizedBox(height: 5,),
-            const Text("سيف أحمد نوح", style: Styles.textStyle12,),
+            Text("أهلا بيك",
+                style: Styles.textStyle12.copyWith(
+                    fontSize: 10, color: AppColors.kUnderHeadLinesColor)),
+            const SizedBox(
+              height: 5,
+            ),
+            const Text(
+              "سيف أحمد نوح",
+              style: Styles.textStyle12,
+            ),
           ],
         ),
         const Spacer(),
-        IconButton(onPressed: (){}, icon:const Icon(Icons.location_on, color: AppColors.kPrimaryColor,)),
-        IconButton(onPressed: (){}, icon:const Icon(FontAwesomeIcons.plus,  color: AppColors.kPrimaryColor,size: 20,))
+        IconButton(
+            onPressed: () {},
+            icon: const Icon(
+              Icons.location_on,
+              color: AppColors.kPrimaryColor,
+            )),
+        IconButton(
+            onPressed: () {},
+            icon: const Icon(
+              FontAwesomeIcons.plus,
+              color: AppColors.kPrimaryColor,
+              size: 20,
+            ))
       ],
     );
   }

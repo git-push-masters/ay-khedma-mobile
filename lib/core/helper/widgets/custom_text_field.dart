@@ -10,7 +10,8 @@ class CustomTextFeild extends StatelessWidget {
       this.onSaved,
       this.onCahnge,
       this.validator,
-       this.width, this.prefixIcon});
+      this.width,
+      this.prefixIcon});
 
   final String hinttext;
   final int maxLines;
@@ -28,7 +29,7 @@ class CustomTextFeild extends StatelessWidget {
         onChanged: onCahnge,
         onSaved: onSaved,
         decoration: InputDecoration(
-          prefixIcon: prefixIcon,
+            prefixIcon: prefixIcon,
             border: buildBorder(),
             enabledBorder: buildBorder(),
             focusedBorder: buildBorder(AppColors.kPrimaryColor.withOpacity(.5)),

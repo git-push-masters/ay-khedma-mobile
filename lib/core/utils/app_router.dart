@@ -14,15 +14,14 @@ import '../../features/user_authentication/presentation/views/bio_and_service_ty
 import '../../features/user_authentication/presentation/views/choose_avatar_view.dart';
 import '../../features/user_authentication/presentation/views/find_location_view.dart';
 
-abstract class AppRouter
-{
+abstract class AppRouter {
   static const kSignInRoute = '/SignInView';
   static const kSignUpRoute = '/SignUpView';
   static const kOtpCodeRoute = '/RegisterView';
   static const kForgetPasswordRoute = '/ForgetPasswordView';
-  static const kFindLocationRoute= '/FindLocationView';
-  static const kBioAndServiceTypeRoute= '/BioAndServiceTypeView';
-  static const kChooseAvatarRoute= '/ChooseAvatarView';
+  static const kFindLocationRoute = '/FindLocationView';
+  static const kBioAndServiceTypeRoute = '/BioAndServiceTypeView';
+  static const kChooseAvatarRoute = '/ChooseAvatarView';
   static const kHomeRoute = '/HomeViewe';
   static const kMapRoute = '/MapView';
   static const kProfileRoute = '/ProfileView';
@@ -30,63 +29,63 @@ abstract class AppRouter
   static const kChatsAndCallsRoute = '/ChatsAndCallsView';
   static const kChatRoute = '/ChatView';
   static final router = GoRouter(
-  routes: [
-    GoRoute(
-      path: '/',
-      builder: (context, state) => const SplashView(),
-    ),
-    GoRoute(
-      path: kSignInRoute,
-      builder: (context, state) => const SignInView(),
-    ),
-    GoRoute(
-      path: kSignUpRoute,
-      builder: (context, state) => const SignUpView(),
-    ),
-    GoRoute(
-      path: kOtpCodeRoute,
-      builder: (context, state) => const OtpCodeView(),
-    ),
-    GoRoute(
-      path: kForgetPasswordRoute,
-      builder: (context, state) => const ForgetPasswordView(),
-    ),
-    GoRoute(
-      path: kFindLocationRoute,
-      builder: (context, state) => const FindLocationView(),
-    ),
-    GoRoute(
-      path: kBioAndServiceTypeRoute,
-      builder: (context, state) => const BioAndServiceTypeView(),
-    ),
-    GoRoute(
-      path: kChooseAvatarRoute,
-      builder: (context, state) => const ChooseAvatarView(),
-    ),
-    GoRoute(
-      path: kHomeRoute,
-      builder: (context, state) => const HomeView(),
-    ),
-    GoRoute(
-      path: kMapRoute,
-      builder: (context, state) => const MyMapView(),
-    ),
-    GoRoute(
-      path: kProfileRoute,
-      builder: (context, state) => const ProfileView(),
-    ),
-    GoRoute(
-      path: kSettingsRoute,
-      builder: (context, state) => const SettingsView(),
-    ),
-    GoRoute(
-      path: kChatsAndCallsRoute,
-      builder: (context, state) => const ChatsAndCallsView(),
-    ),
-    GoRoute(
-      path: kChatRoute,
-      builder: (context, state) => const ChatView(),
-    ),
-  ],
-);
+    routes: [
+      GoRoute(
+        path: '/',
+        builder: (context, state) => const SplashView(),
+      ),
+      GoRoute(
+        path: kSignInRoute,
+        builder: (context, state) => const SignInView(),
+      ),
+      GoRoute(
+        path: kSignUpRoute,
+        builder: (context, state) => const SignUpView(),
+      ),
+      GoRoute(
+        path: kOtpCodeRoute,
+        builder: (context, state) => const OtpCodeView(),
+      ),
+      GoRoute(
+        path: kForgetPasswordRoute,
+        builder: (context, state) => const ForgetPasswordView(),
+      ),
+      GoRoute(
+        path: kFindLocationRoute,
+        builder: (context, state) => const FindLocationView(),
+      ),
+      GoRoute(
+        path: kBioAndServiceTypeRoute,
+        builder: (context, state) => const BioAndServiceTypeView(),
+      ),
+      GoRoute(
+        path: kChooseAvatarRoute,
+        builder: (context, state) => const ChooseAvatarView(),
+      ),
+      GoRoute(
+        path: kHomeRoute,
+        builder: (context, state) => const HomeView(),
+      ),
+      GoRoute(
+        path: kMapRoute,
+        builder: (context, state) => const MyMapView(),
+      ),
+      GoRoute(
+        path: kProfileRoute,
+        builder: (context, state) => const ProfileView(),
+      ),
+      GoRoute(
+        path: kSettingsRoute,
+        builder: (context, state) => const SettingsView(),
+      ),
+      GoRoute(
+        path: kChatsAndCallsRoute,
+        builder: (context, state) => const ChatsAndCallsView(),
+      ),
+      GoRoute(
+        path: kChatRoute,
+        builder: (context, state) => const ChatView(),
+      ),
+    ],
+  );
 }

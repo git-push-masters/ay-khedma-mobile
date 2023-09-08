@@ -12,15 +12,12 @@ class SlidingLogoAnimated extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AnimatedBuilder(
-      animation: slidingAnimation,
-      builder: (context, _) {
-        return SlideTransition(
-          position: slidingAnimation,
-          child: Center(
-            child: Image.asset(AssetsData.logo)
-          ),
-        );
-      }
-    );
+        animation: slidingAnimation,
+        builder: (context, _) {
+          return SlideTransition(
+            position: slidingAnimation,
+            child: Center(child: Image.asset(AssetsData.logo)),
+          );
+        });
   }
 }

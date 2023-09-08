@@ -5,7 +5,7 @@ import 'package:get/get.dart';
 class CustomButton extends StatelessWidget {
   const CustomButton(
       {super.key,
-       this.backgroundColor,
+      this.backgroundColor,
       this.borderRadius,
       required this.text,
       required this.textStyle,
@@ -21,7 +21,7 @@ class CustomButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: height?? 50,
+      height: height ?? 50,
       width: Get.width,
       child: TextButton(
         style: TextButton.styleFrom(

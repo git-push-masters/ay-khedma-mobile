@@ -1,4 +1,3 @@
-abstract class UserAuthRepo
-{
-  
-}
+import 'package:dartz/dartz.dart';
+
+abstract class UserAuthRepo {}

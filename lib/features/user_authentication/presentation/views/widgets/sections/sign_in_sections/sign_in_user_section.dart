@@ -13,15 +13,15 @@ class SignInUserSection extends StatelessWidget {
     return Column(
       children: [
         const TextFeildComp(
-          txt:"الايميل" ,
-          hintTxt:"ادخل الإيميل الخاص بك" ,
+          txt: "الايميل",
+          hintTxt: "ادخل الإيميل الخاص بك",
         ),
         const SizedBox(
           height: 22,
         ),
         const TextFeildComp(
-          txt:"كلمة المرور" ,
-          hintTxt:"..........." ,
+          txt: "كلمة المرور",
+          hintTxt: "...........",
         ),
         const SizedBox(
           height: 10,
@@ -40,5 +40,3 @@ class SignInUserSection extends StatelessWidget {
     );
   }
 }
-
-

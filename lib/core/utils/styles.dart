@@ -17,8 +17,5 @@ abstract class Styles {
   );
 
   static const textStyle12 = TextStyle(
-    fontSize: 12,
-    fontWeight: FontWeight.normal,
-    color: Colors.black
-  );
+      fontSize: 12, fontWeight: FontWeight.normal, color: Colors.black);
 }

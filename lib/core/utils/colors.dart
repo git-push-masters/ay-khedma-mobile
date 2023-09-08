@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
-abstract class AppColors
-{
+abstract class AppColors {
   static const kPrimaryColor = Color(0xff4EBA64);
   static const kSecondPrimaryColor = Color(0xffD2E171);
   static const kListViewItemColor = Color(0xff0B2E1C);

@@ -35,10 +35,11 @@ class BioViewBottomSection extends StatelessWidget {
             height: Get.height * .06,
           ),
           CustomButton(
-            onPressed: ()=> GoRouter.of(context).push(AppRouter.kOtpCodeRoute),
+              onPressed: () =>
+                  GoRouter.of(context).push(AppRouter.kOtpCodeRoute),
               text: "موافق",
               textStyle: Styles.textStyle12.copyWith(color: Colors.white)),
-              SizedBox(
+          SizedBox(
             height: Get.height * .06,
           ),
         ],

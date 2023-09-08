@@ -18,7 +18,10 @@ class HomeSearchWidget extends StatelessWidget {
             borderRadius: BorderRadius.circular(16),
             color: AppColors.kPrimaryColor,
           ),
-          child: const Icon(Icons.format_list_bulleted, color: Colors.white,),
+          child: const Icon(
+            Icons.format_list_bulleted,
+            color: Colors.white,
+          ),
         ),
       ],
     );

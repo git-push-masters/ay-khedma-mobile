@@ -12,16 +12,21 @@ class HomeViewBody extends StatelessWidget {
     return SafeArea(
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
-        children:const [
-          SizedBox(height: 30,),
+        children: const [
+          SizedBox(
+            height: 30,
+          ),
           HomeViewHeaderSection(),
-          SizedBox(height: 26,),
+          SizedBox(
+            height: 26,
+          ),
           HomeViewSrvicesSection(),
-          
         ],
-      ),);
+      ),
+    );
   }
 }
+
 class HomeViewSrvicesSection extends StatelessWidget {
   const HomeViewSrvicesSection({super.key});
 
@@ -29,27 +34,31 @@ class HomeViewSrvicesSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-           Row(
-             children: [
-              Container(
-                height: 53,
-                width:8,
-                decoration:const BoxDecoration(
+        Row(
+          children: [
+            Container(
+              height: 53,
+              width: 8,
+              decoration: const BoxDecoration(
                   color: AppColors.kSecondPrimaryColor,
-                  borderRadius: BorderRadius.only(topLeft: Radius.circular(8), bottomLeft: Radius.circular(8))
-                ),
-              ),
-              const SizedBox(width: 10,),
-               Text("الخدمات", style: Styles.textStyle16.copyWith(fontWeight: FontWeight.bold),),
-             ],
-           ),
-
-           const ServiceListView(),
+                  borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(8),
+                      bottomLeft: Radius.circular(8))),
+            ),
+            const SizedBox(
+              width: 10,
+            ),
+            Text(
+              "الخدمات",
+              style: Styles.textStyle16.copyWith(fontWeight: FontWeight.bold),
+            ),
+          ],
+        ),
+        const ServiceListView(),
       ],
     );
   }
 }
-
 
 class ServiceListView extends StatelessWidget {
   const ServiceListView({super.key});
@@ -57,40 +66,32 @@ class ServiceListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20),
-      child: Container(
-        padding:const EdgeInsets.symmetric(vertical: 16),
-        clipBehavior: Clip.hardEdge,
-        height: 85,
-        width: Get.width,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(16),
-          color: AppColors.kSmall2ContainersColor
-        ),
-        child: SizedBox(
-          height: 50,
+        padding: const EdgeInsets.symmetric(horizontal: 20),
+        child: Container(
+          padding: const EdgeInsets.symmetric(vertical: 16),
+          clipBehavior: Clip.hardEdge,
+          height: 85,
           width: Get.width,
-          child: ListView.builder(
-            scrollDirection: Axis.horizontal,
-            itemCount: 10,
-            itemBuilder: ((context, index) 
-          {
-            return Container(
-              margin:const EdgeInsets.symmetric(horizontal: 6),
-              height: 50,
-              width: 50,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(16),
-                color: AppColors.kListViewItemColor
-              ),
-            );
-          })),
-        ),
-      )
-    );
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(16),
+              color: AppColors.kSmall2ContainersColor),
+          child: SizedBox(
+            height: 50,
+            width: Get.width,
+            child: ListView.builder(
+                scrollDirection: Axis.horizontal,
+                itemCount: 10,
+                itemBuilder: ((context, index) {
+                  return Container(
+                    margin: const EdgeInsets.symmetric(horizontal: 6),
+                    height: 50,
+                    width: 50,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(16),
+                        color: AppColors.kListViewItemColor),
+                  );
+                })),
+          ),
+        ));
   }
 }
-
-
-
-

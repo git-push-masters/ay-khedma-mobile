@@ -14,18 +14,21 @@ class HomeViewHeaderSection extends StatelessWidget {
       child: Column(
         children: [
           const HomeAppBar(),
-           const SizedBox(height: 21,),
+          const SizedBox(
+            height: 21,
+          ),
           const HomeSearchWidget(),
-          const SizedBox(height: 21,),
+          const SizedBox(
+            height: 21,
+          ),
           Container(
             height: 180,
             width: Get.width,
             decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(16),
-              image: const DecorationImage(image: AssetImage(AssetsData.poster), fit: BoxFit.fill)
-            ),
+                borderRadius: BorderRadius.circular(16),
+                image: const DecorationImage(
+                    image: AssetImage(AssetsData.poster), fit: BoxFit.fill)),
           )
-
         ],
       ),
     );

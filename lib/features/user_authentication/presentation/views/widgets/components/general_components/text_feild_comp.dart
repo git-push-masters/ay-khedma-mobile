@@ -7,7 +7,8 @@ class TextFeildComp extends StatelessWidget {
     super.key,
     required this.txt,
     required this.hintTxt,
-    this.prefixIcon, this.maxLines,
+    this.prefixIcon,
+    this.maxLines,
   });
 
   final String txt;
@@ -30,7 +31,7 @@ class TextFeildComp extends StatelessWidget {
         CustomTextFeild(
           hinttext: hintTxt,
           prefixIcon: prefixIcon,
-          maxLines: maxLines?? 1,
+          maxLines: maxLines ?? 1,
         ),
       ],
     );

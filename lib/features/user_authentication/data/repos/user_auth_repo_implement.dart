@@ -1,10 +1,11 @@
 import 'dart:convert';
-
 import 'package:ay_khedma/core/helper/helper_services/api_failures.dart';
 import 'package:ay_khedma/core/helper/helper_services/api_service.dart';
 import 'package:ay_khedma/features/user_authentication/data/repos/user_auth_repo.dart';
 import 'package:dartz/dartz.dart';
 import 'package:dio/dio.dart';
+
+import '../models/user_model/user_model.dart';
 
 class UserAuthRepoImplement implements UserAuthRepo {
   final ApiService apiService;
@@ -15,8 +16,9 @@ class UserAuthRepoImplement implements UserAuthRepo {
   Future<Either<ApiFailures, dynamic>> registerUser(
       {required String name,
       required String phoneNumber,
-      required String password}) async {
-    Map data = {
+      required String password,
+      required String token}) async {
+    Map<String, dynamic> data = {
       "name": name,
       "phone": phoneNumber,
       "password": password,
@@ -24,8 +26,9 @@ class UserAuthRepoImplement implements UserAuthRepo {
 
     String body = json.encode(data);
     try {
-      var data = await apiService.post(endPoint: "/auth/register", body: body);
-      return right(data);
+      var data = await apiService.post(
+          endPoint: "/auth/register", body: body, token: token);
+      return right(UserModel.fromJson(data));
     } catch (e) {
       if (e is DioException) {
         return left(
@@ -34,5 +37,20 @@ class UserAuthRepoImplement implements UserAuthRepo {
       }
       return left(ServerFailure(e.toString()));
     }
+  }
+
+  @override
+  Future<Either<ApiFailures, dynamic>> vrefyUser(
+      {required String phoneNumber,
+      required String password,
+      required String smsCode,
+      required String token}) {
+    throw UnimplementedError();
+  }
+
+  @override
+  Future<Either<ApiFailures, dynamic>> loginUser(
+      {required String name, required String passwprd, required String token}) {
+    throw UnimplementedError();
   }
 }

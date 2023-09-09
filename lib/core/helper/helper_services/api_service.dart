@@ -20,12 +20,15 @@ class ApiService {
       {required endPoint,
       @required dynamic body,
       @required String? token}) async {
-    Map<String, dynamic> headers = {};
+    Map<String, String> headers = {};
     if (token != null) {
-      headers.addAll({'Authorization': 'Bearer $token'});
+      headers.addAll({
+        'Authorization': 'Bearer $token',
+        'Content-Type' : 'application/json',
+        });
     }
     var response = await _dio.post("$_baseUrl$endPoint",
-        data: body, queryParameters: headers);
+        data: body, options: Options(headers: headers));
     if(response.statusCode == 201){
       var data = jsonDecode(response.data);
       return data;
@@ -43,7 +46,7 @@ class ApiService {
       headers.addAll({'Authorization': 'Bearer $token'});
     }
     var response = await _dio.put("$_baseUrl$endPoint",
-        data: body, queryParameters: headers);
+        data: body, options: Options(headers: headers));
     var data = jsonDecode(response.data);
     return data;
   }

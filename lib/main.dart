@@ -13,7 +13,7 @@ class AyKhedmaApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       locale: const Locale("ar", "AE"),
       localizationsDelegates: const [
         GlobalMaterialLocalizations.delegate,
@@ -24,14 +24,14 @@ class AyKhedmaApp extends StatelessWidget {
         Locale('en'),
         Locale('ar'),
       ],
-      // routerConfig: AppRouter.router,
+      routerConfig: AppRouter.router,
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         fontFamily: 'Kohinoor Arabic',
         textTheme:
             Theme.of(context).textTheme.apply(fontFamily: 'Kohinoor Arabic'),
       ),
-      home: const HomeView(),
+      
     );
   }
 }

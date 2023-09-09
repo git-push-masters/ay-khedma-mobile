@@ -15,11 +15,12 @@ class SignUpUserSection extends StatelessWidget {
   Widget build(BuildContext context) {
     RegisterDataModel? registerData;
     return Column(children: [
-       TextFeildComp(
-         onSaved: (value) 
-         {
-           registerData!.userName = value;
-         } ,
+      TextFeildComp(
+        validator: (value) =>
+            value?.isEmpty ?? true ? "This field is required" : null,
+        onSaved: (value) {
+          registerData!.userName = value;
+        },
         txt: "اسم المستخدم",
         hintTxt: "ادخل اسمك...",
       ),
@@ -36,22 +37,24 @@ class SignUpUserSection extends StatelessWidget {
         height: 10,
       ),
       Row(
-        children:  [
+        children: [
           Expanded(
               child: CustomTextFeild(
-                onSaved: (value) 
-         {
-           registerData!.phoneNumber = value;
-         } ,
-                hinttext: "ادخل رقم الهاتف الخاص بك")),
+                  validator: (value) =>
+                      value?.isEmpty ?? true ? "This field is required" : null,
+                  onSaved: (value) {
+                    registerData!.phoneNumber = value;
+                  },
+                  hinttext: "ادخل رقم الهاتف الخاص بك")),
           const SizedBox(
             width: 7,
           ),
           CustomTextFeild(
-            onSaved: (value) 
-         {
-           registerData!.countryCode = value;
-         } ,
+            validator: (value) =>
+                      value?.isEmpty ?? true ? "" : null,
+            onSaved: (value) {
+              registerData!.countryCode = value;
+            },
             hinttext: "20+",
             width: 60,
           ),
@@ -60,11 +63,10 @@ class SignUpUserSection extends StatelessWidget {
       const SizedBox(
         height: 20,
       ),
-       TextFeildComp(
-        onSaved: (value) 
-         {
-           registerData!.email = value;
-         } ,
+      TextFeildComp(
+        onSaved: (value) {
+          registerData!.email = value;
+        },
         txt: "الايميل",
         hintTxt: "ادخل الايميل الخاص بك",
       ),
@@ -72,10 +74,9 @@ class SignUpUserSection extends StatelessWidget {
         height: 20,
       ),
       TextFeildComp(
-        onSaved: (value) 
-         {
-           registerData!.identity = value;
-         } ,
+        onSaved: (value) {
+          registerData!.identity = value;
+        },
         txt: "ادخل صورة البطاقة الشخصية",
         hintTxt: "اختر ملف...",
         prefixIcon: IconButton(
@@ -88,11 +89,12 @@ class SignUpUserSection extends StatelessWidget {
       const SizedBox(
         height: 20,
       ),
-       TextFeildComp(
-        onSaved: (value) 
-         {
-           registerData!.password = value;
-         } ,
+      TextFeildComp(
+        validator: (value) =>
+            value?.isEmpty ?? true ? "This field is required" : null,
+        onSaved: (value) {
+          registerData!.password = value;
+        },
         txt: "كلمة المرور",
         hintTxt: "...........",
       ),

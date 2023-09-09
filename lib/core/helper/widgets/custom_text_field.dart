@@ -26,7 +26,7 @@ class CustomTextFeild extends StatelessWidget {
     return SizedBox(
       width: width,
       child: TextFormField(
-        validator: validator ?? (value)=> value?.isEmpty ?? true ? "This field is required" : null,
+        validator: validator,
         controller: controller,
         onChanged: onCahnge,
         onSaved: onSaved,

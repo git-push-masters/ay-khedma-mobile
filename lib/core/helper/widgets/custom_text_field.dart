@@ -11,7 +11,7 @@ class CustomTextFeild extends StatelessWidget {
       this.onCahnge,
       this.validator,
       this.width,
-      this.prefixIcon});
+      this.prefixIcon, this.controller});
 
   final String hinttext;
   final int maxLines;
@@ -20,12 +20,14 @@ class CustomTextFeild extends StatelessWidget {
   final String? Function(String?)? validator;
   final double? width;
   final Widget? prefixIcon;
+  final TextEditingController? controller;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       width: width,
       child: TextFormField(
-        validator: validator,
+        validator: validator ?? (value)=> value?.isEmpty ?? true ? "This field is required" : null,
+        controller: controller,
         onChanged: onCahnge,
         onSaved: onSaved,
         decoration: InputDecoration(

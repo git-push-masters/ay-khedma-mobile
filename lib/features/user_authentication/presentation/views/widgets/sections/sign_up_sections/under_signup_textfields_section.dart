@@ -1,4 +1,3 @@
-import 'package:ay_khedma/core/utils/app_router.dart';
 import 'package:ay_khedma/features/user_authentication/presentation/views/widgets/components/general_components/custom_text_rich.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -8,8 +7,9 @@ import '../../../../../../../core/utils/colors.dart';
 import '../../../../../../../core/utils/styles.dart';
 
 class UnderSignUpTextFieldsSection extends StatelessWidget {
-  const UnderSignUpTextFieldsSection({super.key});
-
+  const UnderSignUpTextFieldsSection({super.key, this.onPressed});
+ 
+ final void Function()? onPressed;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -61,8 +61,8 @@ class UnderSignUpTextFieldsSection extends StatelessWidget {
           height: 15,
         ),
         CustomButton(
-            onPressed: () =>
-                GoRouter.of(context).push(AppRouter.kBioAndServiceTypeRoute),
+            onPressed: onPressed,
+                // GoRouter.of(context).push(AppRouter.kBioAndServiceTypeRoute),
             backgroundColor: AppColors.kPrimaryColor,
             text: "التسجيل",
             textStyle: Styles.textStyle12.copyWith(color: Colors.white),

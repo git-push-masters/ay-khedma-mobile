@@ -8,13 +8,14 @@ class TextFeildComp extends StatelessWidget {
     required this.txt,
     required this.hintTxt,
     this.prefixIcon,
-    this.maxLines,
+    this.maxLines, this.onSaved,
   });
 
   final String txt;
   final String hintTxt;
   final Widget? prefixIcon;
   final int? maxLines;
+  final void Function(String?)? onSaved;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -29,6 +30,7 @@ class TextFeildComp extends StatelessWidget {
           height: 10,
         ),
         CustomTextFeild(
+          onSaved: onSaved,
           hinttext: hintTxt,
           prefixIcon: prefixIcon,
           maxLines: maxLines ?? 1,

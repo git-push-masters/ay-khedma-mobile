@@ -3,15 +3,23 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import '../../../../../../../core/helper/widgets/custom_text_field.dart';
 import '../../../../../../../core/utils/colors.dart';
 import '../../../../../../../core/utils/styles.dart';
+import '../../../../../data/models/rigester_data_model.dart';
 import '../../components/general_components/text_feild_comp.dart';
 
 class SignUpUserSection extends StatelessWidget {
-  const SignUpUserSection({super.key});
+  const SignUpUserSection({
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
+    RegisterDataModel? registerData;
     return Column(children: [
-      const TextFeildComp(
+       TextFeildComp(
+         onSaved: (value) 
+         {
+           registerData!.userName = value;
+         } ,
         txt: "اسم المستخدم",
         hintTxt: "ادخل اسمك...",
       ),
@@ -28,13 +36,22 @@ class SignUpUserSection extends StatelessWidget {
         height: 10,
       ),
       Row(
-        children: const [
+        children:  [
           Expanded(
-              child: CustomTextFeild(hinttext: "ادخل رقم الهاتف الخاص بك")),
-          SizedBox(
+              child: CustomTextFeild(
+                onSaved: (value) 
+         {
+           registerData!.phoneNumber = value;
+         } ,
+                hinttext: "ادخل رقم الهاتف الخاص بك")),
+          const SizedBox(
             width: 7,
           ),
           CustomTextFeild(
+            onSaved: (value) 
+         {
+           registerData!.countryCode = value;
+         } ,
             hinttext: "20+",
             width: 60,
           ),
@@ -43,7 +60,11 @@ class SignUpUserSection extends StatelessWidget {
       const SizedBox(
         height: 20,
       ),
-      const TextFeildComp(
+       TextFeildComp(
+        onSaved: (value) 
+         {
+           registerData!.email = value;
+         } ,
         txt: "الايميل",
         hintTxt: "ادخل الايميل الخاص بك",
       ),
@@ -51,6 +72,10 @@ class SignUpUserSection extends StatelessWidget {
         height: 20,
       ),
       TextFeildComp(
+        onSaved: (value) 
+         {
+           registerData!.identity = value;
+         } ,
         txt: "ادخل صورة البطاقة الشخصية",
         hintTxt: "اختر ملف...",
         prefixIcon: IconButton(
@@ -63,7 +88,11 @@ class SignUpUserSection extends StatelessWidget {
       const SizedBox(
         height: 20,
       ),
-      const TextFeildComp(
+       TextFeildComp(
+        onSaved: (value) 
+         {
+           registerData!.password = value;
+         } ,
         txt: "كلمة المرور",
         hintTxt: "...........",
       ),

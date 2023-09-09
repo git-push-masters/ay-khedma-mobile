@@ -46,7 +46,7 @@ class SignInWithOthersSection extends StatelessWidget {
             ),
             TextButton(
               onPressed: () {
-                GoRouter.of(context).push(AppRouter.kSignUpRoute);
+                GoRouter.of(context).pop();
               },
               child: Text("التسجيل",
                   style: Styles.textStyle12.copyWith(

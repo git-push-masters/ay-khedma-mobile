@@ -1,3 +1,4 @@
+import 'package:ay_khedma/features/user_authentication/data/models/user_model/user_model.dart';
 import 'package:dio/dio.dart';
 
 abstract class ApiFailures {
@@ -5,6 +6,21 @@ abstract class ApiFailures {
 
   ApiFailures(this.errorMessage);
 }
+
+
+class MyServerFailure extends ApiFailures
+{
+  MyServerFailure(super.errorMessage);
+   
+   factory MyServerFailure.fromServerError(UserModel errorMsg)
+   {
+     return MyServerFailure(errorMsg.msgs.toString());
+   }
+}
+
+
+
+
 
 class ServerFailure extends ApiFailures {
   ServerFailure(super.errorMessage);

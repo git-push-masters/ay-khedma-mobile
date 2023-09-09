@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:ay_khedma/features/user_authentication/data/repos/user_auth_repo.dart';
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
@@ -15,12 +17,13 @@ class RegisterCubit extends Cubit<RegisterState> {
     required String password,
   }) async{
     emit(RegisterLoading());
-   var result = await userAuthRepo.registerUser(
+    try {
+        await userAuthRepo.registerUser(
         name: name, phoneNumber: phoneNumber, password: password,);
-      result.fold((failure) {
-        emit(RegisterFailure(failure.errorMessage));
-      }, (success){
-        emit(RegisterSuccess());
-      });
+      emit(RegisterSuccess());
+      
+    } catch (e) {
+      emit(RegisterFailure(e.toString()));
+    }
   }
 }

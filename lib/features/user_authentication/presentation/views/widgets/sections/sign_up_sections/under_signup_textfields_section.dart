@@ -1,3 +1,4 @@
+import 'package:ay_khedma/core/utils/app_router.dart';
 import 'package:ay_khedma/features/user_authentication/presentation/views/widgets/components/general_components/custom_text_rich.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -80,7 +81,7 @@ class UnderSignUpTextFieldsSection extends StatelessWidget {
             ),
             TextButton(
               onPressed: () {
-                GoRouter.of(context).pop();
+                GoRouter.of(context).push(AppRouter.kSignInRoute);
               },
               child: Text("تسجيل الدخول",
                   style: Styles.textStyle12.copyWith(

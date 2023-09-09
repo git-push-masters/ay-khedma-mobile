@@ -13,11 +13,10 @@ class RegisterCubit extends Cubit<RegisterState> {
     required String name,
     required String phoneNumber,
     required String password,
-    required String token,
   }) async{
     emit(RegisterLoading());
    var result = await userAuthRepo.registerUser(
-        name: name, phoneNumber: phoneNumber, password: password, token: token);
+        name: name, phoneNumber: phoneNumber, password: password,);
       result.fold((failure) {
         emit(RegisterFailure(failure.errorMessage));
       }, (success){

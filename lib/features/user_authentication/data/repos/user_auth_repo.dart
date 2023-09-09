@@ -6,7 +6,7 @@ abstract class UserAuthRepo {
       {required String name,
       required String phoneNumber,
       required String password,
-      required String token});
+     });
 
   Future<Either<ApiFailures, dynamic>> loginUser(
       {required String name, required String passwprd, required String token});

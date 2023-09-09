@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../sections/general_sections/header_sign_view_section.dart';
 import '../../sections/sign_up_sections/form_register_user_section.dart';
+import '../../sections/sign_up_sections/sign_up_user_section.dart';
 
 class SignUpViewBody extends StatefulWidget {
   const SignUpViewBody({super.key});
@@ -28,7 +29,7 @@ class _SignUpViewBodyState extends State<SignUpViewBody> {
                SizedBox(
                 height: 45,
               ),
-              FormRegisterUser(),
+              SignUpUserSection(),
             ],
           ),
         ),

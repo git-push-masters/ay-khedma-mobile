@@ -17,17 +17,17 @@ class UserAuthRepoImplement implements UserAuthRepo {
       {required String name,
       required String phoneNumber,
       required String password,
-      required String token}) async {
-    Map<String, dynamic> data = {
+      }) async {
+    Map<String, dynamic> body= {
       "name": name,
       "phone": phoneNumber,
       "password": password,
     };
 
-    String body = json.encode(data);
+    // String body = json.encode(data);
     try {
       var data = await apiService.post(
-          endPoint: "/auth/register", body: body, token: token);
+          endPoint: "/auth/register", body: body);
       return right(UserModel.fromJson(data));
     } catch (e) {
       if (e is DioException) {

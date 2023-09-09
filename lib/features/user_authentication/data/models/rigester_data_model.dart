@@ -1,12 +1,12 @@
 class RegisterDataModel {
-  String? userName, phoneNumber, countryCode, email, identity, password;
+  String userName, phoneNumber, password;
+  String? countryCode, email, identity;
 
-  
   RegisterDataModel(
-      {this.userName,
+      {required this.password,
+      required this.phoneNumber,
+      required this.userName,
       this.countryCode,
       this.email,
-      this.identity,
-      this.password,
-      this.phoneNumber});
+      this.identity});
 }

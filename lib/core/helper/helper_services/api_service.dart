@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'dart:developer';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
-
+import 'package:http/http.dart' as http;
 class ApiService {
   final _baseUrl = "http://192.168.1.26:4000/api";
   final Dio _dio;
@@ -26,12 +26,13 @@ class ApiService {
       headers.addAll({
         'Authorization': 'Bearer $token',
         'Content-Type' : 'application/json',
+        'Accept': 'application/json',
         });
     }
-    var response = await _dio.post("$_baseUrl$endPoint",
-        data: body, options: Options(headers: headers));
+    var response = await http.post(Uri.parse("$_baseUrl$endPoint"),
+        body: body, headers: headers);
     if(response.statusCode == 201){
-      var data = jsonDecode(response.data);
+      var data = jsonDecode(response.body);
       log(data);
       return data;
     }

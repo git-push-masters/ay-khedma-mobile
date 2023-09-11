@@ -14,17 +14,14 @@ class lastClients extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Padding(
-          padding:
-              const EdgeInsets.only(right: 19, bottom: 60, top: 14, ),
-          child: Container(
-            height: 50,
-            width: 50,
-            decoration: const BoxDecoration(
-              color: AppColors.kOutLineBorder,
-              borderRadius: BorderRadius.all(
-                Radius.circular(20),
-              ),
+        Container(
+          margin: EdgeInsets.only(left: 19),
+          height: 50,
+          width: 50,
+          decoration: const BoxDecoration(
+            color: AppColors.kOutLineBorder,
+            borderRadius: BorderRadius.all(
+              Radius.circular(20),
             ),
           ),
         ),

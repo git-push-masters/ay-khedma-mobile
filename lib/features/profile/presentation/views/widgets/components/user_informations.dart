@@ -2,6 +2,7 @@ import 'package:ay_khedma/features/profile/presentation/views/widgets/components
 import 'package:ay_khedma/features/profile/presentation/views/widgets/components/header_user_information.dart';
 import 'package:ay_khedma/features/profile/presentation/views/widgets/components/last_clients.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class UserInformations extends StatelessWidget {
   const UserInformations({super.key});
@@ -42,30 +43,21 @@ class UserInformations extends StatelessWidget {
         const HeaderUserInformation(
           titleinfo: "آخر العملاء",
         ),
-        SingleChildScrollView(
-          scrollDirection: Axis.horizontal,
-          child: Row(
-            children: const [
-              lastClients(),
-              lastClients(),
-              lastClients(),
-              lastClients(),
-              lastClients(),
-              lastClients(),
-              lastClients(),
-              lastClients(),
-              lastClients(),
-              lastClients(),
-              lastClients(),
-              lastClients(),
-              lastClients(),
-              lastClients(),
-              lastClients(),
-              lastClients(),
-              lastClients(),
-            ],
+        Padding(
+          padding: const EdgeInsets.only(right: 16),
+          child: SizedBox(
+            height: 50,
+            width: Get.width,
+            child: ListView.builder(
+              scrollDirection: Axis.horizontal,
+              itemCount: 5,
+              itemBuilder: (context, index)
+            {
+              return lastClients();
+            }),
           ),
         ),
+        SizedBox(height: 20,)
       ],
     );
   }

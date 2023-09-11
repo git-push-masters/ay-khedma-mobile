@@ -9,7 +9,7 @@ class LoginCubit extends Cubit<LoginState> {
   LoginCubit(this.userAuthRepo) : super(LoginInitial());
  
   final UserAuthRepo userAuthRepo;
-  Future<void> rigesterUser({
+  Future<void> loginUser({
     required String phoneNumber,
     required String password,
   }) async{

@@ -3,6 +3,7 @@ import 'package:ay_khedma/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:get/get.dart';
+
 class UserDetails extends StatelessWidget {
   const UserDetails({super.key});
 
@@ -11,11 +12,10 @@ class UserDetails extends StatelessWidget {
     return Column(
       children: [
         Row(
-         
           children: [
-             SizedBox(
+            SizedBox(
               height: 7,
-              width:Get.width *.35,
+              width: Get.width * .35,
             ),
             Text(
               "مصطفي مجدي ",
@@ -40,22 +40,20 @@ class UserDetails extends StatelessWidget {
             textAlign: TextAlign.center,
           ),
         ),
-       RatingBar.builder(
-        itemSize: 20,
-   initialRating: 3,
-   minRating: 1,
-   direction: Axis.horizontal,
-   allowHalfRating: true,
-   itemCount: 5,
-   itemPadding: const EdgeInsets.symmetric(horizontal: 4.0),
-   itemBuilder: (context, _) => const Icon(
-     Icons.star,
-     color: AppColors.kPrimaryColor,
-   ),
-   onRatingUpdate: (rating) {
-   
-   },
-)
+        RatingBar.builder(
+          itemSize: 20,
+          initialRating: 3,
+          minRating: 1,
+          direction: Axis.horizontal,
+          allowHalfRating: true,
+          itemCount: 5,
+          itemPadding: const EdgeInsets.symmetric(horizontal: 4.0),
+          itemBuilder: (context, _) => const Icon(
+            Icons.star,
+            color: AppColors.kPrimaryColor,
+          ),
+          onRatingUpdate: (rating) {},
+        )
       ],
     );
   }

@@ -32,7 +32,7 @@ class AyKhedmaApp extends StatelessWidget {
             create: (context) =>
                 LoginCubit(getIt.get<UserAuthRepoImplement>())),
       ],
-      child: MaterialApp.router(
+      child: MaterialApp(
         locale: const Locale("ar", "AE"),
         localizationsDelegates: const [
           GlobalMaterialLocalizations.delegate,
@@ -43,7 +43,8 @@ class AyKhedmaApp extends StatelessWidget {
           Locale('en'),
           Locale('ar'),
         ],
-        routerConfig: AppRouter.router,
+        //routerConfig: AppRouter.router,
+        home: ProfileView(),
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
           fontFamily: 'Kohinoor Arabic',

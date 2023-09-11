@@ -54,8 +54,7 @@ class UserAuthRepoImplement implements UserAuthRepo {
   @override
   Future<Either<ApiFailures, dynamic>> loginUser(
       {required String phoneNumber,
-      required String password,
-      required String token}) async{
+      required String password,}) async{
         Map<String, dynamic> body = {
       "phone": phoneNumber,
       "password": password,
@@ -63,7 +62,7 @@ class UserAuthRepoImplement implements UserAuthRepo {
 
     String dataEncode = json.encode(body);
     try {
-      var data = await apiService.post(endPoint: "/auth/login", body: dataEncode, token: token );
+      var data = await apiService.post(endPoint: "/auth/login", body: dataEncode);
       log(data);
       return right(UserModel.fromJson(data));
     } catch (e) {

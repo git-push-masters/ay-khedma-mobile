@@ -9,7 +9,7 @@ abstract class UserAuthRepo {
      });
 
   Future<Either<ApiFailures, dynamic>> loginUser(
-      {required String phoneNumber ,required String password, required String token});
+      {required String phoneNumber ,required String password});
 
   Future<Either<ApiFailures, dynamic>> vrefyUser(
       {required String phoneNumber,

@@ -1,6 +1,7 @@
 import 'package:ay_khedma/core/helper/helper_services/service_locator.dart';
 import 'package:ay_khedma/features/home/presentation/views/home_view.dart';
 import 'package:ay_khedma/features/user_authentication/data/repos/user_auth_repo_implement.dart';
+import 'package:ay_khedma/features/user_authentication/presentation/view_models/cubits/login_cubit/login_cubit.dart';
 import 'package:ay_khedma/features/user_authentication/presentation/view_models/cubits/register_cubit/register_cubit.dart';
 import 'package:flutter/material.dart';
 import 'core/helper/test_api.dart';
@@ -25,6 +26,9 @@ class AyKhedmaApp extends StatelessWidget {
             getIt.get<UserAuthRepoImplement>(),
           ),
         ),
+        BlocProvider(
+            create: (context) =>
+                LoginCubit(getIt.get<UserAuthRepoImplement>())),
       ],
       child: MaterialApp.router(
         locale: const Locale("ar", "AE"),
@@ -37,8 +41,8 @@ class AyKhedmaApp extends StatelessWidget {
           Locale('en'),
           Locale('ar'),
         ],
-        // routerConfig: AppRouter.router,
-        home:const HomeView(),
+        routerConfig: AppRouter.router,
+        // home:const HomeView(),
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
           fontFamily: 'Kohinoor Arabic',

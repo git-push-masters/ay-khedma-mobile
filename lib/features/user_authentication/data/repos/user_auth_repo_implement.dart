@@ -1,3 +1,4 @@
+import 'dart:convert';
 import 'dart:developer';
 
 import 'package:ay_khedma/core/helper/helper_services/api_failures.dart';
@@ -14,12 +15,12 @@ class UserAuthRepoImplement implements UserAuthRepo {
   UserAuthRepoImplement(this.apiService);
 
   @override
-  Future<Either<ApiFailures, dynamic>> registerUser(
-      {required String name,
-      required String phoneNumber,
-      required String password,
-      }) async {
-    Map<String, dynamic> body= {
+  Future<Either<ApiFailures, dynamic>> registerUser({
+    required String name,
+    required String phoneNumber,
+    required String password,
+  }) async {
+    Map<String, dynamic> body = {
       "name": name,
       "phone": phoneNumber,
       "password": password,
@@ -27,24 +28,17 @@ class UserAuthRepoImplement implements UserAuthRepo {
 
     // String body = json.encode(data);
     try {
-      var data = await apiService.post(
-          endPoint: "/auth/register", body: body);
-          log(data);
+      var data = await apiService.post(endPoint: "/auth/register", body: body);
+      log(data);
       return right(UserModel.fromJson(data));
-      
     } catch (e) {
-      if(e is DioException)
-      {
+      if (e is DioException) {
         return left(ServerFailure.fromDioError(e));
-      }
-      else if(e is UserModel)
-      {
+      } else if (e is UserModel) {
         return left(MyServerFailure.fromServerError(e));
-      }else
-      {
+      } else {
         return left(ServerFailure(e.toString()));
       }
-      
     }
   }
 
@@ -59,7 +53,26 @@ class UserAuthRepoImplement implements UserAuthRepo {
 
   @override
   Future<Either<ApiFailures, dynamic>> loginUser(
-      {required String name, required String passwprd, required String token}) {
-    throw UnimplementedError();
-  }
+      {required String phoneNumber,
+      required String password,}) async{
+        Map<String, dynamic> body = {
+      "phone": phoneNumber,
+      "password": password,
+    };
+
+    String dataEncode = json.encode(body);
+    try {
+      var data = await apiService.post(endPoint: "/auth/login", body: dataEncode);
+      log(data);
+      return right(UserModel.fromJson(data));
+    } catch (e) {
+      if (e is DioException) {
+        return left(ServerFailure.fromDioError(e));
+      } else if (e is UserModel) {
+        return left(MyServerFailure.fromServerError(e));
+      } else {
+        return left(ServerFailure(e.toString()));
+      }
+    }
+      }
 }

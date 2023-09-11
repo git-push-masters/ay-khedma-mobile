@@ -35,10 +35,10 @@ class ChooseAvatarViewBodyHeaderSection extends StatelessWidget {
               children:const [
                 CircleAvatar(
                   radius: 60,
-                  backgroundColor: AppColors.kOutLineBorder,
+                  backgroundColor: AppColors.kSmallContainersColor,
                   child: Icon(
                     Icons.person,
-                    size: 80,
+                    size: 60,
                     color: AppColors.kUnderHeadLinesColor,
                   ),
                 ),
@@ -46,12 +46,13 @@ class ChooseAvatarViewBodyHeaderSection extends StatelessWidget {
                    bottom: 4,
                     right: 10,
                     child: CircleAvatar(
-                      radius: 20,
+                      radius: 15,
                       backgroundColor: AppColors.kPrimaryColor,
                      
                       foregroundColor: AppColors.kSmallContainersColor,
                        child: Icon(
-                        FontAwesomeIcons.pen,
+                        
+                        FontAwesomeIcons.pen,size: 10,
                       ),
                     )),
               ],

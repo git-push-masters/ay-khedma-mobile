@@ -12,4 +12,7 @@ abstract class AppColors {
   static const kSmallContainersColor = Color(0xffEBEBEB);
   static const kSmall2ContainersColor = Color(0xffF8F8F8);
   static const kHeadersColor = Color(0xffFEF8EF);
+  
 }
+//background: #F8F8F8;  background: #D2E171;
+

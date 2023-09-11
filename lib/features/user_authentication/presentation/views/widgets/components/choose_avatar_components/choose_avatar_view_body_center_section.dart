@@ -15,14 +15,15 @@ class ChooseAvatarViewBodyCenterSection extends StatelessWidget {
         Positioned(
             bottom: 10,
             right: 0,
-            child: Image.asset(AssetsData.addAvatarCenter3)),
+            child: Image.asset(AssetsData.addAvatarCenter3,)),
         Align(
             alignment: Alignment.bottomLeft,
-            child: Image.asset(AssetsData.addAvatarCenter2)),
+            child: Image.asset(AssetsData.addAvatarCenter2,
+          )),
         Positioned(
           bottom: 0,
           top: Get.height*.05,
-          child: Image.asset(AssetsData.addAvatarCenter1)),
+          child: Image.asset(AssetsData.addAvatarCenter1,)),
 
       
        ],

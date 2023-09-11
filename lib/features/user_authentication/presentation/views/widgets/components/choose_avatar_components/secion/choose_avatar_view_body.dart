@@ -30,6 +30,7 @@ class ChooseAvatarViewBody extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 44,),
             child: CustomButton(
+              
                 onPressed: () {},
                 text: "موافق",
                 textStyle: Styles.textStyle12.copyWith(color: Colors.white)),

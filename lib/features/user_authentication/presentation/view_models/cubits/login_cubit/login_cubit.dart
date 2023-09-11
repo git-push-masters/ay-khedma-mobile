@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 
@@ -14,14 +16,15 @@ class LoginCubit extends Cubit<LoginState> {
     required String password,
   }) async{
     emit(LoginLoading());
-      var result =  await userAuthRepo.loginUser(
+      try {
+        var result =  await userAuthRepo.loginUser(
          phoneNumber: phoneNumber, password: password,);
-     result.fold(
-      (failure) {
-    emit(LoginFailure(failure.errorMessage));
-      },
-      (success) {
-    emit(LoginSuccess());
-      });
+         log(result.msgs.toString());
+         emit(LoginSuccess());
+      } catch (e) {
+        emit(LoginFailure(e.toString()));
+        log(e.toString());
+      }
+     
 }
 }

@@ -57,11 +57,13 @@ class _SignInUserSectionState extends State<SignInUserSection> {
               onPressed: () {
                 if (formKey.currentState!.validate()) {
                   formKey.currentState!.save();
+                  BlocProvider.of<LoginCubit>(context).loginUser(
+                      phoneNumber: phoneNumber!, password: password!);
+                }else
+                {
                   setState(() {
                     autoValidateMode = AutovalidateMode.always;
                   });
-                  BlocProvider.of<LoginCubit>(context).loginUser(
-                      phoneNumber: phoneNumber!, password: password!);
                 }
               },
               backgroundColor: AppColors.kPrimaryColor,

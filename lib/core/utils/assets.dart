@@ -16,4 +16,5 @@ abstract class AssetsData {
       "assets/images/find_location_view_header.png";
   static const otpCenter1 = "assets/images/otp_view_center1.png";
   static const otpCenter2 = "assets/images/otp_view_center2.png";
+  static const serviceIte = "assets/images/service_item.png";
 }

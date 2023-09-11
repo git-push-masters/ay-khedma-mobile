@@ -1,4 +1,5 @@
 import 'dart:convert';
+import 'dart:developer';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 
@@ -31,6 +32,7 @@ class ApiService {
         data: body, options: Options(headers: headers));
     if(response.statusCode == 201){
       var data = jsonDecode(response.data);
+      log(data);
       return data;
     }
   }

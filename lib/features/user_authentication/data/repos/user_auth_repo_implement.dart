@@ -4,6 +4,7 @@ import 'package:ay_khedma/core/helper/helper_services/api_failures.dart';
 import 'package:ay_khedma/core/helper/helper_services/api_service.dart';
 import 'package:ay_khedma/features/user_authentication/data/repos/user_auth_repo.dart';
 import 'package:dartz/dartz.dart';
+import 'package:dio/dio.dart';
 
 import '../models/user_model/user_model.dart';
 
@@ -13,7 +14,7 @@ class UserAuthRepoImplement implements UserAuthRepo {
   UserAuthRepoImplement(this.apiService);
 
   @override
-  Future<dynamic> registerUser(
+  Future<Either<ApiFailures, dynamic>> registerUser(
       {required String name,
       required String phoneNumber,
       required String password,
@@ -29,10 +30,20 @@ class UserAuthRepoImplement implements UserAuthRepo {
       var data = await apiService.post(
           endPoint: "/auth/register", body: body);
           log(data);
-      return UserModel.fromJson(data['body']);
+      return right(UserModel.fromJson(data));
       
     } catch (e) {
-      return MyServerFailure(e.toString());
+      if(e is DioException)
+      {
+        return left(ServerFailure.fromDioError(e));
+      }
+      else if(e is UserModel)
+      {
+        return left(MyServerFailure.fromServerError(e));
+      }else
+      {
+        return left(ServerFailure(e.toString()));
+      }
       
     }
   }

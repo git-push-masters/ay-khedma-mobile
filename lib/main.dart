@@ -3,12 +3,10 @@ import 'package:ay_khedma/features/home/presentation/views/home_view.dart';
 import 'package:ay_khedma/features/user_authentication/data/repos/user_auth_repo_implement.dart';
 import 'package:ay_khedma/features/user_authentication/presentation/view_models/cubits/register_cubit/register_cubit.dart';
 import 'package:flutter/material.dart';
+import 'core/helper/test_api.dart';
 import 'core/utils/app_router.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
-import 'features/profile/presentation/views/widgets/profile_view_body.dart';
-import 'features/user_authentication/presentation/views/choose_avatar_view.dart';
 
 void main() {
   setupServiceLocator();
@@ -28,7 +26,7 @@ class AyKhedmaApp extends StatelessWidget {
           ),
         ),
       ],
-      child: MaterialApp(
+      child: MaterialApp.router(
         locale: const Locale("ar", "AE"),
         localizationsDelegates: const [
           GlobalMaterialLocalizations.delegate,
@@ -39,8 +37,7 @@ class AyKhedmaApp extends StatelessWidget {
           Locale('en'),
           Locale('ar'),
         ],
-        home: const ProfileViewBody(),
-        // routerConfig: AppRouter.router,
+        routerConfig: AppRouter.router,
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
           fontFamily: 'Kohinoor Arabic',

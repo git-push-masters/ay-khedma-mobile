@@ -27,7 +27,9 @@ class CantinUser extends StatelessWidget {
               color: AppColors.kPrimaryColor,
             ),
           ),
-          const SizedBox(width: 11,),
+          const SizedBox(
+            width: 11,
+          ),
           Container(
             height: 28,
             width: 28,
@@ -42,8 +44,17 @@ class CantinUser extends StatelessWidget {
               //size: .4,
             ),
           ),
-          const SizedBox(width: 11,),
-         Expanded(child: CustomButton(text: "محادثه", textStyle: Styles.textStyle12.copyWith(color: AppColors.kTextbuttonColor),height: 28,borderRadius: BorderRadius.circular(8),))
+          const SizedBox(
+            width: 11,
+          ),
+          Expanded(
+              child: CustomButton(
+            text: "محادثه",
+            textStyle:
+                Styles.textStyle12.copyWith(color: AppColors.kTextbuttonColor),
+            height: 28,
+            borderRadius: BorderRadius.circular(8),
+          ))
         ],
       ),
     );

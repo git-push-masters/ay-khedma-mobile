@@ -8,8 +8,8 @@ class ProfileViewBodyBottom extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(children: [
-      UserInformations()
-    ],);
+    return Column(
+      children: [UserInformations()],
+    );
   }
 }

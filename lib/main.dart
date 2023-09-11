@@ -8,6 +8,8 @@ import 'core/utils/app_router.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import 'features/profile/presentation/views/profile_view.dart';
+
 void main() {
   setupServiceLocator();
   runApp(const AyKhedmaApp());
@@ -26,7 +28,7 @@ class AyKhedmaApp extends StatelessWidget {
           ),
         ),
       ],
-      child: MaterialApp.router(
+      child: MaterialApp(
         locale: const Locale("ar", "AE"),
         localizationsDelegates: const [
           GlobalMaterialLocalizations.delegate,
@@ -37,7 +39,8 @@ class AyKhedmaApp extends StatelessWidget {
           Locale('en'),
           Locale('ar'),
         ],
-        routerConfig: AppRouter.router,
+       // routerConfig: AppRouter.router,
+       home:ProfileView() ,
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
           fontFamily: 'Kohinoor Arabic',

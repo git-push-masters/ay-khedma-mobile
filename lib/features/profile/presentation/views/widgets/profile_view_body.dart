@@ -11,10 +11,12 @@ class ProfileViewBody extends StatelessWidget {
     return  Scaffold(
      body: SafeArea(
         
-        child: Column(children:const [
-          ProfileViewBodyHeader(),
-          ProfileViewBodyBottom()
-        ],),
+        child: SingleChildScrollView(
+          child: Column(children:const [
+            ProfileViewBodyHeader(),
+            ProfileViewBodyBottom()
+          ],),
+        ),
       ),
     );
   }

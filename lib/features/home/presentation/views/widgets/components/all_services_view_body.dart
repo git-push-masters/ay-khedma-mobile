@@ -11,10 +11,13 @@ class AllServicesViewBody extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: Column(children: const [
-          AllServicesHeader(),
-          AllServicesCenter(),
-        ],),
+        body: SingleChildScrollView(
+          child: Column(children: const [
+            AllServicesHeader(),
+            AllServicesCenter(),
+            AllServiceBottom()
+          ],),
+        ),
       ),
     );
   }

@@ -24,10 +24,11 @@ Future _registerUser() async {
     "phone": "01214919301",
     "password": "1234567",
   };
-   String data= jsonEncode(body);
+  String data = jsonEncode(body);
   log("wait to response");
   var response = await http.post(
-      Uri.parse("https://ay-khedma-backend-development.up.railway.app/api/auth/login"),
+      Uri.parse(
+          "https://ay-khedma-backend-development.up.railway.app/api/auth/login"),
       body: data,
       headers: headers);
   log("response get it");

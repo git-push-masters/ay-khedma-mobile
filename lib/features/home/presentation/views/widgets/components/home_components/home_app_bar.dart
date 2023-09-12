@@ -1,6 +1,7 @@
+import 'package:ay_khedma/features/user_authentication/presentation/view_models/cubits/cubit/login_cubit.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-
 import '../../../../../../../core/utils/colors.dart';
 import '../../../../../../../core/utils/styles.dart';
 
@@ -31,8 +32,9 @@ class HomeAppBar extends StatelessWidget {
             const SizedBox(
               height: 5,
             ),
-            const Text(
-              "سيف أحمد نوح",
+             const Text(
+              // BlocProvider.of<LoginCubit>(context).userModel!.body!.name,
+              "ebrahim",
               style: Styles.textStyle12,
             ),
           ],

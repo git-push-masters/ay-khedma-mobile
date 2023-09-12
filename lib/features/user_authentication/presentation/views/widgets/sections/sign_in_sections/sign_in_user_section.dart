@@ -1,10 +1,10 @@
 import 'package:ay_khedma/core/utils/colors.dart';
 import 'package:ay_khedma/core/utils/styles.dart';
-import 'package:ay_khedma/features/user_authentication/presentation/view_models/cubits/login_cubit/login_cubit.dart';
 import 'package:ay_khedma/features/user_authentication/presentation/views/widgets/components/sign_in_components/forgot_pass_and_remember_me.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../../../../../core/helper/widgets/custom_button.dart';
+import '../../../../view_models/cubits/cubit/login_cubit.dart';
 import '../../components/general_components/text_feild_comp.dart';
 
 class SignInUserSection extends StatefulWidget {
@@ -32,7 +32,7 @@ class _SignInUserSectionState extends State<SignInUserSection> {
               phoneNumber = value;
             },
             txt: "رقم الهاتف",
-            hintTxt: "ادخل الإيميل الخاص بك",
+            hintTxt: "ادخل الرقم الخاص بك",
           ),
           const SizedBox(
             height: 22,

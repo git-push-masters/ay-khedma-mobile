@@ -1,17 +1,17 @@
 import 'package:ay_khedma/core/helper/helper_services/service_locator.dart';
 import 'package:ay_khedma/features/home/presentation/views/home_view.dart';
 import 'package:ay_khedma/features/user_authentication/data/repos/user_auth_repo_implement.dart';
-import 'package:ay_khedma/features/user_authentication/presentation/view_models/cubits/login_cubit/login_cubit.dart';
 import 'package:ay_khedma/features/user_authentication/presentation/view_models/cubits/register_cubit/register_cubit.dart';
 import 'package:ay_khedma/features/user_authentication/presentation/views/sign_in_view.dart';
 import 'package:flutter/material.dart';
+import 'core/helper/auth_contain.dart';
 import 'core/helper/test_api.dart';
 import 'core/utils/app_router.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import 'features/home/presentation/views/all_services_view.dart';
 import 'features/profile/presentation/views/profile_view.dart';
+import 'features/user_authentication/presentation/view_models/cubits/cubit/login_cubit.dart';
 
 void main() {
   setupServiceLocator();
@@ -34,7 +34,7 @@ class AyKhedmaApp extends StatelessWidget {
             create: (context) =>
                 LoginCubit(getIt.get<UserAuthRepoImplement>())),
       ],
-      child: MaterialApp(
+      child: GetMaterialApp(
         locale: const Locale("ar", "AE"),
         localizationsDelegates: const [
           GlobalMaterialLocalizations.delegate,
@@ -45,8 +45,7 @@ class AyKhedmaApp extends StatelessWidget {
           Locale('en'),
           Locale('ar'),
         ],
-       // routerConfig: AppRouter.router,
-       home: const AllServicesView(),
+        routerConfig: AppRouter.router,
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
           fontFamily: 'Kohinoor Arabic',

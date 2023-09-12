@@ -6,7 +6,6 @@ import '../components/home_components/home_search_widget.dart';
 
 class HomeViewHeaderSection extends StatelessWidget {
   const HomeViewHeaderSection({super.key});
-
   @override
   Widget build(BuildContext context) {
     return Padding(

@@ -22,7 +22,6 @@ class LoginCubit extends Cubit<LoginState> {
       try {
         var result =  await userAuthRepo.loginUser(
          phoneNumber: phoneNumber, password: password,token: userModel?.body!.token! ?? "");
-         log(result.msgs.toString());
          emit(LoginSuccess(result));
       } catch (e) {
         emit(LoginFailure(e.toString()));

@@ -3,6 +3,8 @@ import 'dart:developer';
 import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
+
+import '../../../features/user_authentication/data/models/user_model/user_model.dart';
 class ApiService {
   final _baseUrl = "https://ay-khedma-backend-development.up.railway.app/api/";
 
@@ -10,9 +12,17 @@ class ApiService {
   // get request to fetch data
   ApiService();
 
-  Future<Map<String, dynamic>> get({required endPoint}) async {
-    var response = await http.get(Uri.parse("$_baseUrl$endPoint"));
-    var data = jsonDecode(response.body);
+  Future<Map<String, dynamic>> get({required endPoint, @required String? token}) async {
+    Map<String, String> headers = {};
+    if (token != null) {
+      headers.addAll({
+        'Authorization': 'Bearer $token',
+        'Content-Type' : 'application/json',
+        'Accept': 'application/json',
+        });
+    }
+    var response = await http.get(Uri.parse("$_baseUrl$endPoint",), headers: headers);
+    Map<String, dynamic> data = jsonDecode(response.body);
     return data;
   }
 
@@ -36,7 +46,7 @@ class ApiService {
       return data;
     }else
     {
-      throw response.body;
+      throw jsonDecode(response.body);
     }
   }
 

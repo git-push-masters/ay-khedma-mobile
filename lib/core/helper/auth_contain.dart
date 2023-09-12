@@ -1,5 +1,6 @@
 import 'dart:developer';
 
+import 'package:ay_khedma/core/helper/helper_services/api_service.dart';
 import 'package:ay_khedma/features/user_authentication/presentation/views/sign_in_view.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -14,7 +15,6 @@ class AuthContainer extends StatefulWidget {
 }
 
 class _AuthContainerState extends State<AuthContainer> {
-  String? token;
   bool initial = true;
   @override
   Widget build(BuildContext context) {
@@ -25,7 +25,7 @@ class _AuthContainerState extends State<AuthContainer> {
       setState(() {
         initial = false;
         token = sharedPreferencesValue.getString('token');
-        log(token.toString());
+        log("tokenn: $token");
       });
     });
     return const Scaffold(
@@ -33,14 +33,19 @@ class _AuthContainerState extends State<AuthContainer> {
     );
    }else
    {
-    if(token == null)
+    if(token == null) 
     {
       return const SignInView();
     }else
     {
+       
       return const HomeView();
+     
     }
    }
    
   }
 }
+
+String? token;
+

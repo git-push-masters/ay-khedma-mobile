@@ -11,7 +11,7 @@ abstract class UserAuthRepo {
       required String password,
      });
 
-  Future<UserModel> loginUser(
+  Future< UserModel> loginUser(
       {required String phoneNumber ,required String password, required String token});
 
   Future<Either<ApiFailures, dynamic>> vrefyUser(

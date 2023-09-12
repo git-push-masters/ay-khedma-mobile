@@ -7,7 +7,7 @@ final getIt = GetIt.instance;
 
 void setupServiceLocator() {
   getIt.registerSingleton<ApiService>(
-    ApiService(Dio()),
+    ApiService(),
   );
   getIt.registerSingleton<UserAuthRepoImplement>(
     UserAuthRepoImplement(getIt.get<ApiService>()),

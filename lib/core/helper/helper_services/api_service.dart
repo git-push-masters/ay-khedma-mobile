@@ -4,20 +4,20 @@ import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
 class ApiService {
-  final _baseUrl = "http://192.168.1.26:4000/api";
-  final Dio _dio;
+  final _baseUrl = "https://ay-khedma-backend-development.up.railway.app/api/";
+
 
   // get request to fetch data
-  ApiService(this._dio);
+  ApiService();
 
   Future<Map<String, dynamic>> get({required endPoint}) async {
-    var response = await _dio.get("$_baseUrl$endPoint");
-    var data = jsonDecode(response.data);
+    var response = await http.get(Uri.parse("$_baseUrl$endPoint"));
+    var data = jsonDecode(response.body);
     return data;
   }
 
   // post request to post new data
-  Future<dynamic> post(
+  Future<Map<String, dynamic>> post(
       {required endPoint,
       @required dynamic body,
       @required String? token}) async {
@@ -31,34 +31,36 @@ class ApiService {
     }
     var response = await http.post(Uri.parse("$_baseUrl$endPoint"),
         body: body, headers: headers);
-    if(response.statusCode == 201){
-      var data = jsonDecode(response.body);
-      log(data);
+    if(response.statusCode == 201 || response.statusCode == 200){
+      Map<String, dynamic> data = jsonDecode(response.body);
       return data;
+    }else
+    {
+      throw response.body;
     }
   }
 
   // put request to update data
 
-  Future<dynamic> put(
-      {required endPoint,
-      @required dynamic body,
-      @required String? token}) async {
-    Map<String, dynamic> headers = {};
-    if (token != null) {
-      headers.addAll({'Authorization': 'Bearer $token'});
-    }
-    var response = await _dio.put("$_baseUrl$endPoint",
-        data: body, options: Options(headers: headers));
-    var data = jsonDecode(response.data);
-    return data;
-  }
+  // Future<dynamic> put(
+  //     {required endPoint,
+  //     @required dynamic body,
+  //     @required String? token}) async {
+  //   Map<String, dynamic> headers = {};
+  //   if (token != null) {
+  //     headers.addAll({'Authorization': 'Bearer $token'});
+  //   }
+  //   var response = await _dio.put("$_baseUrl$endPoint",
+  //       data: body, options: Options(headers: headers));
+  //   var data = jsonDecode(response.data);
+  //   return data;
+  // }
 
-  Future<dynamic> delete({required endPoint, @required dynamic body}) async {
-    var response = await _dio.delete("$_baseUrl$endPoint", data: body);
-    var data = jsonDecode(response.data);
-    return data;
-  }
+  // Future<dynamic> delete({required endPoint, @required dynamic body}) async {
+  //   var response = await _dio.delete("$_baseUrl$endPoint", data: body);
+  //   var data = jsonDecode(response.data);
+  //   return data;
+  // }
 
   // Future<dynamic> put({
   //   required String url,

@@ -1,5 +1,5 @@
 import 'package:ay_khedma/features/profile/presentation/views/widgets/components/custom_text_information.dart';
-import 'package:ay_khedma/features/profile/presentation/views/widgets/components/header_user_information.dart';
+import 'package:ay_khedma/core/helper/header_user_information.dart';
 import 'package:ay_khedma/features/profile/presentation/views/widgets/components/last_clients.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';

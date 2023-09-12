@@ -10,6 +10,7 @@ import 'core/utils/app_router.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import 'features/home/presentation/views/all_services_view.dart';
 import 'features/profile/presentation/views/profile_view.dart';
 
 void main() {
@@ -44,7 +45,8 @@ class AyKhedmaApp extends StatelessWidget {
           Locale('en'),
           Locale('ar'),
         ],
-        routerConfig: AppRouter.router,
+       // routerConfig: AppRouter.router,
+       home: const AllServicesView(),
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
           fontFamily: 'Kohinoor Arabic',

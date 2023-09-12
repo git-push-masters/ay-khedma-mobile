@@ -2,8 +2,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 
-import '../../../../../../core/utils/colors.dart';
-import '../../../../../../core/utils/styles.dart';
+import '../utils/colors.dart';
+import '../utils/styles.dart';
 
 class HeaderUserInformation extends StatelessWidget {
   const HeaderUserInformation({super.key, required this.titleinfo});

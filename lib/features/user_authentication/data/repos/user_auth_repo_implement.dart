@@ -55,18 +55,18 @@ class UserAuthRepoImplement implements UserAuthRepo {
     // register user methode
   @override
   Future<UserModel> registerUser(
-      /*{required String name,
+      {required String name,
       required String phoneNumber,
-      required String password}*/) async {
+      required String password}) async {
     Map<String, dynamic> body = {
-       "name": "name",
-       "phone": "01000000000",
-       "password": "123456789"
+       "name": name,
+       "phone": phoneNumber,
+       "password": password
     };
     String data = jsonEncode(body);
 
     Map<String, dynamic> response =
-        await apiService.post(endPoint: "auth/login", body: data);
+        await apiService.post(endPoint: "auth/register", body: data, token: "");
     UserModel userData = UserModel.fromJson(response);
     log(userData.toString());
     return userData;

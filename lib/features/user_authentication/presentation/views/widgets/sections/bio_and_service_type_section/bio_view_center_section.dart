@@ -5,9 +5,16 @@ import 'package:get/get.dart';
 import '../../../../../../../core/utils/colors.dart';
 import '../../components/general_components/text_feild_comp.dart';
 
-class BioViewCenterSection extends StatelessWidget {
+class BioViewCenterSection extends StatefulWidget {
   const BioViewCenterSection({super.key});
 
+  @override
+  State<BioViewCenterSection> createState() => _BioViewCenterSectionState();
+}
+
+class _BioViewCenterSectionState extends State<BioViewCenterSection> {
+  List <String>servicesTypes = ["سباك" , "نجار", "حداد", "نقاش", "حلاق"];
+  String selectedService = 'سباك';
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -23,26 +30,22 @@ class BioViewCenterSection extends StatelessWidget {
           const SizedBox(
             height: 10,
           ),
-          Container(
-            padding: const EdgeInsets.symmetric(horizontal: 10),
-            height: 50,
+          SizedBox(
             width: Get.width,
-            decoration: BoxDecoration(
-                border: Border.all(color: AppColors.kOutLineBorder),
-                borderRadius: BorderRadius.circular(16)),
-            child: Row(
-              children: [
-                Text(
-                  "اختر الخدمة",
-                  style: Styles.textStyle12
-                      .copyWith(color: AppColors.kTextFieldHintColor),
-                ),
-                const SizedBox(
-                  width: 7,
-                ),
-                const Icon(FontAwesomeIcons.arrowDownShortWide,
-                    color: AppColors.kTextFieldHintColor),
-              ],
+            child: DropdownButtonFormField<String>(
+              decoration: InputDecoration(
+                suffixIcon:const Icon(FontAwesomeIcons.arrowDownShortWide,
+                      color: AppColors.kTextFieldHintColor),
+                      border: OutlineInputBorder(
+                        borderRadius: BorderRadius.circular(16),
+                        borderSide:const BorderSide(color: AppColors.kOutLineBorder)
+                      ),
+              ),
+              value: selectedService,
+              items: servicesTypes.map((service) => DropdownMenuItem(
+                value: service,
+                child: Text(service, style: Styles.textStyle12,) )).toList(),
+                onChanged: (value) => setState(()=> selectedService = value!) ,
             ),
           ),
           const SizedBox(

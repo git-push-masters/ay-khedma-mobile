@@ -10,15 +10,15 @@ class RegisterCubit extends Cubit<RegisterState> {
 
   final UserAuthRepo userAuthRepo;
 
-  Future<void> rigesterUser(/*{
+  Future<void> rigesterUser({
     required String name,
     required String phoneNumber,
     required String password,
-  }*/) async {
+  }) async {
     emit(RegisterLoading());
     try {
       var result = await userAuthRepo.registerUser(
-          /*name: name, phoneNumber: phoneNumber, password: password*/);
+          name: name, phoneNumber: phoneNumber, password: password);
           log(result.toString());
       emit(RegisterSuccess());
     } catch (e) {

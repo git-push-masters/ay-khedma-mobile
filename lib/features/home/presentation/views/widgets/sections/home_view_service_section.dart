@@ -1,8 +1,6 @@
 import 'package:ay_khedma/features/home/presentation/views/all_services_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-
-import '../../../../../../core/helper/header_user_information.dart';
 import '../../../../../../core/utils/colors.dart';
 import '../../../../../../core/utils/styles.dart';
 import '../components/all_services_components/sections/all_services_bottom.dart';

@@ -5,8 +5,8 @@ import 'package:flutter/src/widgets/placeholder.dart';
 import '../utils/colors.dart';
 import '../utils/styles.dart';
 
-class HeaderUserInformation extends StatelessWidget {
-  const HeaderUserInformation({super.key, required this.titleinfo});
+class TitleRight extends StatelessWidget {
+  const TitleRight({super.key, required this.titleinfo});
   final String titleinfo;
   @override
   Widget build(BuildContext context) {

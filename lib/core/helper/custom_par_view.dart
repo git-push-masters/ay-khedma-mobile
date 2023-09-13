@@ -6,12 +6,12 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 
-import '../../../../../../../core/utils/colors.dart';
-import '../../../../../../../core/utils/styles.dart';
+import '../utils/colors.dart';
+import '../utils/styles.dart';
 
-class CustomParChatView extends StatelessWidget {
-  const CustomParChatView({super.key});
-
+class CustomParView extends StatelessWidget {
+  const CustomParView({super.key, required this.title});
+final String title;
   @override
   Widget build(BuildContext context) {
     return  Stack(
@@ -39,7 +39,7 @@ class CustomParChatView extends StatelessWidget {
                       width: 9,
                     ),
                     Text(
-                      " التواصل",
+                      title,
                       style: Styles.textStyle16.copyWith(color: Colors.white),
                     ),
                     SizedBox(

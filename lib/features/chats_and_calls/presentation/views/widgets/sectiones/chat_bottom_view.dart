@@ -1,3 +1,4 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'components/messages_view.dart';
 
@@ -6,13 +7,15 @@ class ChatBottomView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(children: const[
+    return ListView.builder(
+      itemCount: 8,
+      itemBuilder: (context,index){
+      return       const Messagesview(time: ' ١٢:٣٤', subtitle: 'معادنا الساعة كام ياكبير؟', title: 'أبو احمد',);
 
-      Messagesview(time: 'أبو احمد', subtitle: 'معادنا الساعة كام ياكبير؟', title: '١٢:٣٤',),
-      Messagesview(time: 'أبو احمد', subtitle: 'معادنا الساعة كام ياكبير؟', title: '١٢:٣٤',),
-      Messagesview(time: 'أبو احمد', subtitle: 'معادنا الساعة كام ياكبير؟', title: '١٢:٣٤',),
-      Messagesview(time: 'أبو احمد', subtitle: 'معادنا الساعة كام ياكبير؟', title: '١٢:٣٤',),
+    });
+
       
-    ],);
+      
+   
   }
 }

@@ -1,11 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import '../../../../../../../core/utils/colors.dart';
 import '../../../../../../../core/utils/styles.dart';
 
-class Messagesview extends StatelessWidget {
-  const Messagesview(
+class NotificationsMessges extends StatelessWidget {
+  const NotificationsMessges(
       {super.key,
       required this.title,
       required this.subtitle,
@@ -66,7 +65,7 @@ class Messagesview extends StatelessWidget {
          Positioned(
           top: 27,
           bottom: 49,
-          left: Get.width*.1,
+          left: 25,
           child: Text(time,style: const TextStyle(fontSize: 8),))
       ],
     )

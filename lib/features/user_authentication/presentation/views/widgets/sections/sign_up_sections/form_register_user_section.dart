@@ -1,4 +1,3 @@
-import 'package:ay_khedma/features/user_authentication/data/models/rigester_data_model.dart';
 import 'package:ay_khedma/features/user_authentication/presentation/view_models/cubits/register_cubit/register_cubit.dart';
 import 'package:ay_khedma/features/user_authentication/presentation/views/widgets/sections/sign_up_sections/sign_up_user_section.dart';
 import 'package:ay_khedma/features/user_authentication/presentation/views/widgets/sections/sign_up_sections/under_signup_textfields_section.dart';

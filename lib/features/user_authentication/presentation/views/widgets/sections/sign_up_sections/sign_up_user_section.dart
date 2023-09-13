@@ -2,12 +2,11 @@ import 'package:ay_khedma/features/user_authentication/presentation/views/widget
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import '../../../../../../../core/helper/widgets/custom_text_field.dart';
 import '../../../../../../../core/utils/colors.dart';
 import '../../../../../../../core/utils/styles.dart';
-import '../../../../../data/models/rigester_data_model.dart';
 import '../../../../view_models/cubits/register_cubit/register_cubit.dart';
 import '../../components/general_components/text_feild_comp.dart';
+import '../../components/sign_up_componenets/choose_user_type.dart';
 
 class SignUpUserSection extends StatefulWidget {
   const SignUpUserSection({
@@ -43,38 +42,14 @@ class _SignUpUserSectionState extends State<SignUpUserSection> {
         const SizedBox(
           height: 20,
         ),
-        const Align(
-            alignment: Alignment.centerRight,
-            child: Text(
-              "رقم الهاتف",
-              style: Styles.textStyle14,
-            )),
-        const SizedBox(
-          height: 10,
-        ),
-        Row(
-          children: [
-            Expanded(
-                child: CustomTextFeild(
-                    validator: (value) =>
-                        value?.isEmpty ?? true ? "This field is required" : null,
-                    onSaved: (value) {
-                      phoneNumber = value;
-                    },
-                    hinttext: "ادخل رقم الهاتف الخاص بك")),
-            const SizedBox(
-              width: 7,
-            ),
-            CustomTextFeild(
-              validator: (value) =>
-                        value?.isEmpty ?? true ? "" : null,
-              onSaved: (value) {
-               countryCode = value;
-              },
-              hinttext: "20+",
-              width: 60,
-            ),
-          ],
+        TextFeildComp(
+          validator: (value) =>
+              value?.isEmpty ?? true ? "This field is required" : null,
+          onSaved: (value) {
+            phoneNumber = value;
+          },
+          txt: "رقم الهاتف",
+          hintTxt: "ادخل رقم الهاتف",
         ),
         const SizedBox(
           height: 20,
@@ -117,6 +92,25 @@ class _SignUpUserSectionState extends State<SignUpUserSection> {
         const SizedBox(
               height: 15,
             ),
+            Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            const Icon(
+              Icons.error_outline,
+              size: 15,
+              color: AppColors.kUnderHeadLinesColor,
+            ),
+            Text(
+              "يجب أن تكون كلمة مرورك من 8 ألي 15 حرفا",
+              style: Styles.textStyle12
+                  .copyWith(color: AppColors.kUnderHeadLinesColor),
+            ),
+          ],
+        ),
+        const SizedBox(
+              height: 20,
+            ),
+            const ChooseUserType(),
             UnderSignUpTextFieldsSection(
               onPressed: () {
                 if (formKey.currentState!.validate()) {
@@ -136,3 +130,5 @@ class _SignUpUserSectionState extends State<SignUpUserSection> {
     );
   }
 }
+
+

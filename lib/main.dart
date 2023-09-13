@@ -14,6 +14,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'features/profile/presentation/views/profile_view.dart';
 import 'features/user_authentication/presentation/view_models/cubits/cubit/login_cubit.dart';
+import 'features/user_authentication/presentation/views/sign_up_view.dart';
 
 void main() {
   setupServiceLocator();
@@ -48,7 +49,7 @@ class AyKhedmaApp extends StatelessWidget {
           Locale('ar'),
         ],
         //routerConfig: AppRouter.router,
-        home: const AllServicesView(),
+        home: const SignUpView(),
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
           fontFamily: 'Kohinoor Arabic',

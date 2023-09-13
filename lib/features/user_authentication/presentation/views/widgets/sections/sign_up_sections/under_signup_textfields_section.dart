@@ -15,21 +15,6 @@ class UnderSignUpTextFieldsSection extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        Row(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            const Icon(
-              Icons.error_outline,
-              size: 15,
-              color: AppColors.kUnderHeadLinesColor,
-            ),
-            Text(
-              "يجب أن تكون كلمة مرورك من 8 ألي 15 حرفا",
-              style: Styles.textStyle12
-                  .copyWith(color: AppColors.kUnderHeadLinesColor),
-            ),
-          ],
-        ),
         SizedBox(
           height: Get.height * .03,
         ),

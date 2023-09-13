@@ -31,7 +31,8 @@ class CustomTextFeild extends StatelessWidget {
         onChanged: onCahnge,
         onSaved: onSaved,
         decoration: InputDecoration(
-            prefixIcon: prefixIcon,
+          suffixIcon: prefixIcon,
+           // prefixIcon: prefixIcon,
             border: buildBorder(),
             enabledBorder: buildBorder(),
             focusedBorder: buildBorder(AppColors.kPrimaryColor.withOpacity(.5)),

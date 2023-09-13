@@ -1,6 +1,6 @@
 import 'package:ay_khedma/features/home/presentation/views/widgets/components/all_services_components/sections/user_inf_rating.dart';
 import 'package:flutter/material.dart';
-import '../../../../../../../../core/helper/header_user_information.dart';
+import '../../../../../../../../core/helper/title_right.dart';
 
 class AllServiceBottom extends StatelessWidget {
   const AllServiceBottom({super.key, required this.titleinfo});
@@ -9,9 +9,7 @@ class AllServiceBottom extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children:  [
-         HeaderUserInformation(
-          titleinfo: titleinfo 
-        ),
+         TitleRight(titleinfo: 'أفضل السباكين حواليك',),
         const UserInfoAndRating(),
         
       ],

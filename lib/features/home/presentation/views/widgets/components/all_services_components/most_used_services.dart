@@ -11,36 +11,31 @@ class MostUsedServices extends StatelessWidget {
       {super.key,
       required this.title,
       required this.subtitle,
-      required this.cstuomicon});
+      required this.image});
   final String title;
   final String subtitle;
-  final IconData cstuomicon;
+  final String image;
 
   @override
   Widget build(BuildContext context) {
     return 
-     Padding(
-              padding: const EdgeInsets.only(right: 15),
-              child: Container(
-                height: 133,
-                width: 108,
-                decoration: BoxDecoration(
-                    color: AppColors.kSmallContainersColor,
-                    borderRadius: BorderRadius.circular(26)),
-                child: Column(
+     Container(
+       decoration: BoxDecoration(
+           color: AppColors.kSmallContainersColor,
+           borderRadius: BorderRadius.circular(26)),
+       child: Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-         Icon(
-          cstuomicon ,
-          size: 50,
-        ),
+         Image.asset(image, color: Colors.black,),
         const SizedBox(
           height: 10,
         ),
+        const SizedBox(height: 10,),
         Text(
           title,
           style: Styles.textStyle12.copyWith(fontWeight: FontWeight.bold),
         ),
+        const SizedBox(height: 5,),
          Text(
           subtitle,
           style: const TextStyle(fontSize: 10),
@@ -49,8 +44,7 @@ class MostUsedServices extends StatelessWidget {
         )
       ],
     ),
-              ),
-            );
+     );
    
   }
 }

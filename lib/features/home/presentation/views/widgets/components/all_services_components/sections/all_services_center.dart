@@ -1,3 +1,4 @@
+import 'package:ay_khedma/core/utils/assets.dart';
 import 'package:ay_khedma/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
@@ -12,28 +13,28 @@ class AllServicesCenter extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      height: Get.height*.3,
-      width: Get.width,
-      child: GridView.builder(
-        itemCount: 6,
-          gridDelegate:
-              const SliverGridDelegateWithFixedCrossAxisCount(
-                
-                mainAxisSpacing: 6,
-            crossAxisSpacing:6,
-                crossAxisCount: 3),
-          itemBuilder: (context, index) {
-            return SizedBox(
-              height: 155,
-                width: Get.width,
-              child: const MostUsedServices(
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 18),
+      child: SizedBox(
+        height: Get.height*.4,
+        width: Get.width,
+        child: GridView.builder(
+          physics:const NeverScrollableScrollPhysics(),
+          itemCount: 6,
+            gridDelegate:
+                const SliverGridDelegateWithFixedCrossAxisCount(
+                  mainAxisSpacing: 10,
+              crossAxisSpacing:10,
+              childAspectRatio: .7,
+                  crossAxisCount: 3),
+            itemBuilder: (context, index) {
+              return const MostUsedServices(
                 title: " خدمات المنازل",
                 subtitle: "تن با تولید سادگی نامفهومه",
-                cstuomicon: Icons.home,
-              ),
-            );
-          }),
+                image: AssetsData.serviceIte,
+              );
+            }),
+      ),
     );
 
     //Row(

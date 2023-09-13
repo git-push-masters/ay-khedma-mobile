@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:ay_khedma/features/user_authentication/data/repos/user_auth_repo.dart';
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
@@ -8,21 +10,20 @@ class RegisterCubit extends Cubit<RegisterState> {
 
   final UserAuthRepo userAuthRepo;
 
-  Future<void> rigesterUser({
+  Future<void> rigesterUser(/*{
     required String name,
     required String phoneNumber,
     required String password,
-  }) async{
+  }*/) async {
     emit(RegisterLoading());
-      var result =  await userAuthRepo.registerUser(
-        name: name, phoneNumber: phoneNumber, password: password,);
+    try {
+      var result = await userAuthRepo.registerUser(
+          /*name: name, phoneNumber: phoneNumber, password: password*/);
+          log(result.toString());
       emit(RegisterSuccess());
-     result.fold(
-      (failure) {
-    emit(RegisterFailure(failure.errorMessage));
-      },
-      (success) {
-    emit(RegisterSuccess());
-      });
+    } catch (e) {
+      emit(RegisterFailure(e.toString()));
+      log(e.toString());
+    }
   }
 }

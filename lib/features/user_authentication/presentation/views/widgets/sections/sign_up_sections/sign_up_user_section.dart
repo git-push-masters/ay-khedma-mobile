@@ -84,7 +84,7 @@ class _SignUpUserSectionState extends State<SignUpUserSection> {
           validator: (value) =>
               value?.isEmpty ?? true ? "This field is required" : null,
           onSaved: (value) {
-           password = value!;
+           password = value;
           },
           txt: "كلمة المرور",
           hintTxt: "...........",
@@ -116,9 +116,9 @@ class _SignUpUserSectionState extends State<SignUpUserSection> {
                 if (formKey.currentState!.validate()) {
                   formKey.currentState!.save();
                   BlocProvider.of<RegisterCubit>(context).rigesterUser(
-                      name: userName!,
+                      /*name:userName!,
                       phoneNumber: phoneNumber!, 
-                      password: password!,
+                      password: password!,*/
                       );
                 } else {
                   autoValidateMode = AutovalidateMode.always;

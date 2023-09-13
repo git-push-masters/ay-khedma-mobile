@@ -21,34 +21,6 @@ class UserAuthRepoImplement implements UserAuthRepo {
   UserAuthRepoImplement(this.apiService);
 
   @override
-  Future<Either<ApiFailures, dynamic>> registerUser({
-    required String name,
-    required String phoneNumber,
-    required String password,
-  }) async {
-    Map<String, dynamic> body = {
-      "name": name,
-      "phone": phoneNumber,
-      "password": password,
-    };
-
-    // String body = json.encode(data);
-    try {
-      var data = await apiService.post(endPoint: "/auth/register", body: body);
-      log(data.toString());
-      return right(UserModel.fromJson(data));
-    } catch (e) {
-      if (e is DioException) {
-        return left(ServerFailure.fromDioError(e));
-      } else if (e is UserModel) {
-        return left(MyServerFailure.fromServerError(e));
-      } else {
-        return left(ServerFailure(e.toString()));
-      }
-    }
-  }
-
-  @override
   Future<Either<ApiFailures, dynamic>> vrefyUser(
       {required String phoneNumber,
       required String password,
@@ -56,7 +28,7 @@ class UserAuthRepoImplement implements UserAuthRepo {
       required String token}) {
     throw UnimplementedError();
   }
- 
+
   // login user methode
   @override
   Future<UserModel> loginUser({
@@ -69,8 +41,8 @@ class UserAuthRepoImplement implements UserAuthRepo {
       "password": password,
     };
     String data = jsonEncode(body);
-    
-      Map<String, dynamic> response =
+
+    Map<String, dynamic> response =
         await apiService.post(endPoint: "auth/login", body: data, token: token);
     UserModel userData = UserModel.fromJson(response);
     final SharedPreferences tokenPref = await SharedPreferences.getInstance();
@@ -78,43 +50,25 @@ class UserAuthRepoImplement implements UserAuthRepo {
     await myUserData(token: userData.body!.token!);
     log(userData.toString());
     return userData;
-    }
   }
+    
+    // register user methode
+  @override
+  Future<UserModel> registerUser(
+      /*{required String name,
+      required String phoneNumber,
+      required String password}*/) async {
+    Map<String, dynamic> body = {
+       "name": "name",
+       "phone": "01000000000",
+       "password": "123456789"
+    };
+    String data = jsonEncode(body);
 
-  // Map<String, dynamic> body = {
-  //   "phone": phoneNumber,
-  //   "password": password,
-  // };
-
-  // log("wait to response");
-  // http.Response response = await http.post(
-  //     Uri.parse(
-  //         "https://ay-khedma-backend-development.up.railway.app/api/auth/login"),
-  //     body: data,
-  //     headers: headers);
-  // log("response get it");
-  // if (response.statusCode == 200) {
-  //   log("success");
-  //   Map<String, dynamic> data = jsonDecode(response.body);
-  //   log(data.toString());
-  //   return UserModel.fromJson(data);
-  // } else {
-  //   log(response.statusCode.toString());
-  //   throw response.body;
-
-
-  // String dataEncode = json.encode(body);
-  // try {
-  //   var data = await apiService.post(endPoint: "/auth/login", body: dataEncode);
-  //   log(data);
-  //   return right(UserModel.fromJson(data));
-  // } catch (e) {
-  //   if (e is DioException) {
-  //     return left(ServerFailure.fromDioError(e));
-  //   } else if (e is UserModel) {
-  //     return left(MyServerFailure.fromServerError(e));
-  //   } else {
-  //     return left(ServerFailure(e.toString()));
-  //   }
-  // }
-
+    Map<String, dynamic> response =
+        await apiService.post(endPoint: "auth/login", body: data);
+    UserModel userData = UserModel.fromJson(response);
+    log(userData.toString());
+    return userData;
+  }
+}

@@ -7,7 +7,6 @@ import 'package:go_router/go_router.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 
 import '../../../../core/helper/widgets/custom_snackbar.dart';
-import '../../../../core/utils/styles.dart';
 
 class SignUpView extends StatelessWidget {
   const SignUpView({super.key});

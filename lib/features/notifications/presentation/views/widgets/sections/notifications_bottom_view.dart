@@ -13,7 +13,7 @@ class NotificationsBottomView extends StatelessWidget {
       itemCount: 5,
       itemBuilder: (context,index){
 
-return NotificationsMessges(subtitle: '', time: '', title: '',);
+return NotificationsMessges(subtitle: 'قيد المراجعة', time: '١٢:٣٤', title: 'أبو احمد',);
     });
   }
 }

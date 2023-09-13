@@ -8,9 +8,9 @@ class AllServiceBottom extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      children:  [
+      children:  const[
          TitleRight(titleinfo: 'أفضل السباكين حواليك',),
-        const UserInfoAndRating(),
+         UserInfoAndRating(),
         
       ],
     );

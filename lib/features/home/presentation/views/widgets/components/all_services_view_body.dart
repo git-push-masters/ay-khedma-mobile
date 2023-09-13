@@ -15,7 +15,7 @@ class AllServicesViewBody extends StatelessWidget {
           child: Column(children: const [
             AllServicesHeader(),
             AllServicesCenter(),
-            AllServiceBottom()
+            AllServiceBottom(titleinfo: "افضل السباكين حولك",)
           ],),
         ),
       ),

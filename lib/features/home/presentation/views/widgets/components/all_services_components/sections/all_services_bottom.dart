@@ -3,16 +3,17 @@ import 'package:flutter/material.dart';
 import '../../../../../../../../core/helper/header_user_information.dart';
 
 class AllServiceBottom extends StatelessWidget {
-  const AllServiceBottom({super.key});
-
+  const AllServiceBottom({super.key, required this.titleinfo});
+ final String titleinfo;
   @override
   Widget build(BuildContext context) {
     return Column(
-      children: const [
+      children:  [
          HeaderUserInformation(
-          titleinfo: 'أفضل السباكين حواليك',
+          titleinfo: titleinfo 
         ),
-        UserInfoAndRating(),
+        const UserInfoAndRating(),
+        
       ],
     );
   }

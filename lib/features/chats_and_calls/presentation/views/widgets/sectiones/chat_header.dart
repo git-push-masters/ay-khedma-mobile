@@ -29,7 +29,8 @@ class ChatHeader extends StatelessWidget {
             titleinfo: "الرسائل والمكالمات",
                  ),
          ),
-         ChatSearchWidget()
+         ChatSearchWidget(),
+         
       ],
     );
   }

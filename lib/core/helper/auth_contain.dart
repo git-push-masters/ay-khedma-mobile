@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../features/home/presentation/views/home_view.dart';
+import 'global_var.dart';
 
 class AuthContainer extends StatefulWidget {
   const AuthContainer({super.key});
@@ -24,7 +25,7 @@ class _AuthContainerState extends State<AuthContainer> {
     SharedPreferences.getInstance().then((sharedPreferencesValue){
       setState(() {
         initial = false;
-        token = sharedPreferencesValue.getString('token');
+        token =  sharedPreferencesValue.getString('token');
         log("tokenn: $token");
       });
     });
@@ -47,5 +48,5 @@ class _AuthContainerState extends State<AuthContainer> {
   }
 }
 
-String? token;
+
 

@@ -2,6 +2,7 @@ import 'package:ay_khedma/features/user_authentication/presentation/view_models/
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import '../../../../../../../core/helper/global_var.dart';
 import '../../../../../../../core/utils/colors.dart';
 import '../../../../../../../core/utils/styles.dart';
 
@@ -19,6 +20,7 @@ class HomeAppBar extends StatelessWidget {
             color: AppColors.kOutLineBorder,
             borderRadius: BorderRadius.circular(16),
           ),
+          child: Image.network(myUserModel!.body!.avatar!),
         ),
         const SizedBox(
           width: 10,
@@ -32,9 +34,8 @@ class HomeAppBar extends StatelessWidget {
             const SizedBox(
               height: 5,
             ),
-             const Text(
-              // BlocProvider.of<LoginCubit>(context).userModel!.body!.name,
-              "ebrahim",
+              Text(
+              myUserModel!.body!.name,
               style: Styles.textStyle12,
             ),
           ],

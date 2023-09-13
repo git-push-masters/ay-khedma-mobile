@@ -20,7 +20,6 @@ class SignInView extends StatelessWidget {
         listener: (context, state) {
           if(state is LoginSuccess)
           {
-            BlocProvider.of<LoginCubit>(context).userModel = state.userModel;
             Get.to(()=> const HomeView());
           }
           if(state is LoginFailure)

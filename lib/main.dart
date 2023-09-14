@@ -13,6 +13,7 @@ import 'core/utils/app_router.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
+import 'features/Appointments/presentation/views/widgets/sectiones/appointments_view.dart';
 import 'features/chats_and_calls/presentation/views/chat_view.dart';
 import 'features/chats_and_calls/presentation/views/widgets/chat_view_body.dart';
 import 'features/notifications/presentation/views/widgets/notifications_view.dart';
@@ -53,7 +54,7 @@ class AyKhedmaApp extends StatelessWidget {
           Locale('ar'),
         ],
         //routerConfig: AppRouter.router,
-        home: const SplashView(),
+        home: const HomeView(),
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
           fontFamily: 'Kohinoor Arabic',

@@ -1,5 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 import '../../../../../../../core/utils/colors.dart';
 import '../../../../../../../core/utils/styles.dart';
 
@@ -65,7 +67,7 @@ class NotificationsMessges extends StatelessWidget {
          Positioned(
           top: 27,
           bottom: 49,
-          left: 25,
+         left: Get.width*.1,
           child: Text(time,style: const TextStyle(fontSize: 8),))
       ],
     )

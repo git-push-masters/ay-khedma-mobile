@@ -63,10 +63,6 @@ abstract class AppRouter {
         builder: (context, state) => const ChooseAvatarView(),
       ),
       GoRoute(
-        path: kHomeRoute,
-        builder: (context, state,) => const HomeView(),
-      ),
-      GoRoute(
         path: kMapRoute,
         builder: (context, state) => const MyMapView(),
       ),

@@ -14,6 +14,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../../../core/helper/global_var.dart';
 import '../../../home/presentation/views/home_view.dart';
+import '../../../splash/presentation/views/widgets/splash_view_body.dart';
 import '../models/user_model/user_model.dart';
 
 class UserAuthRepoImplement implements UserAuthRepo {
@@ -48,7 +49,7 @@ class UserAuthRepoImplement implements UserAuthRepo {
     UserModel userData = UserModel.fromJson(response);
     final SharedPreferences tokenPref = await SharedPreferences.getInstance();
     await tokenPref.setString('token', userData.body!.token!);
-    myUserModel = await myUserData(token: userData.body!.token!);
+    await myUserData(token: userData.body!.token!);
     log(userData.toString());
     return userData;
   }
@@ -72,4 +73,7 @@ class UserAuthRepoImplement implements UserAuthRepo {
     log(userData.toString());
     return userData;
   }
+
+ 
 }
+

@@ -1,6 +1,7 @@
 import 'dart:developer';
 
 import 'package:ay_khedma/core/helper/helper_services/api_service.dart';
+import 'package:ay_khedma/features/splash/presentation/views/splash_view.dart';
 import 'package:ay_khedma/features/user_authentication/presentation/views/sign_in_view.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -23,14 +24,18 @@ class _AuthContainerState extends State<AuthContainer> {
    if(initial)
    {
     SharedPreferences.getInstance().then((sharedPreferencesValue){
+      Future.delayed(const Duration(seconds: 10));
       setState(() {
-        initial = false;
         token =  sharedPreferencesValue.getString('token');
         log("tokenn: $token");
+        initial = false;
       });
     });
+    
     return const Scaffold(
-      body: Center(child: CircularProgressIndicator()),
+        body: Center(
+          child: CircularProgressIndicator(),
+        ),
     );
    }else
    {

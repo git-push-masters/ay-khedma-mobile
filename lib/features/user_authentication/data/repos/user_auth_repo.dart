@@ -19,4 +19,5 @@ abstract class UserAuthRepo {
       required String password,
       required String smsCode,
       required String token});
+
 }

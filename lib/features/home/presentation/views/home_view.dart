@@ -15,7 +15,7 @@ class HomeView extends StatelessWidget {
       {
         if(snapshot.hasData)
         {
-          return  HomeViewBody();
+          return  const HomeViewBody();
         }else
         {
           return const Center(child: CircularProgressIndicator());

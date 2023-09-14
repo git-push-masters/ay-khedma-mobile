@@ -10,10 +10,18 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'features/Appointments/presentation/views/widgets/sectiones/appointments_view.dart';
 import 'features/chats_and_calls/presentation/views/chat_view.dart';
 import 'features/chats_and_calls/presentation/views/widgets/chat_view_body.dart';
+import 'features/home/presentation/views/home_view.dart';
 import 'features/notifications/presentation/views/widgets/notifications_view.dart';
 import 'features/profile/presentation/views/profile_view.dart';
 import 'features/user_authentication/presentation/view_models/cubits/cubit/login_cubit.dart';
+import 'features/user_authentication/presentation/views/bio_and_service_type_view.dart';
+import 'features/user_authentication/presentation/views/choose_avatar_view.dart';
+import 'features/user_authentication/presentation/views/find_location_view.dart';
+import 'features/user_authentication/presentation/views/otp_code_view.dart';
+import 'features/user_authentication/presentation/views/sign_in_view.dart';
 import 'features/user_authentication/presentation/views/sign_up_view.dart';
+import 'features/user_authentication/presentation/views/widgets/components/bio_and_service_type_components/bio_and_service_type_view_body.dart';
+import 'features/user_authentication/presentation/views/widgets/components/sign_in_components/sign_in_view_body.dart';
 
 void main() {
   setupServiceLocator();
@@ -48,7 +56,7 @@ class AyKhedmaApp extends StatelessWidget {
           Locale('ar'),
         ],
         //routerConfig: AppRouter.router,
-        home: const HomeView(),
+        home: const SignUpView(),
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
           fontFamily: 'Kohinoor Arabic',

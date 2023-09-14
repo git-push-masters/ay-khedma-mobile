@@ -1,6 +1,7 @@
 import 'package:ay_khedma/core/helper/helper_services/service_locator.dart';
 import 'package:ay_khedma/features/home/presentation/views/all_services_view.dart';
 import 'package:ay_khedma/features/home/presentation/views/home_view.dart';
+import 'package:ay_khedma/features/splash/presentation/views/splash_view.dart';
 import 'package:ay_khedma/features/user_authentication/data/repos/user_auth_repo_implement.dart';
 import 'package:ay_khedma/features/user_authentication/presentation/view_models/cubits/register_cubit/register_cubit.dart';
 import 'package:ay_khedma/features/user_authentication/presentation/views/sign_in_view.dart';
@@ -52,7 +53,7 @@ class AyKhedmaApp extends StatelessWidget {
           Locale('ar'),
         ],
         //routerConfig: AppRouter.router,
-        home: const HomeView(),
+        home: const SplashView(),
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
           fontFamily: 'Kohinoor Arabic',

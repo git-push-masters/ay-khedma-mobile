@@ -1,3 +1,4 @@
+import 'package:ay_khedma/features/user_authentication/data/models/user_model/user_model.dart';
 import 'package:ay_khedma/features/user_authentication/presentation/view_models/cubits/cubit/login_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -7,8 +8,8 @@ import '../../../../../../../core/utils/colors.dart';
 import '../../../../../../../core/utils/styles.dart';
 
 class HomeAppBar extends StatelessWidget {
-  const HomeAppBar({super.key});
-
+  const HomeAppBar({super.key,});
+ 
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -20,7 +21,6 @@ class HomeAppBar extends StatelessWidget {
             color: AppColors.kOutLineBorder,
             borderRadius: BorderRadius.circular(16),
           ),
-          child: Image.network(myUserModel!.body!.avatar!),
         ),
         const SizedBox(
           width: 10,
@@ -34,8 +34,8 @@ class HomeAppBar extends StatelessWidget {
             const SizedBox(
               height: 5,
             ),
-              Text(
-              myUserModel!.body!.name,
+              const Text(
+                "Ebrahim",
               style: Styles.textStyle12,
             ),
           ],

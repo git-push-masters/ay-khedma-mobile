@@ -1,11 +1,20 @@
+import 'dart:developer';
+
+import 'package:ay_khedma/core/helper/auth_contain.dart';
+import 'package:ay_khedma/core/helper/global_var.dart';
+import 'package:ay_khedma/core/helper/helper_services/api_service.dart';
 import 'package:ay_khedma/core/utils/app_router.dart';
 import 'package:ay_khedma/core/utils/colors.dart';
 import 'package:ay_khedma/core/utils/styles.dart';
+import 'package:ay_khedma/features/home/presentation/views/home_view.dart';
 import 'package:ay_khedma/features/splash/presentation/views/widgets/sliding_animation_logo.dart';
+import 'package:ay_khedma/features/user_authentication/data/repos/user_auth_repo.dart';
 import 'package:ay_khedma/features/user_authentication/presentation/views/widgets/components/general_components/custom_text_rich.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:go_router/go_router.dart';
+
+import '../../../../user_authentication/data/models/user_model/user_model.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
@@ -68,12 +77,24 @@ class _SplashViewBodyState extends State<SplashViewBody>
             .animate(animationController);
     animationController.forward();
   }
+  
+
 
   void navigateToHome() {
     Future.delayed(const Duration(seconds: 4), () {
-      GoRouter.of(context).pushReplacement(
-        AppRouter.kSignUpRoute,
-      );
+      Get.to(()=>const AuthContainer());
     });
   }
+}
+
+
+
+   //fetch user data
+
+  Future <Map<String, dynamic>> myUserData( { required String  token}) async
+{
+  Map<String, dynamic> data = await ApiService().get(endPoint: "auth/me", token: token);
+  log(token.toString());
+    log(data.toString());
+    return data;
 }

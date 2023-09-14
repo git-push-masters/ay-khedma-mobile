@@ -10,9 +10,11 @@ class AppointmentsView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: SafeArea(child: Column(children: [
-      AppointmentsViewHeader(),
-      AppointmentsViewBottom()
-    ],)),);
+    return Scaffold(
+      body: SafeArea(
+          child: Column(
+        children: [AppointmentsViewHeader(), AppointmentsViewBottom()],
+      )),
+    );
   }
 }

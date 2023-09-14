@@ -11,8 +11,6 @@ class SignUpViewBody extends StatefulWidget {
 }
 
 class _SignUpViewBodyState extends State<SignUpViewBody> {
-
-  
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -20,13 +18,13 @@ class _SignUpViewBodyState extends State<SignUpViewBody> {
         padding: const EdgeInsets.only(left: 36, right: 36, bottom: 16),
         child: SingleChildScrollView(
           child: Column(
-            children:const [
-               SizedBox(height: 50),
-               HeaderSignViewSection(
+            children: const [
+              SizedBox(height: 50),
+              HeaderSignViewSection(
                 headText: "أهلا بيك",
                 undertext: "من فضلك سجل بياناتك للدخول",
               ),
-               SizedBox(
+              SizedBox(
                 height: 45,
               ),
               SignUpUserSection(),
@@ -37,4 +35,3 @@ class _SignUpViewBodyState extends State<SignUpViewBody> {
     );
   }
 }
-

@@ -12,11 +12,15 @@ class AllServicesViewBody extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         body: SingleChildScrollView(
-          child: Column(children: const [
-            AllServicesHeader(),
-            AllServicesCenter(),
-            AllServiceBottom(titleinfo: "افضل السباكين حولك",)
-          ],),
+          child: Column(
+            children: const [
+              AllServicesHeader(),
+              AllServicesCenter(),
+              AllServiceBottom(
+                titleinfo: "افضل السباكين حولك",
+              )
+            ],
+          ),
         ),
       ),
     );

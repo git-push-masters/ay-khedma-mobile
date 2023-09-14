@@ -21,17 +21,18 @@ class AllServicesHeader extends StatelessWidget {
         Stack(
           clipBehavior: Clip.none,
           alignment: Alignment.topCenter,
-          children: const[
-           CustomParView(title: "جميع الخدمات",)
-          
+          children: const [
+            CustomParView(
+              title: "جميع الخدمات",
+            )
           ],
         ),
-         const Padding(
-           padding: EdgeInsets.symmetric(vertical: 25),
-           child: TitleRight(titleinfo: "الخدمات الأكثر استخدامًا",)
-         )
+        const Padding(
+            padding: EdgeInsets.symmetric(vertical: 25),
+            child: TitleRight(
+              titleinfo: "الخدمات الأكثر استخدامًا",
+            ))
       ],
-      
     );
   }
 }

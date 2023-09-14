@@ -9,8 +9,8 @@ import '../../../../../../../core/utils/styles.dart';
 
 class UnderSignUpTextFieldsSection extends StatelessWidget {
   const UnderSignUpTextFieldsSection({super.key, this.onPressed});
- 
- final void Function()? onPressed;
+
+  final void Function()? onPressed;
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -48,7 +48,7 @@ class UnderSignUpTextFieldsSection extends StatelessWidget {
         ),
         CustomButton(
             onPressed: onPressed,
-                // GoRouter.of(context).push(AppRouter.kBioAndServiceTypeRoute),
+            // GoRouter.of(context).push(AppRouter.kBioAndServiceTypeRoute),
             backgroundColor: AppColors.kPrimaryColor,
             text: "التسجيل",
             textStyle: Styles.textStyle12.copyWith(color: Colors.white),

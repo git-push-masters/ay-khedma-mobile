@@ -49,7 +49,7 @@ class Messagesview extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                     title,
+                      title,
                       style: Styles.textStyle12
                           .copyWith(fontWeight: FontWeight.bold),
                     ),
@@ -63,13 +63,15 @@ class Messagesview extends StatelessWidget {
             ),
           ),
         ),
-         Positioned(
-          top: 27,
-          bottom: 49,
-          left: Get.width*.1,
-          child: Text(time,style: const TextStyle(fontSize: 8),))
+        Positioned(
+            top: 27,
+            bottom: 49,
+            left: Get.width * .1,
+            child: Text(
+              time,
+              style: const TextStyle(fontSize: 8),
+            ))
       ],
-    )
-    ;
+    );
   }
 }

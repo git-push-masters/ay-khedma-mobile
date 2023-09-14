@@ -8,9 +8,11 @@ class DetailService extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(body: SafeArea(child: Column(children: [
-      DetailServiceBody()
-
-    ],)),);
+    return Scaffold(
+      body: SafeArea(
+          child: Column(
+        children: [DetailServiceBody()],
+      )),
+    );
   }
 }

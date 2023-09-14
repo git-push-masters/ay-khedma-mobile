@@ -11,7 +11,6 @@ import '../../components/sign_up_componenets/choose_user_type.dart';
 class SignUpUserSection extends StatefulWidget {
   const SignUpUserSection({
     super.key,
-     
   });
 
   @override
@@ -84,15 +83,15 @@ class _SignUpUserSectionState extends State<SignUpUserSection> {
           validator: (value) =>
               value?.isEmpty ?? true ? "This field is required" : null,
           onSaved: (value) {
-           password = value;
+            password = value;
           },
           txt: "كلمة المرور",
           hintTxt: "...........",
         ),
         const SizedBox(
-              height: 15,
-            ),
-            Row(
+          height: 15,
+        ),
+        Row(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             const Icon(
@@ -108,27 +107,25 @@ class _SignUpUserSectionState extends State<SignUpUserSection> {
           ],
         ),
         const SizedBox(
-              height: 20,
-            ),
-            const ChooseUserType(),
-            UnderSignUpTextFieldsSection(
-              onPressed: () {
-                if (formKey.currentState!.validate()) {
-                  formKey.currentState!.save();
-                  BlocProvider.of<RegisterCubit>(context).rigesterUser(
-                      name:userName!,
-                      phoneNumber: phoneNumber!, 
-                      password: password!,
-                      );
-                } else {
-                  autoValidateMode = AutovalidateMode.always;
-                  setState(() {});
-                }
-              },
-            )
+          height: 20,
+        ),
+        const ChooseUserType(),
+        UnderSignUpTextFieldsSection(
+          onPressed: () {
+            if (formKey.currentState!.validate()) {
+              formKey.currentState!.save();
+              BlocProvider.of<RegisterCubit>(context).rigesterUser(
+                name: userName!,
+                phoneNumber: phoneNumber!,
+                password: password!,
+              );
+            } else {
+              autoValidateMode = AutovalidateMode.always;
+              setState(() {});
+            }
+          },
+        )
       ]),
     );
   }
 }
-
-

@@ -20,38 +20,27 @@ class _AuthContainerState extends State<AuthContainer> {
   bool initial = true;
   @override
   Widget build(BuildContext context) {
-   
-   if(initial)
-   {
-    SharedPreferences.getInstance().then((sharedPreferencesValue){
-      Future.delayed(const Duration(seconds: 10));
-      setState(() {
-        token =  sharedPreferencesValue.getString('token');
-        log("tokenn: $token");
-        initial = false;
+    if (initial) {
+      SharedPreferences.getInstance().then((sharedPreferencesValue) {
+        Future.delayed(const Duration(seconds: 10));
+        setState(() {
+          token = sharedPreferencesValue.getString('token');
+          log("tokenn: $token");
+          initial = false;
+        });
       });
-    });
-    
-    return const Scaffold(
+
+      return const Scaffold(
         body: Center(
           child: CircularProgressIndicator(),
         ),
-    );
-   }else
-   {
-    if(token == null) 
-    {
-      return const SignInView();
-    }else
-    {
-       
-      return const HomeView();
-     
+      );
+    } else {
+      if (token == null) {
+        return const SignInView();
+      } else {
+        return const HomeView();
+      }
     }
-   }
-   
   }
 }
-
-
-

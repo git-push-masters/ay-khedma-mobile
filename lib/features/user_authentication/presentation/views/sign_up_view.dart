@@ -19,7 +19,7 @@ class SignUpView extends StatelessWidget {
         body: BlocConsumer<RegisterCubit, RegisterState>(
       listener: ((context, state) {
         if (state is RegisterSuccess) {
-          Get.to(()=> const BioAndServiceTypeView());
+          Get.to(() => const BioAndServiceTypeView());
         }
         if (state is RegisterFailure) {
           customSnackBar(context, state.errMessage);
@@ -29,7 +29,6 @@ class SignUpView extends StatelessWidget {
         return ModalProgressHUD(
             inAsyncCall: state is RegisterLoading ? true : false,
             child: const SignUpViewBody());
-            
       }),
     ));
   }

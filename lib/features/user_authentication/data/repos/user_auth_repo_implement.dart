@@ -53,17 +53,17 @@ class UserAuthRepoImplement implements UserAuthRepo {
     log(userData.toString());
     return userData;
   }
-    
-    // register user methode
+
+  // register user methode
   @override
   Future<UserModel> registerUser(
       {required String name,
       required String phoneNumber,
       required String password}) async {
     Map<String, dynamic> body = {
-       "name": name,
-       "phone": phoneNumber,
-       "password": password
+      "name": name,
+      "phone": phoneNumber,
+      "password": password
     };
     String data = jsonEncode(body);
 
@@ -73,7 +73,4 @@ class UserAuthRepoImplement implements UserAuthRepo {
     log(userData.toString());
     return userData;
   }
-
- 
 }
-

@@ -13,12 +13,22 @@ class DetailServiceHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(children: [
-      const CustomParView(title: 'تفاصيل عن الخدمة',),
-      
-      const ImeageService(),
-      Column(children: [  Text("تصليح حنفية مكسورة من الداخل",style: Styles.textStyle14.copyWith(fontWeight: FontWeight.bold),)],),
-      const CantinUser()
-    ],);
+    return Column(
+      children: [
+        const CustomParView(
+          title: 'تفاصيل عن الخدمة',
+        ),
+        const ImeageService(),
+        Column(
+          children: [
+            Text(
+              "تصليح حنفية مكسورة من الداخل",
+              style: Styles.textStyle14.copyWith(fontWeight: FontWeight.bold),
+            )
+          ],
+        ),
+        const CantinUser()
+      ],
+    );
   }
 }

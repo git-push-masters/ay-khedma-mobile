@@ -4,28 +4,29 @@ import '../../../../../../../../core/helper/title_right.dart';
 
 class AllServiceBottom extends StatelessWidget {
   const AllServiceBottom({super.key, required this.titleinfo});
- final String titleinfo;
+  final String titleinfo;
   @override
   Widget build(BuildContext context) {
     return Column(
-      children:  const[
-         TitleRight(titleinfo: 'أفضل السباكين حواليك',),
-         UserInfoAndRating(),
-        
+      children: const [
+        TitleRight(
+          titleinfo: 'أفضل السباكين حواليك',
+        ),
+        UserInfoAndRating(),
       ],
     );
   }
 }
 
 class UserInfoAndRating extends StatelessWidget {
-  const UserInfoAndRating ({super.key});
+  const UserInfoAndRating({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16),
       child: Column(
-        children:const [
+        children: const [
           UserInfoRating(),
           UserInfoRating(),
           UserInfoRating(),

@@ -11,10 +11,18 @@ class NotificationsHeaderView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(children: const[
-      CustomParView(title: "الإشعارات",),
-      ParSearchWidget(title: 'ابحث عن الأشعارات',),
-      TitleRight(titleinfo: 'اليوم',)
-    ],);
+    return Column(
+      children: const [
+        CustomParView(
+          title: "الإشعارات",
+        ),
+        ParSearchWidget(
+          title: 'ابحث عن الأشعارات',
+        ),
+        TitleRight(
+          titleinfo: 'اليوم',
+        )
+      ],
+    );
   }
 }

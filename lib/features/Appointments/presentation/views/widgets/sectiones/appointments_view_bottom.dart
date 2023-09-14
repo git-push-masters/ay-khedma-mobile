@@ -11,10 +11,10 @@ class AppointmentsViewBottom extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
       child: ListView.builder(
-        itemCount: 5,
-        itemBuilder: (contex,index){
-        return const UpcomingAppointments();
-      }),
+          itemCount: 5,
+          itemBuilder: (contex, index) {
+            return const UpcomingAppointments();
+          }),
     );
   }
 }

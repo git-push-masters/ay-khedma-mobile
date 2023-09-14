@@ -9,18 +9,19 @@ class ChatHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      children:const [
-       
-        
-        CustomParView(title: "التواصل",),
-         Padding(
-           padding: EdgeInsets.only(top: 20),
-           child: TitleRight(
+      children: const [
+        CustomParView(
+          title: "التواصل",
+        ),
+        Padding(
+          padding: EdgeInsets.only(top: 20),
+          child: TitleRight(
             titleinfo: "الرسائل والمكالمات",
-                 ),
-         ),
-         ParSearchWidget(title: 'ابحث عن المحادثات',),
-         
+          ),
+        ),
+        ParSearchWidget(
+          title: 'ابحث عن المحادثات',
+        ),
       ],
     );
   }

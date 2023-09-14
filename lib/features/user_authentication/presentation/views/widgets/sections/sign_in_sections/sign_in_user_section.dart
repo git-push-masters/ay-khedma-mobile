@@ -59,8 +59,7 @@ class _SignInUserSectionState extends State<SignInUserSection> {
                   formKey.currentState!.save();
                   BlocProvider.of<LoginCubit>(context).loginUser(
                       phoneNumber: phoneNumber!, password: password!);
-                }else
-                {
+                } else {
                   setState(() {
                     autoValidateMode = AutovalidateMode.always;
                   });

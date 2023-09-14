@@ -24,7 +24,9 @@ class HomeAppBar extends StatelessWidget {
           height: 50,
           width: 50,
           decoration: BoxDecoration(
-            image: DecorationImage(image: NetworkImage( "https://ay-khedma-backend-development.up.railway.app/api" + myUserModel!.body!.avatar!)),
+            image: DecorationImage(
+                image: NetworkImage(
+                    "https://ay-khedma-backend-development.up.railway.app/api${myUserModel!.body!.avatar!}")),
             color: AppColors.kOutLineBorder,
             borderRadius: BorderRadius.circular(16),
           ),
@@ -41,8 +43,8 @@ class HomeAppBar extends StatelessWidget {
             const SizedBox(
               height: 5,
             ),
-              const Text(
-                "Ebrahim",
+            Text(
+              myUserModel!.body!.name,
               style: Styles.textStyle12,
             ),
           ],
@@ -83,22 +85,26 @@ class PuplishServiceSheet extends StatelessWidget {
   Widget build(BuildContext context) {
     return SingleChildScrollView(
       child: Padding(
-        padding:EdgeInsets.only(
-                top: 24,
-                right: 24,
-                left: 24,
-                bottom: MediaQuery.of(context).viewInsets.bottom == 0
-                    ? 16
-                    : MediaQuery.of(context).viewInsets.bottom),
+        padding: EdgeInsets.only(
+            top: 24,
+            right: 24,
+            left: 24,
+            bottom: MediaQuery.of(context).viewInsets.bottom == 0
+                ? 16
+                : MediaQuery.of(context).viewInsets.bottom),
         child: Column(
           children: [
-           const BioViewCenterSection(),
-           const SizedBox(height: 12,),
-              CustomTextFeild(
+            const BioViewCenterSection(),
+            const SizedBox(
+              height: 12,
+            ),
+            CustomTextFeild(
               hinttext: "العنوان",
               width: Get.width * .75,
             ),
-           const SizedBox(height: 12,),
+            const SizedBox(
+              height: 12,
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
@@ -112,7 +118,9 @@ class PuplishServiceSheet extends StatelessWidget {
                 ),
               ],
             ),
-             const SizedBox(height: 12,),
+            const SizedBox(
+              height: 12,
+            ),
             const CustomButton(text: "Puplish", textStyle: Styles.textStyle12),
           ],
         ),

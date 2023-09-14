@@ -19,7 +19,7 @@ class RegisterCubit extends Cubit<RegisterState> {
     try {
       var result = await userAuthRepo.registerUser(
           name: name, phoneNumber: phoneNumber, password: password);
-          log(result.toString());
+      log(result.toString());
       emit(RegisterSuccess());
     } catch (e) {
       emit(RegisterFailure(e.toString()));

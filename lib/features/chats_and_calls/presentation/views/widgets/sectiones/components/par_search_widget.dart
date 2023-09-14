@@ -7,8 +7,7 @@ import '../../../../../../../core/utils/colors.dart';
 import '../../../../../../../core/utils/styles.dart';
 
 class ParSearchWidget extends StatelessWidget {
-  const ParSearchWidget(
-      {super.key, required this.title});
+  const ParSearchWidget({super.key, required this.title});
   final String title;
   @override
   Widget build(BuildContext context) {

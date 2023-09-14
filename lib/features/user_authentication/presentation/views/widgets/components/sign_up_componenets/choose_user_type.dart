@@ -11,34 +11,38 @@ class ChooseUserType extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const Text("اختر نوع حسابك", style: Styles.textStyle14,),
-        const SizedBox(height: 10,),
+        const Text(
+          "اختر نوع حسابك",
+          style: Styles.textStyle14,
+        ),
+        const SizedBox(
+          height: 10,
+        ),
         Row(
           children: [
-            
             Expanded(
               child: Container(
                 height: 50,
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(16) ,
+                  borderRadius: BorderRadius.circular(16),
                   border: Border.all(color: AppColors.kOutLineBorder),
                 ),
-                child:const Center(child:  Text("مقدم الخدمة")),
+                child: const Center(child: Text("مقدم الخدمة")),
               ),
             ),
-            const SizedBox(width: 10,),
+            const SizedBox(
+              width: 10,
+            ),
             Expanded(
               child: Container(
                 height: 50,
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(16) ,
-                  border: Border.all(color: AppColors.kPrimaryColor),
-                  color: AppColors.kPrimaryColor.withOpacity(.3)
-                ),
-                child:const Center(child:  Text("طالب الخدمة")),
+                    borderRadius: BorderRadius.circular(16),
+                    border: Border.all(color: AppColors.kPrimaryColor),
+                    color: AppColors.kPrimaryColor.withOpacity(.3)),
+                child: const Center(child: Text("طالب الخدمة")),
               ),
             ),
-            
           ],
         )
       ],

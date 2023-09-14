@@ -7,7 +7,8 @@ class UserModel extends Equatable {
   final List<dynamic>? msgs;
   final Body? body;
 
-  const UserModel({required this.success,required this.status, this.msgs, this.body});
+  const UserModel(
+      {required this.success, required this.status, this.msgs, this.body});
 
   factory UserModel.fromJson(Map<String, dynamic> json) => UserModel(
         success: json['success'] as bool,

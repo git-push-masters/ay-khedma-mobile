@@ -29,6 +29,7 @@ class SignUpView extends StatelessWidget {
         return ModalProgressHUD(
             inAsyncCall: state is RegisterLoading ? true : false,
             child: const SignUpViewBody());
+            
       }),
     ));
   }

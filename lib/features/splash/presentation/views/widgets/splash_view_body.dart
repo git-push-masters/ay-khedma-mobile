@@ -77,24 +77,20 @@ class _SplashViewBodyState extends State<SplashViewBody>
             .animate(animationController);
     animationController.forward();
   }
-  
-
 
   void navigateToHome() {
     Future.delayed(const Duration(seconds: 4), () {
-      Get.to(()=>const AuthContainer());
+      Get.to(() => const AuthContainer());
     });
   }
 }
 
+//fetch user data
 
-
-   //fetch user data
-
-  Future <Map<String, dynamic>> myUserData( { required String  token}) async
-{
-  Map<String, dynamic> data = await ApiService().get(endPoint: "auth/me", token: token);
+Future<UserModel> myUserData({required String token}) async {
+  Map<String, dynamic> data =
+      await ApiService().get(endPoint: "auth/me", token: token);
   log(token.toString());
-    log(data.toString());
-    return data;
+  log(data.toString());
+  return UserModel.fromJson(data);
 }

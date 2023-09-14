@@ -8,14 +8,13 @@ class ChatBottomView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
-      itemCount: 8,
-      itemBuilder: (context,index){
-      return       const Messagesview(time: ' ١٢:٣٤', subtitle: 'معادنا الساعة كام ياكبير؟', title: 'أبو احمد',);
-
-    });
-
-      
-      
-   
+        itemCount: 8,
+        itemBuilder: (context, index) {
+          return const Messagesview(
+            time: ' ١٢:٣٤',
+            subtitle: 'معادنا الساعة كام ياكبير؟',
+            title: 'أبو احمد',
+          );
+        });
   }
 }

@@ -24,14 +24,11 @@ class CustomButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       height: height ?? 50,
-      width: width??Get.width,
+      width: width ?? Get.width,
       child: TextButton(
         style: TextButton.styleFrom(
-       
             backgroundColor: backgroundColor ?? AppColors.kPrimaryColor,
             shape: RoundedRectangleBorder(
-              
-              
                 borderRadius: borderRadius ?? BorderRadius.circular(16))),
         onPressed: onPressed,
         child: Text(text, style: textStyle),

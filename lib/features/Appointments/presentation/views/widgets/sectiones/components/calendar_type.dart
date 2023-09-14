@@ -14,11 +14,17 @@ class CalendarType extends StatelessWidget {
       padding: const EdgeInsets.only(top: 21, right: 19, left: 16),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children:const [
-          ContainerCalendarType(color: AppColors.kPrimaryColor, title: 'قادم',),
-          ContainerCalendarType(title: 'مكتمل',),
-          ContainerCalendarType(title: 'ملغي',),
-        
+        children: const [
+          ContainerCalendarType(
+            color: AppColors.kPrimaryColor,
+            title: 'قادم',
+          ),
+          ContainerCalendarType(
+            title: 'مكتمل',
+          ),
+          ContainerCalendarType(
+            title: 'ملغي',
+          ),
         ],
       ),
     );

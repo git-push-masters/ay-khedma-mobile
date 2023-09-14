@@ -13,7 +13,7 @@ class BioViewCenterSection extends StatefulWidget {
 }
 
 class _BioViewCenterSectionState extends State<BioViewCenterSection> {
-  List <String>servicesTypes = ["سباك" , "نجار", "حداد", "نقاش", "حلاق"];
+  List<String> servicesTypes = ["سباك", "نجار", "حداد", "نقاش", "حلاق"];
   String selectedService = 'سباك';
   @override
   Widget build(BuildContext context) {
@@ -34,18 +34,23 @@ class _BioViewCenterSectionState extends State<BioViewCenterSection> {
             width: Get.width,
             child: DropdownButtonFormField<String>(
               decoration: InputDecoration(
-                suffixIcon:const Icon(FontAwesomeIcons.arrowDownShortWide,
-                      color: AppColors.kTextFieldHintColor),
-                      border: OutlineInputBorder(
-                        borderRadius: BorderRadius.circular(16),
-                        borderSide:const BorderSide(color: AppColors.kOutLineBorder)
-                      ),
+                suffixIcon: const Icon(FontAwesomeIcons.arrowDownShortWide,
+                    color: AppColors.kTextFieldHintColor),
+                border: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(16),
+                    borderSide:
+                        const BorderSide(color: AppColors.kOutLineBorder)),
               ),
               value: selectedService,
-              items: servicesTypes.map((service) => DropdownMenuItem(
-                value: service,
-                child: Text(service, style: Styles.textStyle12,) )).toList(),
-                onChanged: (value) => setState(()=> selectedService = value!) ,
+              items: servicesTypes
+                  .map((service) => DropdownMenuItem(
+                      value: service,
+                      child: Text(
+                        service,
+                        style: Styles.textStyle12,
+                      )))
+                  .toList(),
+              onChanged: (value) => setState(() => selectedService = value!),
             ),
           ),
           const SizedBox(

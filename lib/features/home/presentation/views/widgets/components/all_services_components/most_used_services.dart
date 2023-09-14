@@ -18,33 +18,38 @@ class MostUsedServices extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return 
-     Container(
-       decoration: BoxDecoration(
-           color: AppColors.kSmallContainersColor,
-           borderRadius: BorderRadius.circular(26)),
-       child: Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-         Image.asset(image, color: Colors.black,),
-        const SizedBox(
-          height: 10,
-        ),
-        const SizedBox(height: 10,),
-        Text(
-          title,
-          style: Styles.textStyle12.copyWith(fontWeight: FontWeight.bold),
-        ),
-        const SizedBox(height: 5,),
-         Text(
-          subtitle,
-          style: const TextStyle(fontSize: 10),
-          maxLines: 2,
-          textAlign: TextAlign.center,
-        )
-      ],
-    ),
-     );
-   
+    return Container(
+      decoration: BoxDecoration(
+          color: AppColors.kSmallContainersColor,
+          borderRadius: BorderRadius.circular(26)),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Image.asset(
+            image,
+            color: Colors.black,
+          ),
+          const SizedBox(
+            height: 10,
+          ),
+          const SizedBox(
+            height: 10,
+          ),
+          Text(
+            title,
+            style: Styles.textStyle12.copyWith(fontWeight: FontWeight.bold),
+          ),
+          const SizedBox(
+            height: 5,
+          ),
+          Text(
+            subtitle,
+            style: const TextStyle(fontSize: 10),
+            maxLines: 2,
+            textAlign: TextAlign.center,
+          )
+        ],
+      ),
+    );
   }
 }

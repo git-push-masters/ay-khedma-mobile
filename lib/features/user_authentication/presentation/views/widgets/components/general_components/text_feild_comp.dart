@@ -8,7 +8,9 @@ class TextFeildComp extends StatelessWidget {
     required this.txt,
     required this.hintTxt,
     this.prefixIcon,
-    this.maxLines, this.onSaved, this.validator,
+    this.maxLines,
+    this.onSaved,
+    this.validator,
   });
 
   final String txt;

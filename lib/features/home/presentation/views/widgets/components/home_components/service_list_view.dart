@@ -25,35 +25,36 @@ class _ServiceListViewState extends State<ServiceListView> {
           scrollDirection: Axis.horizontal,
           physics: const BouncingScrollPhysics(),
           slivers: [
-            SliverToBoxAdapter(child:Row(
-              children: List.generate(10, (index) {
-            return GestureDetector(
-              onTap: () {
-                setState(() {
-                  current = index;
-                });
-              },
-              child: Transform.translate(
-                offset: Offset(0.0, current == index ? -20.0 : 0.0),
-                child: AnimatedContainer(
-                  duration: const Duration(milliseconds: 300),
-                  margin: const EdgeInsets.symmetric(horizontal: 6),
-                  height:  50,
-                  width:  50,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(16),
-                      color: current == index
-                          ? AppColors.kSecondPrimaryColor
-                          : AppColors.kListViewItemColor),
-                  child: Image.asset(
-                    AssetsData.serviceIte,
+            SliverToBoxAdapter(
+              child: Row(
+                  children: List.generate(10, (index) {
+                return GestureDetector(
+                  onTap: () {
+                    setState(() {
+                      current = index;
+                    });
+                  },
+                  child: Transform.translate(
+                    offset: Offset(0.0, current == index ? -20.0 : 0.0),
+                    child: AnimatedContainer(
+                      duration: const Duration(milliseconds: 300),
+                      margin: const EdgeInsets.symmetric(horizontal: 6),
+                      height: 50,
+                      width: 50,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(16),
+                          color: current == index
+                              ? AppColors.kSecondPrimaryColor
+                              : AppColors.kListViewItemColor),
+                      child: Image.asset(
+                        AssetsData.serviceIte,
+                      ),
+                    ),
                   ),
-                ),
-              ),
-            );
-          })), )
+                );
+              })),
+            )
           ],
-           
         ),
       ),
     );

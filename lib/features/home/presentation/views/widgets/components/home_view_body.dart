@@ -14,38 +14,38 @@ class HomeViewBody extends StatelessWidget {
           SliverFillRemaining(
             hasScrollBody: false,
             child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: const [
-            SizedBox(
-              height: 30,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: const [
+                SizedBox(
+                  height: 30,
+                ),
+                HomeViewHeaderSection(),
+                SizedBox(
+                  height: 26,
+                ),
+                HomeViewSrvicesSection(),
+                AllServiceBottom(
+                  titleinfo: "افضل السباكين حولك",
+                ),
+                SizedBox(
+                  height: 26,
+                ),
+                Center(child: ViewAllServices()),
+                SizedBox(
+                  height: 26,
+                ),
+                AllServiceBottom(
+                  titleinfo: "طالبي خدمات السباكه",
+                ),
+                Center(child: ViewAllServices()),
+                SizedBox(
+                  height: 26,
+                ),
+              ],
             ),
-            HomeViewHeaderSection(),
-            SizedBox(
-              height: 26,
-            ),
-            HomeViewSrvicesSection(),
-            
-            AllServiceBottom(titleinfo: "افضل السباكين حولك",),
-            SizedBox(
-              height: 26,
-            ),
-             Center(child: ViewAllServices()),
-              SizedBox(
-              height: 26,
-            ),
-             AllServiceBottom(titleinfo: "طالبي خدمات السباكه",),
-             Center(child: ViewAllServices()),
-              SizedBox(
-              height: 26,
-            ),
-          ],
-        ),)
+          )
         ],
-        
       ),
     );
   }
 }
-
-
-

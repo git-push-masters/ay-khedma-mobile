@@ -16,17 +16,16 @@ class AllServicesCenter extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 18),
       child: SizedBox(
-        height: Get.height*.4,
+        height: Get.height * .4,
         width: Get.width,
         child: GridView.builder(
-          physics:const NeverScrollableScrollPhysics(),
-          itemCount: 6,
-            gridDelegate:
-                const SliverGridDelegateWithFixedCrossAxisCount(
-                  mainAxisSpacing: 10,
-              crossAxisSpacing:10,
-              childAspectRatio: .7,
-                  crossAxisCount: 3),
+            physics: const NeverScrollableScrollPhysics(),
+            itemCount: 6,
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                mainAxisSpacing: 10,
+                crossAxisSpacing: 10,
+                childAspectRatio: .7,
+                crossAxisCount: 3),
             itemBuilder: (context, index) {
               return const MostUsedServices(
                 title: " خدمات المنازل",

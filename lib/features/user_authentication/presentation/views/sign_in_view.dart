@@ -15,23 +15,21 @@ class SignInView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return Scaffold(
       body: BlocConsumer<LoginCubit, LoginState>(
         listener: (context, state) {
-          if(state is LoginSuccess)
-          {
+          if (state is LoginSuccess) {
             BlocProvider.of<LoginCubit>(context).userModel = state.userModel;
-            Get.to(()=> const HomeView());
+            Get.to(() => const HomeView());
           }
-          if(state is LoginFailure)
-          {
+          if (state is LoginFailure) {
             customSnackBar(context, state.errMessage);
           }
         },
         builder: (context, state) {
           return ModalProgressHUD(
-            inAsyncCall: state is LoginLoading ? true : false,
-            child:const SignInViewBody());
+              inAsyncCall: state is LoginLoading ? true : false,
+              child: const SignInViewBody());
         },
       ),
     );

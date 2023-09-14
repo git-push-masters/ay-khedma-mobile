@@ -11,11 +11,12 @@ class NotificationsView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: SafeArea(
-        child: Column(children: const [
-          NotificationsHeaderView(),
-          Expanded(child: NotificationsBottomView())
-          
-        ],),
+        child: Column(
+          children: const [
+            NotificationsHeaderView(),
+            Expanded(child: NotificationsBottomView())
+          ],
+        ),
       ),
     );
   }

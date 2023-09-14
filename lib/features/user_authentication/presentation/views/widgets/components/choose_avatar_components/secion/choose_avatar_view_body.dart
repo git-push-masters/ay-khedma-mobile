@@ -28,9 +28,10 @@ class ChooseAvatarViewBody extends StatelessWidget {
           left: 0,
           bottom: Get.height * .1,
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 44,),
+            padding: const EdgeInsets.symmetric(
+              horizontal: 44,
+            ),
             child: CustomButton(
-              
                 onPressed: () {},
                 text: "موافق",
                 textStyle: Styles.textStyle12.copyWith(color: Colors.white)),
@@ -38,12 +39,13 @@ class ChooseAvatarViewBody extends StatelessWidget {
         ),
         Positioned(
             bottom: Get.height * .04,
-            left: Get.width*.06,
+            left: Get.width * .06,
             child: TextButton(
                 onPressed: () {},
-                child:  Text(
+                child: Text(
                   "تخطى",
-                   style: Styles.textStyle12.copyWith(color: AppColors.kPrimaryColor),
+                  style: Styles.textStyle12
+                      .copyWith(color: AppColors.kPrimaryColor),
                   selectionColor: AppColors.kPrimaryColor,
                 )))
       ],

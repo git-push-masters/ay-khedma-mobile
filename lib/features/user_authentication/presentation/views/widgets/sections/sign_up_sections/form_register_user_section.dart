@@ -12,7 +12,7 @@ import 'package:ay_khedma/features/user_authentication/presentation/views/widget
 // }
 
 // class _FormRegisterUserState extends State<FormRegisterUser> {
-  
+
 //    RegisterDataModel? registerModel;
 //   @override
 //   Widget build(BuildContext context) {
@@ -21,8 +21,7 @@ import 'package:ay_khedma/features/user_authentication/presentation/views/widget
 //       autovalidateMode: autoValidateMode,
 //       child: Column(
 //         children: [
-           
-          
+
 //         ],
 //       ),
 //     );

@@ -35,7 +35,6 @@ class HomeViewSrvicesSection extends StatelessWidget {
         ),
         const ServiceListView(),
         const ViewAllServices(),
-        
       ],
     );
   }
@@ -47,22 +46,28 @@ class ViewAllServices extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: ()
-      {
-        Get.to(()=> const AllServicesView());
+      onTap: () {
+        Get.to(() => const AllServicesView());
       },
       child: Container(
         height: 30,
         width: Get.width * .5,
         decoration: BoxDecoration(
-          border: Border.all(color: AppColors.kPrimaryColor.withOpacity(.3)),
-          borderRadius: BorderRadius.circular(8)
-        ),
+            border: Border.all(color: AppColors.kPrimaryColor.withOpacity(.3)),
+            borderRadius: BorderRadius.circular(8)),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: [
-            Text("عرض الكل", style: Styles.textStyle12.copyWith(color: AppColors.kPrimaryColor),),
-            const Icon(Icons.arrow_circle_left, size: 20, color: AppColors.kPrimaryColor,)
+            Text(
+              "عرض الكل",
+              style:
+                  Styles.textStyle12.copyWith(color: AppColors.kPrimaryColor),
+            ),
+            const Icon(
+              Icons.arrow_circle_left,
+              size: 20,
+              color: AppColors.kPrimaryColor,
+            )
           ],
         ),
       ),

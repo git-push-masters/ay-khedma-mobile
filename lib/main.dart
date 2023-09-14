@@ -10,6 +10,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'features/Appointments/presentation/views/widgets/sectiones/appointments_view.dart';
 import 'features/chats_and_calls/presentation/views/chat_view.dart';
 import 'features/chats_and_calls/presentation/views/widgets/chat_view_body.dart';
+import 'features/home/presentation/views/details_service_view.dart';
 import 'features/home/presentation/views/home_view.dart';
 import 'features/notifications/presentation/views/widgets/notifications_view.dart';
 import 'features/profile/presentation/views/profile_view.dart';
@@ -49,7 +50,7 @@ class AyKhedmaApp extends StatelessWidget {
           Locale('ar'),
         ],
         //routerConfig: AppRouter.router,
-        home: const HomeView(),
+        home: const DetailService(),
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
           fontFamily: 'Kohinoor Arabic',

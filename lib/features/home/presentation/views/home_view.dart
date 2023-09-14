@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:ay_khedma/core/helper/global_var.dart';
 import 'package:ay_khedma/features/splash/presentation/views/widgets/splash_view_body.dart';
 import 'package:flutter/material.dart';
@@ -15,7 +17,9 @@ class HomeView extends StatelessWidget {
       {
         if(snapshot.hasData)
         {
-          return  HomeViewBody();
+          myUserModel = snapshot.data;
+          log(myUserModel.toString());
+          return const HomeViewBody();
         }else
         {
           return const Center(child: CircularProgressIndicator());

@@ -24,6 +24,7 @@ class HomeAppBar extends StatelessWidget {
           height: 50,
           width: 50,
           decoration: BoxDecoration(
+            image: DecorationImage(image: NetworkImage( "https://ay-khedma-backend-development.up.railway.app/api" + myUserModel!.body!.avatar!)),
             color: AppColors.kOutLineBorder,
             borderRadius: BorderRadius.circular(16),
           ),
@@ -40,8 +41,8 @@ class HomeAppBar extends StatelessWidget {
             const SizedBox(
               height: 5,
             ),
-            const Text(
-              "Ebrahim",
+              const Text(
+                "Ebrahim",
               style: Styles.textStyle12,
             ),
           ],

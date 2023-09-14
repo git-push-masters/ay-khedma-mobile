@@ -31,6 +31,7 @@ final String title;
                 child: Row(
                   //mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
+                    
                     const Icon(
                       FontAwesomeIcons.arrowRight,
                       color: AppColors.kTextbuttonColor,
@@ -42,9 +43,8 @@ final String title;
                       title,
                       style: Styles.textStyle16.copyWith(color: Colors.white),
                     ),
-                    SizedBox(
-                      width: Get.width * .6,
-                    ),
+                    Spacer(),
+                    
                     const Icon(
                       FontAwesomeIcons.ellipsis,
                       color: AppColors.kTextbuttonColor,

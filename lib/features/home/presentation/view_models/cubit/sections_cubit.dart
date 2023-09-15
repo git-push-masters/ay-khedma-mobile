@@ -1,8 +1,8 @@
 import 'dart:developer';
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
+import '../../../data/models/repos/home_repo.dart';
 import '../../../data/models/sectionsmodel/sectionsmodel.dart';
-import '../../../data/repos/home_repo.dart';
 
 part 'sections_state.dart';
 

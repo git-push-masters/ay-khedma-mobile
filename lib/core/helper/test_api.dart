@@ -5,7 +5,9 @@ import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
 import 'package:dio/dio.dart';
 
+import '../../features/home/data/models/requests_model/requests_model.dart';
 import '../../features/home/data/models/sectionsmodel/sectionsmodel.dart';
+import 'global_var.dart';
 
 class TestApi extends StatefulWidget {
   const TestApi({super.key});
@@ -44,13 +46,29 @@ class TestApi extends StatefulWidget {
 //   }
 // }
 
-Future<SectionsModel> fetchAllSections() async {
-  log("enter method");
-  Map<String, dynamic> sectionsData =
-      await ApiService().get(endPoint: "sections", token: "");
-  log(sectionsData.toString());
-  return SectionsModel.fromJson(sectionsData);
-}
+// Future<SectionsModel> fetchAllSections() async {
+//   log("enter method");
+//   Map<String, dynamic> sectionsData =
+//       await ApiService().get(endPoint: "sections", token: "");
+//   log(sectionsData.toString());
+//   return SectionsModel.fromJson(sectionsData);
+// }
+
+Future<RequestsModel> postRequest(
+      ) async {
+    log("enter method");
+    Map<String, dynamic> body = {
+      "title": "مطلوب سباك لتصليح حنفية المطبخ",
+      "description": "الشغلانة سهلة خااالص بس محتاج حد متمكن",
+      "maxPrice": 6120,
+      "sectionId": 5,
+      "durationRange": "من ساعة لساعتين",
+    };
+    String data = jsonEncode(body);
+    Map<String, dynamic> requestData =
+        await ApiService().post(endPoint: "requests", body: data, token: token);
+    return RequestsModel.fromJson(requestData);
+  }
 
 class _TestApiState extends State<TestApi> {
   @override
@@ -59,7 +77,7 @@ class _TestApiState extends State<TestApi> {
       body: Center(
         child: ElevatedButton(
             onPressed: () {
-              fetchAllSections();
+              postRequest();
             },
             child: const Text("Check")),
       ),

@@ -104,6 +104,13 @@ class PuplishServiceSheet extends StatelessWidget {
             const SizedBox(
               height: 12,
             ),
+            CustomTextFeild(
+              hinttext: "المده المحدده",
+              width: Get.width * .75,
+            ),
+            const SizedBox(
+              height: 12,
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [

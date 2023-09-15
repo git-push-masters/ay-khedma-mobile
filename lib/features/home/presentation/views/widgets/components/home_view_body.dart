@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../sections/home_view_header_section.dart';
 import '../sections/home_view_service_section.dart';
 import 'all_services_components/sections/all_services_bottom.dart';
+import 'home_components/offered_services.dart';
 
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({super.key});
@@ -34,9 +35,7 @@ class HomeViewBody extends StatelessWidget {
                 SizedBox(
                   height: 26,
                 ),
-                AllServiceBottom(
-                  titleinfo: "طالبي خدمات السباكه",
-                ),
+                OfferedServices(),
                 Center(child: ViewAllServices()),
                 SizedBox(
                   height: 26,

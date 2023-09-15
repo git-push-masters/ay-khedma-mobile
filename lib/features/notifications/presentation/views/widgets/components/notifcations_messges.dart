@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import '../../../../../../../core/utils/colors.dart';
@@ -71,7 +72,25 @@ class NotificationsMessges extends StatelessWidget {
             child: Text(
               time,
               style: const TextStyle(fontSize: 8),
-            ))
+            )),
+            Positioned(
+              top: 57,
+              left: 35,
+              child: RatingBar.builder(
+                      itemSize: 10,
+                      initialRating: 3,
+                      minRating: 1,
+                      direction: Axis.horizontal,
+                      allowHalfRating: true,
+                      itemCount: 5,
+                      itemPadding: const EdgeInsets.symmetric(horizontal: 4.0),
+                      itemBuilder: (context, _) => const Icon(
+              Icons.star,
+              color: AppColors.kPrimaryColor,
+                      ),
+                      onRatingUpdate: (rating) {},
+                    ),
+            )
       ],
     );
   }

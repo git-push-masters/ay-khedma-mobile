@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../../../../../core/helper/widgets/custom_button.dart';
+import '../../../otp_code_view.dart';
 import '../../components/bio_and_service_type_components/under_text_fields_bio_view.dart';
 
 class BioViewBottomSection extends StatelessWidget {
@@ -35,8 +36,7 @@ class BioViewBottomSection extends StatelessWidget {
             height: Get.height * .06,
           ),
           CustomButton(
-              onPressed: () =>
-                  GoRouter.of(context).push(AppRouter.kOtpCodeRoute),
+              onPressed: () => Get.to(const OtpCodeView()),
               text: "موافق",
               textStyle: Styles.textStyle12.copyWith(color: Colors.white)),
           SizedBox(

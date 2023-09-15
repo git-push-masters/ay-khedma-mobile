@@ -26,19 +26,17 @@ class _HomeViewState extends State<HomeView> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: FutureBuilder(
-          future: myUserData(token: token ?? ""),
-          builder: (context, snapshot) {
-            if (snapshot.hasData) {
-              myUserModel = snapshot.data;
-              log(myUserModel.toString());
-              return const HomeViewBody();
-            } else {
-              return const Center(
-                  child: CircularProgressIndicator(
-                color: AppColors.kPrimaryColor,
-              ));
-            }
-          }),
+        future: myUserData(token: token??""),
+        builder: (context, snapshot)
+      {
+        if(snapshot.hasData)
+        {
+          return  HomeViewBody();
+        }else
+        {
+          return const Center(child: CircularProgressIndicator());
+        }
+      }),
     );
   }
 }

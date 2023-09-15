@@ -76,7 +76,9 @@ class _ServiceListBodyState extends State<ServiceListBody> {
                         child: Image.network(
                             "$baseUrl${mySectionsModel!.body![index].icon}"),
                       ),
-                      const SizedBox(height: 5,),
+                      const SizedBox(
+                        height: 5,
+                      ),
                       Text(mySectionsModel!.body![index].name!)
                     ],
                   ),

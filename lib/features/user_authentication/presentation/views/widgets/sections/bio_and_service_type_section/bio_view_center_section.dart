@@ -14,6 +14,7 @@ class BioViewCenterSection extends StatefulWidget {
 }
 
 class _BioViewCenterSectionState extends State<BioViewCenterSection> {
+  String? selectedSection = mySectionsModel!.body![0].name;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -40,16 +41,16 @@ class _BioViewCenterSectionState extends State<BioViewCenterSection> {
                     borderSide:
                         const BorderSide(color: AppColors.kOutLineBorder)),
               ),
-              value: mySectionsModel!.body![0],
+              value: selectedSection,
               items: mySectionsModel!.body!
                   .map((service) => DropdownMenuItem(
-                      value: service,
+                      value: service.name,
                       child: Text(
                         service.name!,
                         style: Styles.textStyle12,
                       )))
                   .toList(),
-              onChanged: (value) => setState(() => mySectionsModel!.body![0] = value!),
+              onChanged: (value) => setState(() => selectedSection = value!),
             ),
           ),
           const SizedBox(

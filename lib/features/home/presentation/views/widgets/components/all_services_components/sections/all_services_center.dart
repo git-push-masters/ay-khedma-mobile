@@ -28,11 +28,10 @@ class AllServicesCenter extends StatelessWidget {
                 childAspectRatio: .7,
                 crossAxisCount: 3),
             itemBuilder: (context, index) {
-              return  MostUsedServices(
-                title: mySectionsModel!.body![index].name!,
-                subtitle: "تن با تولید سادگی نامفهومه",
-                image: "$baseUrl${mySectionsModel!.body![index].icon!}"
-              );
+              return MostUsedServices(
+                  title: mySectionsModel!.body![index].name!,
+                  subtitle: "تن با تولید سادگی نامفهومه",
+                  image: "$baseUrl${mySectionsModel!.body![index].icon!}");
             }),
       ),
     );

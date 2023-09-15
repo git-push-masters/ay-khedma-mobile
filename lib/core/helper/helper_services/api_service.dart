@@ -4,8 +4,6 @@ import 'package:http/http.dart' as http;
 import '../global_var.dart';
 
 class ApiService {
-  
-
   // get request to fetch data
   ApiService();
 

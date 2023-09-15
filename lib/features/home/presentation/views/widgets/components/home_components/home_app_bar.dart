@@ -25,8 +25,7 @@ class HomeAppBar extends StatelessWidget {
           width: 50,
           decoration: BoxDecoration(
             image: DecorationImage(
-                image: NetworkImage(
-                    "$baseUrl${myUserModel!.body!.avatar!}")),
+                image: NetworkImage("$baseUrl${myUserModel!.body!.avatar!}")),
             color: AppColors.kOutLineBorder,
             borderRadius: BorderRadius.circular(16),
           ),

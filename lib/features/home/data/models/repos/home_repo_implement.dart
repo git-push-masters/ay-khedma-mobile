@@ -28,17 +28,20 @@ class HomeRepoImplement implements HomeRepo {
       required String durationRange,
       required int sectionId,
       required String token}) async {
-    log("enter method");
+    log("enter request");
     Map<String, dynamic> body = {
       "title": title,
       "description": description,
       "maxPrice": maxPrice,
       "sectionId": sectionId,
       "durationRange": durationRange,
+      "locationLat": 32.32421,
+      "locationLong": 32.134539,
     };
     String data = jsonEncode(body);
     Map<String, dynamic> requestData =
         await apiService.post(endPoint: "requests", body: data, token: token);
+     log(requestData.toString());   
     return RequestsModel.fromJson(requestData);
   }
 }

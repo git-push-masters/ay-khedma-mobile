@@ -14,9 +14,9 @@ class BioViewCenterSection extends StatefulWidget {
 }
 
 class _BioViewCenterSectionState extends State<BioViewCenterSection> {
-  String? selectedSection = mySectionsModel!.body![0].name;
   @override
   Widget build(BuildContext context) {
+    selectedSection = mySectionsModel!.body![0].name;
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 44),
       child: Column(
@@ -30,6 +30,7 @@ class _BioViewCenterSectionState extends State<BioViewCenterSection> {
           const SizedBox(
             height: 10,
           ),
+          
           SizedBox(
             width: Get.width,
             child: DropdownButtonFormField(

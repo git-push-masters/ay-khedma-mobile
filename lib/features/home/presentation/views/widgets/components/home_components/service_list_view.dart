@@ -58,7 +58,7 @@ class _ServiceListBodyState extends State<ServiceListBody> {
                 });
               },
               child: Transform.translate(
-                offset: Offset(0.0, current == index ? -20.0 : 0.0),
+                offset: Offset(0.0, current == index ? -10.0 : 0.0),
                 child: Padding(
                   padding: const EdgeInsets.symmetric(vertical: 10),
                   child: Column(

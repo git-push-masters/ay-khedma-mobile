@@ -50,7 +50,7 @@ class _ServiceListBodyState extends State<ServiceListBody> {
       slivers: [
         SliverToBoxAdapter(
           child: Row(
-              children: List.generate(10, (index) {
+              children: List.generate(mySectionsModel!.body!.length, (index) {
             return GestureDetector(
               onTap: () {
                 setState(() {
@@ -59,18 +59,27 @@ class _ServiceListBodyState extends State<ServiceListBody> {
               },
               child: Transform.translate(
                 offset: Offset(0.0, current == index ? -20.0 : 0.0),
-                child: AnimatedContainer(
-                  duration: const Duration(milliseconds: 300),
-                  margin: const EdgeInsets.symmetric(horizontal: 6),
-                  height: 50,
-                  width: 50,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(16),
-                      color: current == index
-                          ? AppColors.kSecondPrimaryColor
-                          : AppColors.kListViewItemColor),
-                  child: Image.asset(
-                      "https://ay-khedma-backend-development.up.railway.app/api${mySectionsModel}"),
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 10),
+                  child: Column(
+                    children: [
+                      AnimatedContainer(
+                        duration: const Duration(milliseconds: 300),
+                        margin: const EdgeInsets.symmetric(horizontal: 6),
+                        height: 50,
+                        width: 50,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(16),
+                            color: current == index
+                                ? AppColors.kSecondPrimaryColor
+                                : AppColors.kListViewItemColor),
+                        child: Image.network(
+                            "$baseUrl${mySectionsModel!.body![index].icon}"),
+                      ),
+                      const SizedBox(height: 5,),
+                      Text(mySectionsModel!.body![index].name!)
+                    ],
+                  ),
                 ),
               ),
             );

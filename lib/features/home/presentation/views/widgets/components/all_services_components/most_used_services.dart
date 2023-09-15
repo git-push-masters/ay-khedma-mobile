@@ -25,7 +25,7 @@ class MostUsedServices extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Image.asset(
+          Image.network(
             image,
             color: Colors.black,
           ),

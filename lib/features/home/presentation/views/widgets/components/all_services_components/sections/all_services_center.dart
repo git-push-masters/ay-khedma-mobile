@@ -5,6 +5,7 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 import 'package:get/get.dart';
 
+import '../../../../../../../../core/helper/global_var.dart';
 import '../../../../../../../../core/utils/colors.dart';
 import '../most_used_services.dart';
 
@@ -20,17 +21,17 @@ class AllServicesCenter extends StatelessWidget {
         width: Get.width,
         child: GridView.builder(
             physics: const NeverScrollableScrollPhysics(),
-            itemCount: 6,
+            itemCount: mySectionsModel!.body!.length,
             gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 mainAxisSpacing: 10,
                 crossAxisSpacing: 10,
                 childAspectRatio: .7,
                 crossAxisCount: 3),
             itemBuilder: (context, index) {
-              return const MostUsedServices(
-                title: " خدمات المنازل",
+              return  MostUsedServices(
+                title: mySectionsModel!.body![index].name!,
                 subtitle: "تن با تولید سادگی نامفهومه",
-                image: AssetsData.serviceIte,
+                image: "$baseUrl${mySectionsModel!.body![index].icon!}"
               );
             }),
       ),

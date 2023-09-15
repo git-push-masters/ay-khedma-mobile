@@ -1,13 +1,10 @@
 import 'dart:convert';
-import 'dart:developer';
-import 'package:dio/dio.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
-
-import '../../../features/user_authentication/data/models/user_model/user_model.dart';
+import '../global_var.dart';
 
 class ApiService {
-  final _baseUrl = "https://ay-khedma-backend-development.up.railway.app/api/";
+  
 
   // get request to fetch data
   ApiService();
@@ -24,7 +21,7 @@ class ApiService {
     }
     var response = await http.get(
         Uri.parse(
-          "$_baseUrl$endPoint",
+          "$baseUrl$endPoint",
         ),
         headers: headers);
     Map<String, dynamic> data = jsonDecode(response.body);
@@ -44,7 +41,7 @@ class ApiService {
         'Accept': 'application/json',
       });
     }
-    var response = await http.post(Uri.parse("$_baseUrl$endPoint"),
+    var response = await http.post(Uri.parse("$baseUrl$endPoint"),
         body: body, headers: headers);
     if (response.statusCode == 201 || response.statusCode == 200) {
       Map<String, dynamic> data = jsonDecode(response.body);

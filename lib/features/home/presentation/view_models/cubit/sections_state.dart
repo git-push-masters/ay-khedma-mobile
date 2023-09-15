@@ -8,12 +8,15 @@ abstract class SectionsState extends Equatable {
 }
 
 class SectionsInitial extends SectionsState {}
+
 class SectionsLoading extends SectionsState {}
+
 class SectionsSuccess extends SectionsState {
-  final List<SectionsModel> sections;
+  final SectionsModel sections;
 
   const SectionsSuccess(this.sections);
 }
+
 class SectionsFailure extends SectionsState {
   final String errMessage;
 

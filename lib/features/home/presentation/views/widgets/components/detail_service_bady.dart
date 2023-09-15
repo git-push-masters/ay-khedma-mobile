@@ -11,9 +11,7 @@ class DetailServiceBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      children: [DetailServiceHeader(),
-      DetailserviceBottom()
-      ],
+      children: [DetailServiceHeader(), DetailserviceBottom()],
     );
   }
 }

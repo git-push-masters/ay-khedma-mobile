@@ -5,7 +5,7 @@ import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
 import 'package:dio/dio.dart';
 
-import '../../features/home/data/models/sections/sections.dart';
+import '../../features/home/data/models/sectionsmodel/sectionsmodel.dart';
 
 class TestApi extends StatefulWidget {
   const TestApi({super.key});
@@ -44,12 +44,13 @@ class TestApi extends StatefulWidget {
 //   }
 // }
 
- Future<SectionsModel> fetchAllSections() async{
+Future<SectionsModel> fetchAllSections() async {
   log("enter method");
-    Map<String, dynamic> sectionsData  = await ApiService().get(endPoint: "sections", token: "");
-    log("sectionData: $sectionsData");
-    return SectionsModel.fromJson(sectionsData);
-  }
+  Map<String, dynamic> sectionsData =
+      await ApiService().get(endPoint: "sections", token: "");
+  log(sectionsData.toString());
+  return SectionsModel.fromJson(sectionsData);
+}
 
 class _TestApiState extends State<TestApi> {
   @override

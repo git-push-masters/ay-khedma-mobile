@@ -33,7 +33,9 @@ class HomeViewSrvicesSection extends StatelessWidget {
             ),
           ],
         ),
-        const SizedBox(height: 20,),
+        const SizedBox(
+          height: 20,
+        ),
         const ServiceListView(),
         const ViewAllServices(),
       ],

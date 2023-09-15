@@ -16,27 +16,25 @@ class HomeView extends StatefulWidget {
 }
 
 class _HomeViewState extends State<HomeView> {
-
   @override
   void initState() {
     super.initState();
     BlocProvider.of<SectionsCubit>(context).fetchSections();
   }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: FutureBuilder(
-        future: myUserData(token: token??""),
-        builder: (context, snapshot)
-      {
-        if(snapshot.hasData)
-        {
-          return  HomeViewBody();
-        }else
-        {
-          return const Center(child: CircularProgressIndicator());
-        }
-      }),
+          future: myUserData(token: token ?? ""),
+          builder: (context, snapshot) {
+            if (snapshot.hasData) {
+              myUserModel = snapshot.data;
+              return const HomeViewBody();
+            } else {
+              return const Center(child: CircularProgressIndicator());
+            }
+          }),
     );
   }
 }

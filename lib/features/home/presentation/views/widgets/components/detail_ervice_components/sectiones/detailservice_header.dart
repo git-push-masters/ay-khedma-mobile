@@ -27,7 +27,9 @@ class DetailServiceHeader extends StatelessWidget {
               "تصليح حنفية مكسورة من الداخل",
               style: Styles.textStyle14.copyWith(fontWeight: FontWeight.bold),
             ),
-            SizedBox(height: Get.height*.01,),
+            SizedBox(
+              height: Get.height * .01,
+            ),
             const Text(
               "100ج قابلة للنقاش",
               style: Styles.textStyle12,

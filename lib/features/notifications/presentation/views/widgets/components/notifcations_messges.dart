@@ -73,24 +73,24 @@ class NotificationsMessges extends StatelessWidget {
               time,
               style: const TextStyle(fontSize: 8),
             )),
-            Positioned(
-              top: 57,
-              left: 35,
-              child: RatingBar.builder(
-                      itemSize: 10,
-                      initialRating: 3,
-                      minRating: 1,
-                      direction: Axis.horizontal,
-                      allowHalfRating: true,
-                      itemCount: 5,
-                      itemPadding: const EdgeInsets.symmetric(horizontal: 4.0),
-                      itemBuilder: (context, _) => const Icon(
+        Positioned(
+          top: 57,
+          left: 35,
+          child: RatingBar.builder(
+            itemSize: 10,
+            initialRating: 3,
+            minRating: 1,
+            direction: Axis.horizontal,
+            allowHalfRating: true,
+            itemCount: 5,
+            itemPadding: const EdgeInsets.symmetric(horizontal: 4.0),
+            itemBuilder: (context, _) => const Icon(
               Icons.star,
               color: AppColors.kPrimaryColor,
-                      ),
-                      onRatingUpdate: (rating) {},
-                    ),
-            )
+            ),
+            onRatingUpdate: (rating) {},
+          ),
+        )
       ],
     );
   }

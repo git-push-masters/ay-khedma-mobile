@@ -12,7 +12,7 @@ class DetailserviceBottom extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      children:  [
+      children: [
         const TitleRight(
           titleinfo: 'تفاصيل عن الخدمة',
         ),
@@ -21,11 +21,14 @@ class DetailserviceBottom extends StatelessWidget {
           child: Text(
               "لوريم أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو  تيمبور ينسشمع لش مع يمن بخس لوريم أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو  تيمبور ينسشمع لش مع يمن بخس "),
         ),
-              const TitleRight(titleinfo: ' تفاصيل عن طالب الخدمة ',),
-              
-              NotificationsMessges(time: '', subtitle: 'المهنه: مهندس', title: 'أبو احمد',)
-             
-
+        const TitleRight(
+          titleinfo: ' تفاصيل عن طالب الخدمة ',
+        ),
+        NotificationsMessges(
+          time: '',
+          subtitle: 'المهنه: مهندس',
+          title: 'أبو احمد',
+        )
       ],
     );
   }

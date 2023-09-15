@@ -14,6 +14,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../../../home/data/models/sections/repos/home_repo.dart';
 import '../../../../user_authentication/data/models/user_model/user_model.dart';
 
 class SplashViewBody extends StatefulWidget {
@@ -29,7 +30,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
   late Animation<Offset> slidingAnimation;
 
   @override
-  void initState() {
+  void initState(){
     super.initState();
     initSlidingAnimation();
     navigateToHome();

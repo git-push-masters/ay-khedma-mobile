@@ -2,14 +2,14 @@ import 'package:equatable/equatable.dart';
 
 import 'body.dart';
 
-class Sections extends Equatable {
+class SectionsModel extends Equatable {
   final bool? success;
   final int? status;
   final List<dynamic>? msgs;
   final int? count;
   final List<Body>? body;
 
-  const Sections({
+  const SectionsModel({
     this.success,
     this.status,
     this.msgs,
@@ -17,7 +17,7 @@ class Sections extends Equatable {
     this.body,
   });
 
-  factory Sections.fromJson(Map<String, dynamic> json) => Sections(
+  factory SectionsModel.fromJson(Map<String, dynamic> json) => SectionsModel(
         success: json['success'] as bool?,
         status: json['status'] as int?,
         msgs: json['msgs'] as List<dynamic>?,

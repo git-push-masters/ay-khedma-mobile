@@ -13,7 +13,9 @@ class AppointmentsView extends StatelessWidget {
     return Scaffold(
       body: SafeArea(
           child: Column(
-        children: [AppointmentsViewHeader(), AppointmentsViewBottom()],
+        children:const [
+          AppointmentsViewHeader(),
+           AppointmentsViewBottom()],
       )),
     );
   }

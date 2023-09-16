@@ -14,8 +14,8 @@ import 'features/home/presentation/view_models/cubit/fetchrequests_cubit.dart';
 import 'features/home/presentation/view_models/cubit/sections_cubit.dart';
 
 class MainScreen extends StatefulWidget {
-  const MainScreen({super.key});
-
+  const MainScreen({super.key, this.loginToken});
+final String? loginToken;
   @override
   State<MainScreen> createState() => _MainScreenState();
 }
@@ -25,7 +25,7 @@ class _MainScreenState extends State<MainScreen> {
 
   List<Widget> _buildScreens(){
     return [
-      const HomeView(),
+      HomeView(loginToken: widget.loginToken,),
       const NotificationsView(),
       const AppointmentsView(),
       const ChatView(),
@@ -67,7 +67,7 @@ class _MainScreenState extends State<MainScreen> {
   void initState() {
     super.initState();
     BlocProvider.of<SectionsCubit>(context).fetchSections();
-    BlocProvider.of<FetchrequestsCubit>(context).fetchRequests(token: token?? "");
+    BlocProvider.of<FetchrequestsCubit>(context).fetchRequests(token: widget.loginToken?? token!);
   }
   @override
   Widget build(BuildContext context) {

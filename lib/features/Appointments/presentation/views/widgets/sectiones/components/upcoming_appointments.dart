@@ -99,7 +99,7 @@ class UpcomingAppointments extends StatelessWidget {
                         text: "مراجعة وتعديل العرض",
                         textStyle: Styles.textStyle12
                             .copyWith(color: AppColors.kTextbuttonColor),
-                        height: Get.height*.03,
+                        height: Get.height*.04,
                         borderRadius: BorderRadius.circular(8),
                       ),
                       SizedBox(
@@ -111,7 +111,7 @@ class UpcomingAppointments extends StatelessWidget {
                         text: "إلغاء",
                         textStyle: Styles.textStyle12
                             .copyWith(color: AppColors.kHeadLinesColor),
-                        height: Get.height*.03,
+                        height: Get.height*.04,
                         borderRadius: BorderRadius.circular(8),
                       )
                     ],

@@ -123,7 +123,7 @@ class _PuplishServiceSheetState extends State<PuplishServiceSheet> {
                       });
                     }
                   },
-                  text: "Puplish",
+                  text: "طلب خدمه",
                   textStyle: Styles.textStyle12.copyWith(color: Colors.white)),
             ],
           ),

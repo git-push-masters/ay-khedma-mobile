@@ -57,7 +57,10 @@ final RequestsModel requestsModel;
                               padding:  EdgeInsets.all(Get.width*.02),
                               child: Row(
                                 children: [
-                                   Text(requestsModel.title?? "",style: TextStyle(fontSize: Get.width*.025,fontWeight: FontWeight.bold),),
+                                   SizedBox(
+                                    
+                                    width: 100,
+                                    child: Text(requestsModel.title?? "",style: TextStyle(fontSize: Get.width*.025,fontWeight: FontWeight.bold),)),
                                   SizedBox(width: Get.width*.2,),
                                     Text("${requestsModel.maxPrice.toString()} ج",style: TextStyle(fontSize: Get.width*.02,color: AppColors.kUnderHeadLinesColor)),
                                 ],
@@ -90,10 +93,13 @@ final RequestsModel requestsModel;
                               ],
                             ),
                              SizedBox(height: Get.height*.01,),
-                             Text(
-                              requestsModel.description?? "",
-                                  style: TextStyle(fontSize: Get.width*.03),
-                                ),
+                             SizedBox(
+                              width: 100,
+                               child: Text(
+                                requestsModel.description?? "",
+                                    style: TextStyle(fontSize: Get.width*.03),
+                                  ),
+                             ),
                           ],
                         )
                       ],

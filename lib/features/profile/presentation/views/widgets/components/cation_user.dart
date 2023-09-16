@@ -54,7 +54,7 @@ class CantinUser extends StatelessWidget {
             text: "محادثه",
             textStyle:
                 Styles.textStyle12.copyWith(color: AppColors.kTextbuttonColor),
-            height: Get.height*.03,
+            height: Get.height*.04,
             borderRadius: BorderRadius.circular(8),
           ))
         ],

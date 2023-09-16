@@ -10,6 +10,7 @@ import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 import '../../../../../../../core/helper/global_var.dart';
 import '../../../../../../../core/utils/colors.dart';
 import '../../../../../../../core/utils/styles.dart';
+import '../../../../../../map/presentation/views/map_view.dart';
 import '../../../../view_models/cubit/fetchrequests_cubit.dart';
 import 'form_bottom_sheet.dart';
 
@@ -52,7 +53,9 @@ class HomeAppBar extends StatelessWidget {
         ),
         const Spacer(),
         IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Get.to(()=> const MyMapView());
+            },
             icon: const Icon(
               Icons.location_on,
               color: AppColors.kPrimaryColor,

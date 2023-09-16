@@ -7,6 +7,7 @@ import 'package:get/get.dart';
 import 'package:go_router/go_router.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 import '../../../../core/helper/widgets/custom_snackbar.dart';
+import '../../../../main_screen.dart';
 import '../view_models/cubits/cubit/login_cubit.dart';
 import 'widgets/components/sign_in_components/sign_in_view_body.dart';
 
@@ -20,7 +21,7 @@ class SignInView extends StatelessWidget {
         listener: (context, state) {
           if (state is LoginSuccess) {
 
-            Get.to(() =>  HomeView(loginToken: state.userModel.body!.token));
+            Get.to(() =>  MainScreen(loginToken: state.userModel.body!.token,));
           }
           if (state is LoginFailure) {
             customSnackBar(context, state.errMessage);

@@ -41,63 +41,62 @@ final RequestsModel requestsModel;
                           padding: EdgeInsets.only(top: 5),
                           child: FittedBox(
                             child: Text(
-                              "3 أشخاص مقدمين للخدمة",
+                              "1 أشخاص مقدمين للخدمة",
                               style: TextStyle(fontSize: 6,color: AppColors.kPrimaryColor),
                             ),
                           ),
                         )
                       ],
                     ),
-                    Padding(
-                      padding: const EdgeInsets.all(0),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: [
-                          Column(
-                            children: [
-                              Padding(
-                                padding:  EdgeInsets.all(Get.width*.02),
-                                child: Row(
-                                  children: [
-                                     Text(requestsModel.title?? "",style: TextStyle(fontSize: Get.width*.02,fontWeight: FontWeight.bold),),
-                                    SizedBox(width: Get.width*.2,),
-                                      Text(requestsModel.maxPrice.toString(),style: TextStyle(fontSize: Get.width*.02,color: AppColors.kUnderHeadLinesColor)),
-                                  ],
-                                ),
-                              ),
-                              
-                              Row(
-                               
-                                children:  [
-                                  Text("18/10/2023",style: TextStyle(fontSize: Get.width*.02)),
-                                ],
-                              ),
-                              Row(
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: [
+                        Column(
+                          children: [
+                            Padding(
+                              padding:  EdgeInsets.all(Get.width*.02),
+                              child: Row(
                                 children: [
-                                  Padding(
-                                    padding: const EdgeInsets.all(0),
-                                    child: Icon(
-                                      FontAwesomeIcons.locationPin,
-                                      size: Get.width*.03,
-                                      color: AppColors.kPrimaryColor,
-                                    ),
-                                  ),
-                                  Text(
-                                    requestsModel .address?? "",
-                                    style: TextStyle(fontSize: Get.width*.02),
-                                  ),
+                                   Text(requestsModel.title?? "",style: TextStyle(fontSize: Get.width*.025,fontWeight: FontWeight.bold),),
+                                  SizedBox(width: Get.width*.2,),
+                                    Text("${requestsModel.maxPrice.toString()} ج",style: TextStyle(fontSize: Get.width*.02,color: AppColors.kUnderHeadLinesColor)),
                                 ],
                               ),
-                                               SizedBox(height: Get.height*.01,),
-
-                               Text(
-                                requestsModel.description?? "",
-                                    style: TextStyle(fontSize: Get.width*.02),
+                            ),
+                           const SizedBox(height: 10,),
+                            
+                            Row(
+                             
+                              children:  [
+                                Text("16/19/2023",style: TextStyle(fontSize: Get.width*.02)),
+                              ],
+                            ),
+                           const SizedBox(height: 10,),
+                            Row(
+                              children: [
+                                Padding(
+                                  padding: const EdgeInsets.all(0),
+                                  child: Icon(
+                                    FontAwesomeIcons.locationPin,
+                                    size: Get.width*.03,
+                                    color: AppColors.kPrimaryColor,
                                   ),
-                            ],
-                          )
-                        ],
-                      ),
+                                ),
+                                const SizedBox(width: 10,),
+                                Text(
+                                  requestsModel.address?? "العنوان غير محدد",
+                                  style: TextStyle(fontSize: Get.width*.02),
+                                ),
+                              ],
+                            ),
+                             SizedBox(height: Get.height*.01,),
+                             Text(
+                              requestsModel.description?? "",
+                                  style: TextStyle(fontSize: Get.width*.03),
+                                ),
+                          ],
+                        )
+                      ],
                     ),
                    
                   ],

@@ -10,7 +10,8 @@ abstract class HomeRepo {
       required int maxPrice,
       required String durationRange,
       required int sectionId,
-      required String token});
+      required String token,
+      required String address});
 
   Future<List<RequestsModel>> fetchAllRequests({required String token});
 }

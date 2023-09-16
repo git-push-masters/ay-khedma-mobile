@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:get/get.dart';
 
 import '../../../../../../../core/utils/colors.dart';
 import '../../../../../../../core/utils/styles.dart';
@@ -10,10 +11,9 @@ class MostUsedServices extends StatelessWidget {
   const MostUsedServices(
       {super.key,
       required this.title,
-      required this.subtitle,
+
       required this.image});
   final String title;
-  final String subtitle;
   final String image;
 
   @override
@@ -28,6 +28,7 @@ class MostUsedServices extends StatelessWidget {
           Image.network(
             image,
             color: Colors.black,
+            height: Get.width * .15,
           ),
           const SizedBox(
             height: 10,
@@ -42,12 +43,6 @@ class MostUsedServices extends StatelessWidget {
           const SizedBox(
             height: 5,
           ),
-          Text(
-            subtitle,
-            style: const TextStyle(fontSize: 10),
-            maxLines: 2,
-            textAlign: TextAlign.center,
-          )
         ],
       ),
     );

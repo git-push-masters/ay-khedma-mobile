@@ -5,8 +5,8 @@ import '../../../../../../../../core/utils/colors.dart';
 import '../../../../../../../../core/utils/styles.dart';
 
 class UserInfoRating extends StatelessWidget {
-  const UserInfoRating({super.key});
-
+  const UserInfoRating({super.key, required this.name});
+ final String name;
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -41,10 +41,11 @@ class UserInfoRating extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      "أبو احمد",
+                     name,
                       style: Styles.textStyle12
                           .copyWith(fontWeight: FontWeight.bold),
                     ),
+                    const SizedBox(height: 5,),
                     Text("المهارات :  ",
                         style: Styles.textStyle12.copyWith(
                             color: AppColors.kTextFieldHintColor,

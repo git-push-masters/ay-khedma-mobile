@@ -27,7 +27,8 @@ class HomeRepoImplement implements HomeRepo {
       required int maxPrice,
       required String durationRange,
       required int sectionId,
-      required String token}) async {
+      required String token,
+      required String address}) async {
     log("enter request");
     Map<String, dynamic> body = {
       "title": title,
@@ -35,6 +36,7 @@ class HomeRepoImplement implements HomeRepo {
       "maxPrice": maxPrice,
       "sectionId": sectionId,
       "durationRange": durationRange,
+      "address" : address,
       "locationLat": 32.32421,
       "locationLong": 32.134539,
     };

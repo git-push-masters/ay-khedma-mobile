@@ -20,7 +20,7 @@ class PuplishServiceSheet extends StatefulWidget {
 class _PuplishServiceSheetState extends State<PuplishServiceSheet> {
   GlobalKey<FormState> formKey = GlobalKey();
   AutovalidateMode autoValidateMode = AutovalidateMode.disabled;
-  String? title, description, durationRange, sectionId, maxPrice, minPrice;
+  String? title, description, durationRange, sectionId, maxPrice, minPrice, address;
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -45,7 +45,7 @@ class _PuplishServiceSheetState extends State<PuplishServiceSheet> {
                 onSaved: (value) {
                   title = value;
                 },
-                hinttext: "العنوان",
+                hinttext: "تعريف المشكله",
                 width: Get.width * .75,
               ),
               const SizedBox(
@@ -56,6 +56,16 @@ class _PuplishServiceSheetState extends State<PuplishServiceSheet> {
                   description = value;
                 },
                 hinttext: "الوصف",
+                width: Get.width * .75,
+              ),
+              const SizedBox(
+                height: 12,
+              ),
+               CustomTextFeild(
+                onSaved: (value) {
+                  address = value;
+                },
+                hinttext: "العنوان",
                 width: Get.width * .75,
               ),
               const SizedBox(
@@ -104,6 +114,7 @@ class _PuplishServiceSheetState extends State<PuplishServiceSheet> {
                               maxPrice!.replaceAll(RegExp(r'[^0-9]'), '')),
                           durationRange: durationRange!,
                           sectionId: int.tryParse(selectedSection!)?? 1,
+                          address: address!,
                           token: token!);
                           Get.back();
                     } else {

@@ -19,7 +19,8 @@ class RequestCubit extends Cubit<RequestState> {
       required int maxPrice,
       required String durationRange,
       required int sectionId,
-      required String token}) async {
+      required String token,
+      required String address}) async {
     emit(RequestLoading());
     try {
       var result = await homeRepo.postRequest(
@@ -28,7 +29,8 @@ class RequestCubit extends Cubit<RequestState> {
           maxPrice: maxPrice,
           durationRange: durationRange,
           sectionId: sectionId,
-          token: token);
+          token: token,
+          address: address);
       emit(RequestSuccess(result));
     } catch (e) {
       emit(RequestFailure(e.toString()));

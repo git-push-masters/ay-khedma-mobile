@@ -56,11 +56,6 @@ class _BioViewCenterSectionState extends State<BioViewCenterSection> {
           const SizedBox(
             height: 17,
           ),
-          const TextFeildComp(
-            hintTxt: 'تعريف عن الخدمة....',
-            txt: 'اكتب تعريفا',
-            maxLines: 7,
-          )
         ],
       ),
     );

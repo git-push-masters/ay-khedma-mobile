@@ -30,7 +30,6 @@ class AllServicesCenter extends StatelessWidget {
             itemBuilder: (context, index) {
               return MostUsedServices(
                   title: mySectionsModel!.body![index].name!,
-                  subtitle: "تن با تولید سادگی نامفهومه",
                   image: "$baseUrl${mySectionsModel!.body![index].icon!}");
             }),
       ),

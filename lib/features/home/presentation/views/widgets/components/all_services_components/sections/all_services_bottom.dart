@@ -26,12 +26,12 @@ class UserInfoAndRating extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16),
       child: Column(
-        children: const [
-          UserInfoRating(),
-          UserInfoRating(),
-          UserInfoRating(),
-          UserInfoRating(),
-          UserInfoRating(),
+        children:  const[
+          UserInfoRating(name: "ابو احمد" ,),
+          UserInfoRating(name: "الألماني" ,),
+          UserInfoRating(name: "ديناصور الحداده" ,),
+          UserInfoRating(name: "ابو سعاد" ,),
+          UserInfoRating(name: "الحاج نصر" ,),
         ],
       ),
     );

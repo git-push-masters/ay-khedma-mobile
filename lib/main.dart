@@ -13,6 +13,7 @@ import 'features/home/presentation/view_models/cubit/request_cubit.dart';
 import 'features/home/presentation/view_models/cubit/sections_cubit.dart';
 import 'features/home/presentation/views/all_services_view.dart';
 import 'features/home/presentation/views/details_service_view.dart';
+import 'features/map/presentation/views/map_view.dart';
 import 'features/map/presentation/views/widgets/map_view_body.dart';
 import 'features/notifications/presentation/views/widgets/notifications_view.dart';
 import 'features/profile/presentation/views/profile_view.dart';
@@ -61,7 +62,7 @@ class AyKhedmaApp extends StatelessWidget {
           Locale('ar'),
         ],
         //routerConfig: AppRouter.router,
-        home: const DetailService(),
+        home: const MyMapView(),
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
           fontFamily: 'Kohinoor Arabic',

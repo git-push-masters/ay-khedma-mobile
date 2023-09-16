@@ -18,6 +18,6 @@ abstract class Styles {
     fontWeight: FontWeight.normal,
   );
 
-  static  TextStyle textStyle12 = TextStyle(
-      fontSize: Get.width*.02, fontWeight: FontWeight.normal, color: Colors.black);
+  static const TextStyle textStyle12 = TextStyle(
+      fontSize: 12, fontWeight: FontWeight.normal, color: Colors.black);
 }

@@ -3,6 +3,8 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
 
+import '../../../../../core/helper/widgets/custom_text_field.dart';
+
 class MapViewBody extends StatefulWidget {
   const MapViewBody({super.key});
 
@@ -50,26 +52,24 @@ class MapViewBodyState extends State<MapViewBody> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: GoogleMap(
-        mapType: MapType.normal,
-        markers: {_KGoogelpleaMarker, _KLeMarker},
-        polylines: {_kpolyline},
-        polygons: {},
-        initialCameraPosition: _kGooglePlex,
-        onMapCreated: (GoogleMapController controller) {
-          _controller.complete(controller);
-        },
+      body: Stack(children: [
+        GoogleMap(
+          mapType: MapType.normal,
+          markers: {_KGoogelpleaMarker, _KLeMarker},
+          polylines: {_kpolyline},
+          polygons: {},
+          initialCameraPosition: _kGooglePlex,
+          onMapCreated: (GoogleMapController controller) {
+            _controller.complete(controller);
+          },
+        ),
+        // Row(children: const[
+        //   CustomTextFeild(hinttext: '',prefixIcon: Icon(Icons.search),)
+        // ],)
+      ],
+      
       ),
-      floatingActionButton: FloatingActionButton.extended(
-        onPressed: _goToTheLake,
-        label: const Text('To the lake!'),
-        icon: const Icon(Icons.directions_boat),
-      ),
+     
     );
-  }
-
-  Future<void> _goToTheLake() async {
-    final GoogleMapController controller = await _controller.future;
-    await controller.animateCamera(CameraUpdate.newCameraPosition(_kLake));
   }
 }

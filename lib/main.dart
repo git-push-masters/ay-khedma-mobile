@@ -62,7 +62,7 @@ class AyKhedmaApp extends StatelessWidget {
           Locale('ar'),
         ],
         //routerConfig: AppRouter.router,
-        home: const MapViewBody(),
+        home: const MyMapView(),
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
           fontFamily: 'Kohinoor Arabic',
@@ -73,3 +73,40 @@ class AyKhedmaApp extends StatelessWidget {
     );
   }
 }
+/**import 'dart:collection';
+
+import 'package:flutter/src/widgets/framework.dart';
+import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';
+
+class MapViewBody extends StatefulWidget {
+  const MapViewBody({super.key});
+
+  @override
+  State<MapViewBody> createState() => _MapViewBodyState();
+}
+
+class _MapViewBodyState extends State<MapViewBody> {
+  var myMarkers = HashSet<Marker>();
+  @override
+  Widget build(BuildContext context) {
+    return GoogleMap(
+      initialCameraPosition://31.038121, 31.368673
+          const CameraPosition(target: LatLng(31.038121, 31.368673), zoom: 14),
+      onMapCreated: (GoogleMapController googleMapController) {
+        setState(() {
+          myMarkers.add(const Marker(markerId: MarkerId("2"),
+          position: LatLng(31.036312, 31.369905),
+          ));
+          myMarkers.add(const Marker(
+            markerId: MarkerId("1"),
+            position: LatLng(31.036312, 31.369905),
+            infoWindow:InfoWindow(title: "أبو احمد",snippet: "تصليح حنفية مكسورة من الداخل")
+          ));
+        });
+      },
+      markers: myMarkers,
+    );
+  }
+}
+ */

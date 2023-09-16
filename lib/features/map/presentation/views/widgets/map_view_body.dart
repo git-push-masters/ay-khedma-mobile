@@ -1,9 +1,8 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:google_maps_flutter/google_maps_flutter.dart';
+import 'package:google_maps_flutter/google_maps_flutter.dart';  
 
-import '../../../../../core/helper/widgets/custom_text_field.dart';
 
 class MapViewBody extends StatefulWidget {
   const MapViewBody({super.key});
@@ -17,59 +16,51 @@ class MapViewBodyState extends State<MapViewBody> {
       Completer<GoogleMapController>();
 
   static const CameraPosition _kGooglePlex = CameraPosition(
-    target: LatLng(37.42796133580664, -122.085749655962),
-    zoom: 19,
+    target: LatLng(31.038121, 31.368673),
+    zoom: 14,
   );
-  static final Marker _KGoogelpleaMarker = const Marker(
-    markerId: MarkerId("KGooleplex"),
-    infoWindow: InfoWindow(title: "Google plex"),
-    icon: BitmapDescriptor.defaultMarker,
-    position: LatLng(37.42796133580664, -122.085749655962),
-  );
+  // ignore: constant_identifier_names
+  static const Marker _KGoogelpleaMarker = Marker(
+      markerId: MarkerId("KGooleplex"),
+      infoWindow: InfoWindow(title: " ابراهيم النمر"),
+      icon: BitmapDescriptor.defaultMarker,
+      position: LatLng(31.036312, 31.369905));
+  // ignore: constant_identifier_names
+  static const Marker _Klake2 = Marker(
+      markerId: MarkerId("KGooleplex"),
+      infoWindow: InfoWindow(title: " شربني  "),
+      icon: BitmapDescriptor.defaultMarker,
+      position: LatLng(31.034621, 31.359333));
+  // ignore: constant_identifier_names
+  static const Marker _Klake3 = Marker(
+      markerId: MarkerId("KGooleplex"),
+      infoWindow: InfoWindow(title: "أبو احمد"),
+      icon: BitmapDescriptor.defaultMarker,
+      position: LatLng(31.046109, 31.367065));
 
-  static const CameraPosition _kLake = CameraPosition(
-      bearing: 192.8334901395799,
-      target: LatLng(37.43296265331129, -122.08832357078792),
-      tilt: 59.440717697143555,
-      zoom: 19.151926040649414);
   // ignore: non_constant_identifier_names
   static final Marker _KLeMarker = Marker(
     markerId: const MarkerId("_KLeMarker"),
-    infoWindow: const InfoWindow(title: "mus"),
+    infoWindow: const InfoWindow(title: "سيف سويلم"),
     icon: BitmapDescriptor.defaultMarkerWithHue(BitmapDescriptor.hueBlue),
-    position: const LatLng(37.43296265331129, -122.08832357078792),
+    position: const LatLng(31.036240, 31.368224),
   );
   // ignore: unused_field
-  static const Polyline _kpolyline = Polyline(
-    polylineId: PolylineId("_kpolyline"),
-    points: [
-      LatLng(37.43296265331129, -122.08832357078792),
-      LatLng(37.42796133580664, -122.085749655962),
-    ],
-    width: 5,
-  );
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Stack(children: [
+        body: Stack(
+      children: [
         GoogleMap(
           mapType: MapType.normal,
-          markers: {_KGoogelpleaMarker, _KLeMarker},
-          polylines: {_kpolyline},
-          polygons: {},
+          markers: {_KGoogelpleaMarker, _KLeMarker, _Klake2, _Klake3},
           initialCameraPosition: _kGooglePlex,
           onMapCreated: (GoogleMapController controller) {
             _controller.complete(controller);
           },
         ),
-        // Row(children: const[
-        //   CustomTextFeild(hinttext: '',prefixIcon: Icon(Icons.search),)
-        // ],)
       ],
-      
-      ),
-     
-    );
+    ));
   }
 }

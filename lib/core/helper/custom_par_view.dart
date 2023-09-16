@@ -31,10 +31,10 @@ class CustomParView extends StatelessWidget {
             child: Row(
               //mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                const Icon(
+                IconButton(onPressed: ()=>Get.back(), icon: const Icon(
                   FontAwesomeIcons.arrowRight,
                   color: AppColors.kTextbuttonColor,
-                ),
+                ),),
                 const SizedBox(
                   width: 9,
                 ),

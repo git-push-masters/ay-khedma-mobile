@@ -75,6 +75,13 @@ class UpcomingAppointments extends StatelessWidget {
                               style: Styles.textStyle12.copyWith(
                                   color: AppColors.kTextFieldHintColor,
                                   fontSize: Get.width*.022)),
+                                  TextButton(
+                onPressed: () {},
+                child:  Text(
+                  "سباكة",
+                  style: TextStyle(fontSize: Get.width*.022, color: AppColors.kPrimaryColor),
+                ),
+              ),
                         ],
                       )
                     ],
@@ -117,17 +124,11 @@ class UpcomingAppointments extends StatelessWidget {
         Positioned(
           top: Get.height*.065,
           left: Get.width*.1,
-          right: Get.width*.15,
+          // right: Get.width*.15,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              TextButton(
-                onPressed: () {},
-                child:  Text(
-                  "سباكة",
-                  style: TextStyle(fontSize: Get.width*.03, color: AppColors.kPrimaryColor),
-                ),
-              ),
+              
               RatingBar.builder(
                 itemSize: Get.width*.03,
                 initialRating: 4,

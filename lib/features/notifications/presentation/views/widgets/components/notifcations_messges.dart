@@ -25,7 +25,7 @@ class NotificationsMessges extends StatelessWidget {
           padding: const EdgeInsets.all(8.0),
           child: Container(
             height: 86,
-            width: 352,
+            width: Get.width,
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(27),
                 color: AppColors.kSmallContainersColor),

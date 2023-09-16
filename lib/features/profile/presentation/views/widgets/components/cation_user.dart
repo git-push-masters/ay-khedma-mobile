@@ -3,6 +3,8 @@ import 'package:ay_khedma/core/utils/colors.dart';
 import 'package:ay_khedma/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:get/get.dart';
+import 'package:get/get_core/src/get_main.dart';
 
 class CantinUser extends StatelessWidget {
   const CantinUser({super.key});
@@ -52,7 +54,7 @@ class CantinUser extends StatelessWidget {
             text: "محادثه",
             textStyle:
                 Styles.textStyle12.copyWith(color: AppColors.kTextbuttonColor),
-            height: 28,
+            height: Get.height*.03,
             borderRadius: BorderRadius.circular(8),
           ))
         ],

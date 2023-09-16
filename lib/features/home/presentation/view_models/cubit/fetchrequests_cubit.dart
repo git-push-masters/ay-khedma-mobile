@@ -11,8 +11,7 @@ class FetchrequestsCubit extends Cubit<FetchrequestsState> {
 
   final HomeRepo homeRepo;
 
-  Future <void> fetchRequests({required String token})async
-  {
+  Future<void> fetchRequests({required String token}) async {
     emit(FetchrequestsLoading());
     try {
       var result = await homeRepo.fetchAllRequests(token: token);
@@ -20,5 +19,5 @@ class FetchrequestsCubit extends Cubit<FetchrequestsState> {
     } catch (e) {
       emit(FetchrequestsFailure(e.toString()));
     }
-  } 
+  }
 }

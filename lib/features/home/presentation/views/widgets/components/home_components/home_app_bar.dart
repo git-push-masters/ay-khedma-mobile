@@ -70,17 +70,15 @@ class HomeAppBar extends StatelessWidget {
                   builder: (contex) {
                     return BlocBuilder<RequestCubit, RequestState>(
                       builder: (context, state) {
-                        if(state is RequestSuccess)
-                        {
-                           requestsModel = state.requestsModel;
-                           Get.back();
-                        }else if(state is RequestFailure)
-                        {
-                        // Get.snackbar("opps!", state.errMessage);
+                        if (state is RequestSuccess) {
+                          requestsModel = state.requestsModel;
+                          Get.back();
+                        } else if (state is RequestFailure) {
+                          // Get.snackbar("opps!", state.errMessage);
                         }
                         return ModalProgressHUD(
-                          inAsyncCall: state is RequestLoading ? true : false,
-                          child: const PuplishServiceSheet());
+                            inAsyncCall: state is RequestLoading ? true : false,
+                            child: const PuplishServiceSheet());
                       },
                     );
                   });

@@ -41,14 +41,14 @@ class HomeRepoImplement implements HomeRepo {
     String data = jsonEncode(body);
     Map<String, dynamic> requestData =
         await apiService.post(endPoint: "requests", body: data, token: token);
-     log(requestData.toString());   
+    log(requestData.toString());
     return RequestsModel.fromJson(requestData);
   }
-  
+
   @override
-  Future<RequestsModel> fetchAllRequests({required String token})async {
-     log("enter method");
-    Map<String, dynamic> requestsData=
+  Future<RequestsModel> fetchAllRequests({required String token}) async {
+    log("enter method");
+    Map<String, dynamic> requestsData =
         await apiService.get(endPoint: "sections", token: token);
     log(requestsData.toString());
     return RequestsModel.fromJson(requestsData);

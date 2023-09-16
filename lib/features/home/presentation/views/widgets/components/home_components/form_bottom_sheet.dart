@@ -94,23 +94,22 @@ class _PuplishServiceSheetState extends State<PuplishServiceSheet> {
               ),
               CustomButton(
                   onPressed: () {
-                    if(formKey.currentState!.validate())
-                    {
+                    if (formKey.currentState!.validate()) {
                       formKey.currentState!.save();
-                       BlocProvider.of<RequestCubit>(context).postRequest(
-                        title: title!,
-                        description: description!,
-                        maxPrice: int.parse(maxPrice!.replaceAll(RegExp(r'[^0-9]'),'')),
-                        durationRange: durationRange!,
-                        sectionId:int.parse(selectedSection!.replaceAll(RegExp(r'[^0-9]'),'')),
-                        token: token!);
-                    }else
-                    {
+                      BlocProvider.of<RequestCubit>(context).postRequest(
+                          title: title!,
+                          description: description!,
+                          maxPrice: int.parse(
+                              maxPrice!.replaceAll(RegExp(r'[^0-9]'), '')),
+                          durationRange: durationRange!,
+                          sectionId: int.parse(selectedSection!
+                              .replaceAll(RegExp(r'[^0-9]'), '')),
+                          token: token!);
+                    } else {
                       setState(() {
                         autoValidateMode = AutovalidateMode.always;
                       });
                     }
-                   
                   },
                   text: "Puplish",
                   textStyle: Styles.textStyle12.copyWith(color: Colors.white)),

@@ -38,27 +38,23 @@ class MapViewBodyState extends State<MapViewBody> {
     position: const LatLng(37.43296265331129, -122.08832357078792),
   );
   // ignore: unused_field
-  static const Polyline _kpolyline =
-      Polyline(polylineId: PolylineId("_kpolyline"),
-      points: [
-LatLng(37.43296265331129, -122.08832357078792),
-LatLng(37.42796133580664, -122.085749655962),
-      ],
-      width: 5,
-      );
-      
+  static const Polyline _kpolyline = Polyline(
+    polylineId: PolylineId("_kpolyline"),
+    points: [
+      LatLng(37.43296265331129, -122.08832357078792),
+      LatLng(37.42796133580664, -122.085749655962),
+    ],
+    width: 5,
+  );
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       body: GoogleMap(
         mapType: MapType.normal,
         markers: {_KGoogelpleaMarker, _KLeMarker},
-        polylines: {
-          _kpolyline
-        },
-        polygons: {
-
-        },
+        polylines: {_kpolyline},
+        polygons: {},
         initialCameraPosition: _kGooglePlex,
         onMapCreated: (GoogleMapController controller) {
           _controller.complete(controller);

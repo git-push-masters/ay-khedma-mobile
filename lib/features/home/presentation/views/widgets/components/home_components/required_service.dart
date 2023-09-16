@@ -38,7 +38,8 @@ class RequiredService extends StatelessWidget {
                         padding: EdgeInsets.only(top: 5),
                         child: Text(
                           "3 أشخاص مقدمين للخدمة",
-                          style: TextStyle(fontSize: 6,color: AppColors.kPrimaryColor),
+                          style: TextStyle(
+                              fontSize: 6, color: AppColors.kPrimaryColor),
                         ),
                       )
                     ],
@@ -52,20 +53,29 @@ class RequiredService extends StatelessWidget {
                           children: [
                             Row(
                               children: [
-                                const Text("تصليح حنفية مكسورة من الداخل",style: TextStyle(fontSize: 8,fontWeight: FontWeight.bold),),
-                                SizedBox(width: Get.width*.2,),
-                                 const Text("100ج",style: TextStyle(fontSize: 8,color: AppColors.kUnderHeadLinesColor)),
+                                const Text(
+                                  "تصليح حنفية مكسورة من الداخل",
+                                  style: TextStyle(
+                                      fontSize: 8, fontWeight: FontWeight.bold),
+                                ),
+                                SizedBox(
+                                  width: Get.width * .2,
+                                ),
+                                const Text("100ج",
+                                    style: TextStyle(
+                                        fontSize: 8,
+                                        color: AppColors.kUnderHeadLinesColor)),
                               ],
                             ),
-                            
+
                             Row(
-                             
                               children: const [
-                                Text("18/10/2023",style: TextStyle(fontSize: 8)),
+                                Text("18/10/2023",
+                                    style: TextStyle(fontSize: 8)),
                               ],
                             ),
                             Row(
-                              children:const [
+                              children: const [
                                 Padding(
                                   padding: EdgeInsets.all(3),
                                   child: Icon(
@@ -81,9 +91,9 @@ class RequiredService extends StatelessWidget {
                               ],
                             ),
                             const Text(
-                                  "وريم أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو",
-                                  style: TextStyle(fontSize: 9),
-                                ),
+                              "وريم أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو",
+                              style: TextStyle(fontSize: 9),
+                            ),
                             //Text("لوريم أميت ,كونسيكتيتور أدايبا يسكينج أليايت,سيت دو  تيمبور ينسشمع لش مع يمن بخس "),
                           ],
                         )

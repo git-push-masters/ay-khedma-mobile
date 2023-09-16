@@ -14,10 +14,9 @@ class OfferedServices extends StatelessWidget {
           titleinfo: 'طالبي خدمات السباكة',
         ),
         SizedBox(
-          height: Get.height * 1/3,
+          height: Get.height * 1 / 3,
           width: Get.width,
-          child: ListView.builder(
-            itemBuilder: (context,index){
+          child: ListView.builder(itemBuilder: (context, index) {
             return const RequiredService();
           }),
         ),

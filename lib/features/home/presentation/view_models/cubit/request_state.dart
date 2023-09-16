@@ -8,16 +8,17 @@ abstract class RequestState extends Equatable {
 }
 
 class RequestInitial extends RequestState {}
+
 class RequestLoading extends RequestState {}
+
 class RequestFailure extends RequestState {
   final String errMessage;
 
   const RequestFailure(this.errMessage);
 }
+
 class RequestSuccess extends RequestState {
   final RequestsModel requestsModel;
 
   const RequestSuccess(this.requestsModel);
 }
-
-

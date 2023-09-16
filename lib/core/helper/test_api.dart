@@ -54,21 +54,20 @@ class TestApi extends StatefulWidget {
 //   return SectionsModel.fromJson(sectionsData);
 // }
 
-Future<RequestsModel> postRequest(
-      ) async {
-    log("enter method");
-    Map<String, dynamic> body = {
-      "title": "مطلوب سباك لتصليح حنفية المطبخ",
-      "description": "الشغلانة سهلة خااالص بس محتاج حد متمكن",
-      "maxPrice": 6120,
-      "sectionId": 5,
-      "durationRange": "من ساعة لساعتين",
-    };
-    String data = jsonEncode(body);
-    Map<String, dynamic> requestData =
-        await ApiService().post(endPoint: "requests", body: data, token: token);
-    return RequestsModel.fromJson(requestData);
-  }
+Future<RequestsModel> postRequest() async {
+  log("enter method");
+  Map<String, dynamic> body = {
+    "title": "مطلوب سباك لتصليح حنفية المطبخ",
+    "description": "الشغلانة سهلة خااالص بس محتاج حد متمكن",
+    "maxPrice": 6120,
+    "sectionId": 5,
+    "durationRange": "من ساعة لساعتين",
+  };
+  String data = jsonEncode(body);
+  Map<String, dynamic> requestData =
+      await ApiService().post(endPoint: "requests", body: data, token: token);
+  return RequestsModel.fromJson(requestData);
+}
 
 class _TestApiState extends State<TestApi> {
   @override

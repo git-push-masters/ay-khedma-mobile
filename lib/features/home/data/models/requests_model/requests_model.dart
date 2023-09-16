@@ -1,44 +1,103 @@
 import 'package:equatable/equatable.dart';
 
-import 'body.dart';
-
 class RequestsModel extends Equatable {
-  final bool? success;
+  final int? id;
+  final String? title;
+  final String? address;
+  final String? description;
+  final String? thumbnailsText;
+  final int? minPrice;
+  final int? maxPrice;
+  final String? durationRange;
+  final double? locationLat;
+  final double? locationLong;
   final int? status;
-  final List<dynamic>? msgs;
-  final int? count;
-  final int? page;
-  final List<Body>? body;
+  final DateTime? createdAt;
+  final DateTime? updatedAt;
+  final int? userId;
+  final int? sectionId;
+  final List<dynamic>? thumbnails;
 
   const RequestsModel({
-    this.success,
+    this.id,
+    this.title,
+    this.address,
+    this.description,
+    this.thumbnailsText,
+    this.minPrice,
+    this.maxPrice,
+    this.durationRange,
+    this.locationLat,
+    this.locationLong,
     this.status,
-    this.msgs,
-    this.count,
-    this.page,
-    this.body,
+    this.createdAt,
+    this.updatedAt,
+    this.userId,
+    this.sectionId,
+    this.thumbnails,
   });
 
   factory RequestsModel.fromJson(Map<String, dynamic> json) => RequestsModel(
-        success: json['success'] as bool?,
+        id: json['id'] as int?,
+        title: json['title'] as String?,
+        address: json['address'] as String?,
+        description: json['description'] as String?,
+        thumbnailsText: json['thumbnailsText'] as String?,
+        minPrice: json['minPrice'] as int?,
+        maxPrice: json['maxPrice'] as int?,
+        durationRange: json['durationRange'] as String?,
+        locationLat: (json['locationLat'] as num?)?.toDouble(),
+        locationLong: (json['locationLong'] as num?)?.toDouble(),
         status: json['status'] as int?,
-        msgs: json['msgs'] as List<dynamic>?,
-        count: json['count'] as int?,
-        page: json['page'] as int?,
-        body: (json['body'] as List<dynamic>?)
-            ?.map((e) => Body.fromJson(e as Map<String, dynamic>))
-            .toList(),
+        createdAt: json['createdAt'] == null
+            ? null
+            : DateTime.parse(json['createdAt'] as String),
+        updatedAt: json['updatedAt'] == null
+            ? null
+            : DateTime.parse(json['updatedAt'] as String),
+        userId: json['userId'] as int?,
+        sectionId: json['sectionId'] as int?,
+        thumbnails: json['thumbnails'] as List<dynamic>?,
       );
 
   Map<String, dynamic> toJson() => {
-        'success': success,
+        'id': id,
+        'title': title,
+        'address': address,
+        'description': description,
+        'thumbnailsText': thumbnailsText,
+        'minPrice': minPrice,
+        'maxPrice': maxPrice,
+        'durationRange': durationRange,
+        'locationLat': locationLat,
+        'locationLong': locationLong,
         'status': status,
-        'msgs': msgs,
-        'count': count,
-        'page': page,
-        'body': body?.map((e) => e.toJson()).toList(),
+        'createdAt': createdAt?.toIso8601String(),
+        'updatedAt': updatedAt?.toIso8601String(),
+        'userId': userId,
+        'sectionId': sectionId,
+        'thumbnails': thumbnails,
       };
 
   @override
-  List<Object?> get props => [success, status, msgs, count, page, body];
+  List<Object?> get props {
+    return [
+      id,
+      title,
+      address,
+      description,
+      thumbnailsText,
+      minPrice,
+      maxPrice,
+      durationRange,
+      locationLat,
+      locationLong,
+      status,
+      createdAt,
+      updatedAt,
+      userId,
+      sectionId,
+      thumbnails,
+    ];
+  }
 }

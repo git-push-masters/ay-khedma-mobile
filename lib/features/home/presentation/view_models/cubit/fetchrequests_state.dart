@@ -8,14 +8,16 @@ abstract class FetchrequestsState extends Equatable {
 }
 
 class FetchrequestsInitial extends FetchrequestsState {}
+
 class FetchrequestsLoading extends FetchrequestsState {}
+
 class FetchrequestsSuccess extends FetchrequestsState {
   final RequestsModel requestsModel;
 
   const FetchrequestsSuccess(this.requestsModel);
 }
-class FetchrequestsFailure extends FetchrequestsState 
-{
+
+class FetchrequestsFailure extends FetchrequestsState {
   final String errMessage;
 
   const FetchrequestsFailure(this.errMessage);

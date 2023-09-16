@@ -30,7 +30,6 @@ class _BioViewCenterSectionState extends State<BioViewCenterSection> {
           const SizedBox(
             height: 10,
           ),
-          
           SizedBox(
             width: Get.width,
             child: DropdownButtonFormField(

@@ -2,6 +2,7 @@ import 'package:ay_khedma/core/utils/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
+import 'package:get/get.dart';
 
 import 'container_calendar_type.dart';
 
@@ -11,7 +12,7 @@ class CalendarType extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 21, right: 19, left: 16),
+      padding:  EdgeInsets.only(top:  Get.width*.04, right: Get.width*.01, left:  Get.width*.01),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: const [

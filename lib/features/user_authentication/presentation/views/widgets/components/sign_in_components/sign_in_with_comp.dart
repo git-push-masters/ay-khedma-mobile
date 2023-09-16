@@ -9,7 +9,7 @@ class SignInWithComp extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
-      children: const [
+      children:  [
         Expanded(
             child: Divider(
           color: AppColors.kTextFieldHintColor,

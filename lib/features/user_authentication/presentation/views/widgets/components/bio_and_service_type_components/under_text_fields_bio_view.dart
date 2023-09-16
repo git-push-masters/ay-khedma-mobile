@@ -18,7 +18,7 @@ class UnderTxetFeildsBioViw extends StatelessWidget {
           Icons.check_box_outline_blank,
           color: AppColors.kOutLineBorder,
         ),
-        const Text(
+         Text(
           "  اوافق علي عرض",
           style: Styles.textStyle12,
         ),

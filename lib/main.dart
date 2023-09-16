@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get_navigation/src/root/get_material_app.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'features/Appointments/presentation/views/widgets/sectiones/appointments_view.dart';
 import 'features/home/data/models/repos/home_repo_implement.dart';
 import 'features/home/presentation/view_models/cubit/fetchrequests_cubit.dart';
 import 'features/home/presentation/view_models/cubit/request_cubit.dart';
@@ -47,13 +48,13 @@ class AyKhedmaApp extends StatelessWidget {
           GlobalWidgetsLocalizations.delegate,
           GlobalCupertinoLocalizations.delegate,
         ],
-        
+
         supportedLocales: const [
           Locale('en'),
           Locale('ar'),
         ],
         //routerConfig: AppRouter.router,
-        home: const SplashView(),
+        home: const MapViewBody(),
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
           fontFamily: 'Kohinoor Arabic',

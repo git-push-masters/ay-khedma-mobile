@@ -17,7 +17,7 @@ class ForgotPasswordAndRememberMe extends StatelessWidget {
         ),
         Row(
           children: [
-            const Text("تذكرني", style: Styles.textStyle12),
+             Text("تذكرني", style: Styles.textStyle12),
             IconButton(
                 onPressed: () {},
                 icon: const Icon(

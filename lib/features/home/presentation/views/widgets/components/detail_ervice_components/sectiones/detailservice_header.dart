@@ -30,7 +30,7 @@ class DetailServiceHeader extends StatelessWidget {
             SizedBox(
               height: Get.height * .01,
             ),
-            const Text(
+             Text(
               "100ج قابلة للنقاش",
               style: Styles.textStyle12,
             ),

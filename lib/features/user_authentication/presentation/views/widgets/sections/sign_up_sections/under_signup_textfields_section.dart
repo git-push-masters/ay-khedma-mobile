@@ -31,7 +31,7 @@ class UnderSignUpTextFieldsSection extends StatelessWidget {
                     .copyWith(color: AppColors.kPrimaryColor)),
             Row(
               children: [
-                const Text("تذكرني", style: Styles.textStyle12),
+                 Text("تذكرني", style: Styles.textStyle12),
                 IconButton(
                     padding: EdgeInsets.zero,
                     onPressed: () {},

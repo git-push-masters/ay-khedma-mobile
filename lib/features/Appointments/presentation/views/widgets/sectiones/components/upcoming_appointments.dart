@@ -18,10 +18,10 @@ class UpcomingAppointments extends StatelessWidget {
     return Stack(
       children: [
         Padding(
-          padding: const EdgeInsets.only(bottom: 19, right: 19, left: 19),
+          padding:  EdgeInsets.only(bottom:  Get.width*.02, right: Get.width*.03, left: Get.width*.03),
           child: Container(
-            height: 205,
-            width: 352,
+            height: Get.height*.17,
+            width: Get.width,
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(27),
                 color: AppColors.kSmallContainersColor),
@@ -29,19 +29,19 @@ class UpcomingAppointments extends StatelessWidget {
               // mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Padding(
-                  padding: const EdgeInsets.all(15),
+                  padding:  EdgeInsets.only(top: Get.width*.03,right: Get.width*.03,left: Get.width*.03),
                   child: Column(
                     children: [
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                        children: const [
+                        children:  [
                           Text(
                             "15 نوفبر, 2023 - 8:00Am",
-                            style: TextStyle(fontSize: 8),
+                            style: TextStyle(fontSize: Get.width*.02),
                           ),
                           Text(
                             "١٢:٣٤",
-                            style: TextStyle(fontSize: 8),
+                            style: TextStyle(fontSize: Get.width*.02),
                           ),
                         ],
                       ),
@@ -49,18 +49,18 @@ class UpcomingAppointments extends StatelessWidget {
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(top: 5, right: 22),
+                  padding:  EdgeInsets.only(top: Get.width*.01, right: Get.width*.01),
                   child: Row(
                     children: [
                       Container(
-                        height: 76,
-                        width: 76,
+                        height: Get.height*.07,
+                        width: Get.height*.07,
                         decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(20),
                             color: AppColors.kOutLineBorder),
                       ),
-                      const SizedBox(
-                        width: 8,
+                       SizedBox(
+                        width: Get.width*.01,
                       ),
                       Column(
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -74,25 +74,25 @@ class UpcomingAppointments extends StatelessWidget {
                           Text("المهارات :  ",
                               style: Styles.textStyle12.copyWith(
                                   color: AppColors.kTextFieldHintColor,
-                                  fontSize: 10)),
+                                  fontSize: Get.width*.022)),
                         ],
                       )
                     ],
                   ),
                 ),
                 Padding(
-                  padding: const EdgeInsets.only(
-                    top: 27,
+                  padding:  EdgeInsets.only(
+                    top: Get.width*.01,
                   ),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       CustomButton(
-                        width: 191,
+                        width: Get.width*.42,
                         text: "مراجعة وتعديل العرض",
                         textStyle: Styles.textStyle12
                             .copyWith(color: AppColors.kTextbuttonColor),
-                        height: 30,
+                        height: Get.height*.03,
                         borderRadius: BorderRadius.circular(8),
                       ),
                       SizedBox(
@@ -100,11 +100,11 @@ class UpcomingAppointments extends StatelessWidget {
                       ),
                       CustomButton(
                         backgroundColor: AppColors.kPrimaryColor,
-                        width: 100,
+                        width: Get.width*.3,
                         text: "إلغاء",
                         textStyle: Styles.textStyle12
                             .copyWith(color: AppColors.kHeadLinesColor),
-                        height: 28,
+                        height: Get.height*.03,
                         borderRadius: BorderRadius.circular(8),
                       )
                     ],
@@ -115,21 +115,21 @@ class UpcomingAppointments extends StatelessWidget {
           ),
         ),
         Positioned(
-          top: 100,
-          left: 35,
-          right: 105,
+          top: Get.height*.065,
+          left: Get.width*.1,
+          right: Get.width*.15,
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               TextButton(
                 onPressed: () {},
-                child: const Text(
+                child:  Text(
                   "سباكة",
-                  style: TextStyle(fontSize: 8, color: AppColors.kPrimaryColor),
+                  style: TextStyle(fontSize: Get.width*.03, color: AppColors.kPrimaryColor),
                 ),
               ),
               RatingBar.builder(
-                itemSize: 12,
+                itemSize: Get.width*.03,
                 initialRating: 4,
                 minRating: 5,
                 direction: Axis.horizontal,

@@ -24,11 +24,14 @@ class OfferedServices extends StatelessWidget {
           return SizedBox(
           height: Get.height * 1 / 3,
           width: Get.width,
-          child: ListView.builder(
-            itemCount: state.requestsModel.length,
-            itemBuilder: (context, index) {
-            return  RequiredService(requestsModel: state.requestsModel[index],);
-          }),
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: ListView.builder(
+              itemCount: state.requestsModel.length,
+              itemBuilder: (context, index) {
+              return  RequiredService(requestsModel: state.requestsModel[index],);
+            }),
+          ),
         );
          }
          else if(state is FetchrequestsFailure)

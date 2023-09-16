@@ -1,3 +1,4 @@
+import 'package:ay_khedma/features/home/presentation/view_models/cubit/fetchrequests_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:get/get.dart';
@@ -102,9 +103,9 @@ class _PuplishServiceSheetState extends State<PuplishServiceSheet> {
                           maxPrice: int.parse(
                               maxPrice!.replaceAll(RegExp(r'[^0-9]'), '')),
                           durationRange: durationRange!,
-                          sectionId: int.parse(selectedSection!
-                              .replaceAll(RegExp(r'[^0-9]'), '')),
+                          sectionId: int.tryParse(selectedSection!)?? 1,
                           token: token!);
+                          Get.back();
                     } else {
                       setState(() {
                         autoValidateMode = AutovalidateMode.always;

@@ -19,8 +19,8 @@ class SignInView extends StatelessWidget {
       body: BlocConsumer<LoginCubit, LoginState>(
         listener: (context, state) {
           if (state is LoginSuccess) {
-            BlocProvider.of<LoginCubit>(context).userModel = state.userModel;
-            Get.to(() => const HomeView());
+
+            Get.to(() =>  HomeView(loginToken: state.userModel.body!.token));
           }
           if (state is LoginFailure) {
             customSnackBar(context, state.errMessage);

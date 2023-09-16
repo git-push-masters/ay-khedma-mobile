@@ -36,10 +36,6 @@ class HomeViewBody extends StatelessWidget {
                   height: 26,
                 ),
                 OfferedServices(),
-                Center(child: ViewAllServices()),
-                SizedBox(
-                  height: 26,
-                ),
               ],
             ),
           )

@@ -66,7 +66,7 @@ class _MainScreenState extends State<MainScreen> {
   @override
   void initState() {
     super.initState();
-        BlocProvider.of<SectionsCubit>(context).fetchSections();
+    BlocProvider.of<SectionsCubit>(context).fetchSections();
     BlocProvider.of<FetchrequestsCubit>(context).fetchRequests(token: token?? "");
   }
   @override

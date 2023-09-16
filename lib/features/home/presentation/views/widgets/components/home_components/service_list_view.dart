@@ -73,8 +73,11 @@ class _ServiceListBodyState extends State<ServiceListBody> {
                             color: current == index
                                 ? AppColors.kSecondPrimaryColor
                                 : AppColors.kListViewItemColor),
-                        child: Image.network(
-                            "$baseUrl${mySectionsModel!.body![index].icon}"),
+                        child: Padding(
+                          padding: const EdgeInsets.all(8.0),
+                          child: Image.network(
+                              "$baseUrl${mySectionsModel!.body![index].icon}"),
+                        ),
                       ),
                       const SizedBox(
                         height: 5,

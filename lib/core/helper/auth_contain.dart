@@ -23,7 +23,6 @@ class _AuthContainerState extends State<AuthContainer> {
   Widget build(BuildContext context) {
     if (initial) {
       SharedPreferences.getInstance().then((sharedPreferencesValue) {
-        Future.delayed(const Duration(seconds: 10));
         setState(() {
           token = sharedPreferencesValue.getString('token');
           log("tokenn: $token");

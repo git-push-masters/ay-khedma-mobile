@@ -2,8 +2,6 @@ import 'package:ay_khedma/core/helper/widgets/custom_button.dart';
 import 'package:ay_khedma/core/helper/widgets/custom_snackbar.dart';
 import 'package:ay_khedma/core/helper/widgets/custom_text_field.dart';
 import 'package:ay_khedma/features/home/presentation/view_models/cubit/request_cubit.dart';
-import 'package:ay_khedma/features/user_authentication/data/models/user_model/user_model.dart';
-import 'package:ay_khedma/features/user_authentication/presentation/view_models/cubits/cubit/login_cubit.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -12,7 +10,7 @@ import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 import '../../../../../../../core/helper/global_var.dart';
 import '../../../../../../../core/utils/colors.dart';
 import '../../../../../../../core/utils/styles.dart';
-import '../../../../../../user_authentication/presentation/views/widgets/sections/bio_and_service_type_section/bio_view_center_section.dart';
+import '../../../../view_models/cubit/fetchrequests_cubit.dart';
 import 'form_bottom_sheet.dart';
 
 class HomeAppBar extends StatelessWidget {
@@ -72,7 +70,7 @@ class HomeAppBar extends StatelessWidget {
                       builder: (context, state) {
                         if (state is RequestSuccess) {
                           requestsModel = state.requestsModel;
-                          // Get.back();
+                          BlocProvider.of<FetchrequestsCubit>(context).fetchRequests(token: token!);
                         } else if (state is RequestFailure) {
                           // Get.snackbar("opps!", state.errMessage);
                         }

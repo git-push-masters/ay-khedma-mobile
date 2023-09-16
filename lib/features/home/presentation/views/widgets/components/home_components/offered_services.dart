@@ -1,10 +1,7 @@
 import 'package:ay_khedma/features/home/presentation/views/widgets/components/home_components/required_service.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
-
+import 'package:get/get.dart';
 import '../../../../../../../core/helper/title_right.dart';
-import '../../../../../../Appointments/presentation/views/widgets/sectiones/appointments_view.dart';
 
 class OfferedServices extends StatelessWidget {
   const OfferedServices({super.key});
@@ -14,11 +11,16 @@ class OfferedServices extends StatelessWidget {
     return Column(
       children: [
         const TitleRight(
-          titleinfo: 'أفضل السباكين حواليك',
+          titleinfo: 'طالبي خدمات السباكة',
         ),
-        ListView.builder(itemBuilder: (context,index){
-          return const RequiredService();
-        }),
+        SizedBox(
+          height: Get.height * 1/3,
+          width: Get.width,
+          child: ListView.builder(
+            itemBuilder: (context,index){
+            return const RequiredService();
+          }),
+        ),
       ],
     );
   }

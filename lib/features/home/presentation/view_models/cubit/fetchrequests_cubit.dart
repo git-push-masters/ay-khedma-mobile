@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:bloc/bloc.dart';
 import 'package:equatable/equatable.dart';
 
@@ -15,9 +17,11 @@ class FetchrequestsCubit extends Cubit<FetchrequestsState> {
     emit(FetchrequestsLoading());
     try {
       var result = await homeRepo.fetchAllRequests(token: token);
+      log(result.toString());
       emit(FetchrequestsSuccess(result));
     } catch (e) {
       emit(FetchrequestsFailure(e.toString()));
+      log(e.toString());
     }
   }
 }

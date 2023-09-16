@@ -12,7 +12,7 @@ class FetchrequestsInitial extends FetchrequestsState {}
 class FetchrequestsLoading extends FetchrequestsState {}
 
 class FetchrequestsSuccess extends FetchrequestsState {
-  final RequestsModel requestsModel;
+  final List<RequestsModel> requestsModel;
 
   const FetchrequestsSuccess(this.requestsModel);
 }

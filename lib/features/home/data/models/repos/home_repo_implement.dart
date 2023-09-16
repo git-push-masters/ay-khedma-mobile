@@ -46,11 +46,15 @@ class HomeRepoImplement implements HomeRepo {
   }
 
   @override
-  Future<RequestsModel> fetchAllRequests({required String token}) async {
+  Future<List<RequestsModel>> fetchAllRequests({required String token}) async {
     log("enter method");
     Map<String, dynamic> requestsData =
-        await apiService.get(endPoint: "sections", token: token);
+        await apiService.get(endPoint: "requests", token: token);
     log(requestsData.toString());
-    return RequestsModel.fromJson(requestsData);
+    List<RequestsModel> requestsList = [];
+    for (var element in requestsData['body']) {
+      requestsList.add( RequestsModel.fromJson(element));
+    }
+     return requestsList;
   }
 }

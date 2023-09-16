@@ -12,5 +12,5 @@ abstract class HomeRepo {
       required int sectionId,
       required String token});
 
-  Future<RequestsModel> fetchAllRequests({required String token});
+  Future<List<RequestsModel>> fetchAllRequests({required String token});
 }

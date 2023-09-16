@@ -1,12 +1,14 @@
+import 'package:ay_khedma/features/home/data/models/requests_model/requests_model.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:get/get.dart';
 import '../../../../../../../core/helper/widgets/custom_button.dart';
 import '../../../../../../../core/utils/colors.dart';
+import '../../../../../../../core/utils/styles.dart';
 
 class RequiredService extends StatelessWidget {
-  const RequiredService({super.key});
-
+  const RequiredService({super.key, required this.requestsModel});
+ final RequestsModel requestsModel;
   @override
   Widget build(BuildContext context) {
     return Stack(
@@ -53,18 +55,15 @@ class RequiredService extends StatelessWidget {
                           children: [
                             Row(
                               children: [
-                                const Text(
-                                  "تصليح حنفية مكسورة من الداخل",
-                                  style: TextStyle(
-                                      fontSize: 8, fontWeight: FontWeight.bold),
+                                 Text(
+                                  requestsModel.title!,
+                                  style:Styles.textStyle12.copyWith(fontSize: 8, fontWeight: FontWeight.bold)
                                 ),
                                 SizedBox(
                                   width: Get.width * .2,
                                 ),
-                                const Text("100ج",
-                                    style: TextStyle(
-                                        fontSize: 8,
-                                        color: AppColors.kUnderHeadLinesColor)),
+                                 Text( requestsModel.maxPrice.toString(),
+                                    style: Styles.textStyle12.copyWith(fontSize: 8, color: AppColors.kUnderHeadLinesColor))
                               ],
                             ),
 
@@ -75,8 +74,8 @@ class RequiredService extends StatelessWidget {
                               ],
                             ),
                             Row(
-                              children: const [
-                                Padding(
+                              children:  [
+                               const Padding(
                                   padding: EdgeInsets.all(3),
                                   child: Icon(
                                     FontAwesomeIcons.locationPin,
@@ -85,8 +84,8 @@ class RequiredService extends StatelessWidget {
                                   ),
                                 ),
                                 Text(
-                                  "الدقهلية , ميت غمر , شارع الجيش عمارة 6 , شقة 14",
-                                  style: TextStyle(fontSize: 9),
+                                  requestsModel.address?? "العنوان غير محدد",
+                                  style: const TextStyle(fontSize: 9),
                                 ),
                               ],
                             ),

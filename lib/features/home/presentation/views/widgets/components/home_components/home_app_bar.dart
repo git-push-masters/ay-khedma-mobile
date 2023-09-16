@@ -72,7 +72,7 @@ class HomeAppBar extends StatelessWidget {
                       builder: (context, state) {
                         if (state is RequestSuccess) {
                           requestsModel = state.requestsModel;
-                          Get.back();
+                          // Get.back();
                         } else if (state is RequestFailure) {
                           // Get.snackbar("opps!", state.errMessage);
                         }

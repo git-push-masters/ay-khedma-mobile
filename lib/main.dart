@@ -62,7 +62,7 @@ class AyKhedmaApp extends StatelessWidget {
           Locale('ar'),
         ],
         //routerConfig: AppRouter.router,
-        home: const MyMapView(),
+        home: const MapViewBody(),
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
           fontFamily: 'Kohinoor Arabic',

@@ -74,7 +74,7 @@ class RequiredService extends StatelessWidget {
                               Row(
                                 children: [
                                   Padding(
-                                    padding: EdgeInsets.all(0),
+                                    padding: const EdgeInsets.all(0),
                                     child: Icon(
                                       FontAwesomeIcons.locationPin,
                                       size: Get.width*.03,

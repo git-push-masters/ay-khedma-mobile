@@ -9,20 +9,8 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../view_models/cubit/fetchrequests_cubit.dart';
 import 'widgets/components/home_view_body.dart';
 
-class HomeView extends StatefulWidget {
+class HomeView extends StatelessWidget {
   const HomeView({super.key});
-
-  @override
-  State<HomeView> createState() => _HomeViewState();
-}
-
-class _HomeViewState extends State<HomeView> {
-  @override
-  void initState() {
-    super.initState();
-    BlocProvider.of<SectionsCubit>(context).fetchSections();
-    BlocProvider.of<FetchrequestsCubit>(context).fetchRequests(token: token?? "");
-  }
 
   @override
   Widget build(BuildContext context) {

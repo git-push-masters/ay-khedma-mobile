@@ -5,6 +5,8 @@
         android:label="ay_khedma"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
+        <meta-data android:name="com.google.android.geo.API_KEY"
+               android:value="AIzaSyCf6HG1wTKR4Vo0vbG5N2y3_97q3bwOy8w"/>
         <activity
             android:name=".MainActivity"
             android:exported="true"
@@ -32,4 +34,5 @@
             android:name="flutterEmbedding"
             android:value="2" />
     </application>
+     
 </manifest>

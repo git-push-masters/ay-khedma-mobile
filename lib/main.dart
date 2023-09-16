@@ -9,6 +9,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'features/home/data/models/repos/home_repo_implement.dart';
 import 'features/home/presentation/view_models/cubit/request_cubit.dart';
 import 'features/home/presentation/view_models/cubit/sections_cubit.dart';
+import 'features/home/presentation/views/widgets/components/all_services_view_body.dart';
+import 'features/map/presentation/views/map_view.dart';
+import 'features/map/presentation/views/widgets/map_view_body.dart';
 import 'features/user_authentication/presentation/view_models/cubits/cubit/login_cubit.dart';
 
 void main() {
@@ -48,7 +51,7 @@ class AyKhedmaApp extends StatelessWidget {
           Locale('ar'),
         ],
         //routerConfig: AppRouter.router,
-        home: const SplashView(),
+        home: const MapViewBody(),
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
           fontFamily: 'Kohinoor Arabic',

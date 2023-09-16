@@ -85,11 +85,3 @@ class _SplashViewBodyState extends State<SplashViewBody>
 }
 
 //fetch user data
-
-Future<UserModel> myUserData({required String token}) async {
-  Map<String, dynamic> data =
-      await ApiService().get(endPoint: "auth/me", token: token);
-  log(token.toString());
-  log(data.toString());
-  return UserModel.fromJson(data);
-}

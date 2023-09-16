@@ -3,6 +3,7 @@ import '../sectionsmodel/sectionsmodel.dart';
 
 abstract class HomeRepo {
   Future<SectionsModel> fetchAllSections();
+
   Future<RequestsModel> postRequest(
       {required String title,
       required String description,
@@ -10,4 +11,6 @@ abstract class HomeRepo {
       required String durationRange,
       required int sectionId,
       required String token});
+
+  Future<RequestsModel> fetchAllRequests({required String token});
 }
